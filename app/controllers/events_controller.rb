@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-before_action :find_event only: [:show, :edit]
+before_action :find_event, only: [:show, :edit]
 
 
 
@@ -10,16 +10,18 @@ before_action :find_event only: [:show, :edit]
 
   def new
     @user = User.find(params[:user_id])
-    @gym = Gym.find(params[:gym_id])
+    # @gym = Gym.find(params[:gym_id])
     @event = Event.new
   end
 
 def create
-  @event = gym.events.new(event_params)
+  @user = User.find(params[:user_id])
+  @event = Event.new(event_params)
   if @event.save
-    redirect_to @event
+    redirect_to user_path
   else
     render new
+  end
 end
 
 
@@ -34,7 +36,7 @@ end
 private
 
 def event_params
-require.(:event).permit(:name, :event_type, :start_date, :end_date)
+params.require(:event).permit(:name, :event_type, :start_date, :end_date)
   end
 
 def find_event

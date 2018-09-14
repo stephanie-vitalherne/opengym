@@ -2,10 +2,10 @@
 
 
 
-<%= form_for(@user, @event) do |f| %>
+<%= form_for([@user,@event]) do |f| %>
 <%= f.text_field :name, placeholder: "Event name" %><br>
 <%= f.text_field :event_type, placeholder: "Event type" %><br>
-<%= f.date_field :start_date, placeholder: "Start date" %><br>
-<%= f.date_field :end_date, placeholder: "End date" %><br>
+<%= f.date_field :start_date %><br>
+<%= f.date_field :end_date%><br>
 <%= f.submit "Submit event" %>
 <% end %>
