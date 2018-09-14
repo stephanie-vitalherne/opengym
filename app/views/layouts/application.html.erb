@@ -8,26 +8,27 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
 
-    <div class="nav-top">
-      <h1>Open Gym</h1>
+    <nav class="nav-top">
+      <div class="nav-top-logo">Open Gym</div>
       <button><i class="fa fa-search"></i></button>
-    </div>
+    </nav>
 
     <%= yield %>
 
-    <div class="nav-bottom">
+    <nav class="nav-bottom">
       <button><i class="fa fa-envelope-o"></i></button>
-      <h1>OG</h1>
+      <div class="nav-bottom-logo">OG</div>
       <div class="bar-container" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
-    </div>
+    </nav>
 
   </body>
 </html>
