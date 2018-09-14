@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
- root  'pages#home'
+  root 'pages#home'
+
+  resources :users
+
   get 'pages/basketball'
   get 'pages/football'
   get 'pages/soccer'
