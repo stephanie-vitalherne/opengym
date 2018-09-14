@@ -1,0 +1,7 @@
+<%= form_for @gym do |f| %>
+
+<%= f.text_field :name, placeholder: 'name' %><br>
+<%= f.text_field :location, placeholder: 'full location address' %><br>
+<%= f.number_field :user_id, placeholder: 'your user id' %><br>
+<%= f.submit 'Create' %>
+<% end %>
