@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
  root  'pages#home'
 
-  resources :users do
+  resources :users
+
+resources :gyms do
 resources :events
 end
-
   get '/gyms' => 'gyms#index'
 
   get 'gyms/show'

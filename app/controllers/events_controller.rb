@@ -9,18 +9,18 @@ before_action :find_event, only: [:show, :edit]
   end
 
   def new
-    @user = User.find(params[:user_id])
-    # @gym = Gym.find(params[:gym_id])
+    @gym = Gym.find(params[:gym_id])
+
     @event = Event.new
   end
 
 def create
-  @user = User.find(params[:user_id])
+  @gym = Gym.find(params[:gym_id])
   @event = Event.new(event_params)
   if @event.save
-    redirect_to user_path
+    redirect_to gym_event_path(@gym)
   else
-    render new
+    render 'new'
   end
 end
 

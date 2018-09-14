@@ -1,0 +1,11 @@
+<h1>Event form</h1>
+
+
+
+<%= form_for([@gym, @event]) do |f| %>
+<%= f.text_field :name, placeholder: "Event name" %><br>
+<%= f.text_field :event_type, placeholder: "Event type" %><br>
+<%= f.date_field :start_date %><br>
+<%= f.date_field :end_date%><br>
+<%= f.submit "Submit event" %>
+<% end %>
