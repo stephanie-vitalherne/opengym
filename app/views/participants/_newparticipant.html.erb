@@ -1,0 +1,8 @@
+<%= form_for([@gym, @event, @participant]) do |f| %>
+<%= f.number_field :user_id, placeholder: 'your user id' %><br>
+<%= f.text_field :first_name, placeholder: 'name' %><br>
+<%= f.text_field :last_name, placeholder: 'last' %><br>
+<%= f.text_field :email, placeholder: 'email' %><br>
+<%= f.text_field :phone, placeholder: 'phone' %><br>
+<%= f.submit 'Create' %>
+<% end %>
