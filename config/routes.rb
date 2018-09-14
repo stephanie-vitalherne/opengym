@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+ root  'pages#home'
   get 'participants/index'
   get 'participants/edit'
   get 'participants/show'
   get 'participants/new'
- root  'pages#home'
 
 resources :gyms do
 resources :events do
