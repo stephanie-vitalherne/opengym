@@ -15,12 +15,12 @@
 
     <nav class="nav-top">
       <div class="nav-top-logo">Open Gym</div>
-      <button><i class="fa fa-search"></i></button>
+      <i class="fa fa-search"></i>
     </nav>
 
-    <%= yield %>
+    <div id="yield-container"> <%= yield %> </div>
 
-    <ul id="nav-box" class="hidden">
+    <ul id="nav-box" class="hidden" >
       <li>
         Basketball
       </li>
@@ -33,9 +33,9 @@
     </ul>
 
     <nav class="nav-bottom">
-      <button><i class="fa fa-envelope-o"></i></button>
+      <i class="fa fa-envelope-o"></i>
       <div class="nav-bottom-logo">OG</div>
-      <div class="bar-container" onclick="menuReveal(this)">
+      <div id="bar-container" onClick="menuReveal()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
