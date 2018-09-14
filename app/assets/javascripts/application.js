@@ -14,3 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+var menuItems = document.getElementById("nav-box");
+
+function menuReveal(x) {
+    x.classList.toggle("change");
+    menuItems.classList.toggle("hidden");
+}
+
