@@ -6,6 +6,7 @@ before_action :find_event, only: [:show, :edit]
 
   def index
     @event = Event.all
+    @gym = Gym.find(params[:gym_id])
   end
 
   def new
