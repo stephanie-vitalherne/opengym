@@ -1,9 +1,9 @@
 class Gym < ApplicationRecord
   has_many :events
+
   # belongs_to :user
 
   has_one_attached :cover_photo
-
 
 
 

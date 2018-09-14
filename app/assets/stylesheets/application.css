@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ :root {
+   --navbar-color: blue;
+ }
+
 html{
   font-family: sans-serif;
   background-image: url(asphalt2.JPG);
@@ -35,7 +39,7 @@ body {
 
 nav {
     width: 100%;
-    background-color: blue;
+    background-color: var(--navbar-color);
     text-align: center;
     font-size: 30px;
     padding-top: 1%;
