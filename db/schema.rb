@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_09_14_160501) do
 
-<<<<<<< HEAD
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "event_type"
@@ -26,14 +25,14 @@ ActiveRecord::Schema.define(version: 2018_09_14_160501) do
     t.datetime "updated_at", null: false
     t.index ["gym_id"], name: "index_events_on_gym_id"
     t.index ["user_id"], name: "index_events_on_user_id"
-=======
+  end
+
   create_table "gyms", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> 6557354d3dd0691b6d3933c50d4294aba750d751
   end
 
   create_table "users", force: :cascade do |t|
