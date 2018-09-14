@@ -17,8 +17,17 @@ html{
   font-family: sans-serif;
   background-image: url(asphalt2.JPG);
   background-size: cover;
+  color: white;
 }
-
+a {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: red;
+}
 body {
     margin: 0;
     padding: 0;
@@ -31,6 +40,7 @@ nav {
     font-size: 30px;
     padding-top: 1%;
     padding-bottom: 1%;
+    color: black;
 }
 
 .nav-top {
@@ -49,7 +59,7 @@ nav {
 }
 
 .nav-bottom {
-    position: sticky;
+    position: fixed;
     left: 0px;
     bottom: 0px;
     display: flex;
@@ -112,5 +122,19 @@ nav {
     display: none;
 }
 .gymphoto {
-  max-width: 100vw;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.gmap_canvas iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
 }
