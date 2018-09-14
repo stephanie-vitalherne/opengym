@@ -1,6 +1,5 @@
-<h1>Gyms#show</h1>
-<p>Find me in app/views/gyms/show.html.erb</p>
-<%= @gym.name %><br>
+
+<h1><%= @gym.name %></h1>
 
 <%= @gym.cover_photo.attachment.nil? ? image_tag('def.png', class: 'gymphoto') : image_tag(@gym.cover_photo, class: 'gymphoto') %>
 

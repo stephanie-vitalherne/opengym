@@ -17,8 +17,17 @@ html{
   font-family: sans-serif;
   background-image: url(asphalt2.JPG);
   background-size: cover;
+  color: white;
 }
-
+a {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: red;
+}
 body {
     margin: 0;
     padding: 0;
@@ -31,6 +40,7 @@ nav {
     font-size: 30px;
     padding-top: 1%;
     padding-bottom: 1%;
+    color: black;
 }
 
 .nav-top {
