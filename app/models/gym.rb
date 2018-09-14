@@ -1,5 +1,5 @@
 class Gym < ApplicationRecord
-  # has_one_attached :cover_photo
+  has_one_attached :cover_photo
   # has_many :events
   # belongs_to :user
     before_save :default_values
