@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
- root  'pages#home'
+  get '/gyms' => 'gyms#index'
+
+  get 'gyms/show'
+  get 'gyms/edit'
+  get 'gyms/new'
+
+  root 'pages#home'
+
+  resources :users, only: %i[edit index create show update destroy]
+  resources :gyms
+
+  get 'register' => 'users#new'
+
   get 'pages/basketball'
   get 'pages/football'
   get 'pages/soccer'
