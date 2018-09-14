@@ -17,3 +17,5 @@ module Opengym
     # the framework and any gems in your application.
   end
 end
+
+config.assets.paths << Rails.root.join("app", "assets", "images", "levers")
