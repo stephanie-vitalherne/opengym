@@ -34,7 +34,7 @@ end
 private
 
 def event_params
-require.(:event).permit(:name, :event_type, :start_date, :end_date, :approved, :denied)
+require.(:event).permit(:name, :event_type, :start_date, :end_date)
   end
 
 def find_event

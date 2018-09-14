@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
 
 
+
+
+  resources :users do
 resources :events
-
-
-  resources :users
-
+end
 
   get 'pages/basketball'
   get 'pages/football'
