@@ -33,6 +33,21 @@ ActiveRecord::Schema.define(version: 2018_09_14_165509) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "event_type"
+    t.boolean "approved", default: false
+    t.boolean "denied", default: false
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "user_id"
+    t.integer "gym_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gym_id"], name: "index_events_on_gym_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
   create_table "gyms", force: :cascade do |t|
     t.string "name"
     t.string "location"
