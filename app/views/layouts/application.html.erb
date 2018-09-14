@@ -14,8 +14,9 @@
   <body>
 
     <nav class="nav-top">
-      <div class="nav-top-logo">Open Gym</div>
-      <i class="fa fa-search"></i>
+      <input id="search-bar" class="hidden" type="text" placeholder="search" name="search"> 
+      <div id="nav-top-logo">Open Gym</div>
+      <i onClick="search()" class="fa fa-search"></i>
     </nav>
 
     <div id="yield-container"> <%= yield %> </div>

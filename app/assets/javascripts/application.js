@@ -23,3 +23,7 @@ function menuReveal() {
     document.getElementById("yield-container").classList.toggle("hidden");
 }
 
+function search() {
+    document.getElementById("search-bar").classList.toggle("hidden");
+    document.getElementById("nav-top-logo").classList.toggle("hidden");
+}
