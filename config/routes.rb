@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  get 'participants/index'
+  get 'participants/edit'
+  get 'participants/show'
+  get 'participants/new'
  root  'pages#home'
 
-  resources :users
-
 resources :gyms do
-resources :events
+resources :events do
+  resources :participants
+end
 end
   get '/gyms' => 'gyms#index'
 
@@ -15,7 +19,6 @@ end
 
 
   resources :users, only: %i[edit index create show update destroy]
-  resources :gyms
 
   get 'register' => 'users#new'
 
