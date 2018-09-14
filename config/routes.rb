@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
  root  'pages#home'
 
 
 
 resources :events
 
+
+  resources :users
 
 
   get 'pages/basketball'
