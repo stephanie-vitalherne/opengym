@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  resources :users
+  resources :users, only: %i[edit index create update destroy]
+  get 'register' => 'users#new'
 
   get 'pages/basketball'
   get 'pages/football'
