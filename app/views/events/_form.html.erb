@@ -4,6 +4,7 @@
 
 <%= form_for([@gym, @event]) do |f| %>
 <%= f.text_field :name, placeholder: "Event name" %><br>
+<%= f.file_field :cover_photo %><br>
 <%= f.text_field :event_type, placeholder: "Event type" %><br>
 <%= f.date_field :start_date %><br>
 <%= f.date_field :end_date%><br>
