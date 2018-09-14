@@ -59,7 +59,7 @@ nav {
 }
 
 .nav-bottom {
-    position: sticky;
+    position: fixed;
     left: 0px;
     bottom: 0px;
     display: flex;
