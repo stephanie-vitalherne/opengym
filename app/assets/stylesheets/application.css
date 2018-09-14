@@ -112,5 +112,19 @@ nav {
     display: none;
 }
 .gymphoto {
-  max-width: 100vw;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.gmap_canvas iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
 }
