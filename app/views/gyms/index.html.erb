@@ -1,2 +1,8 @@
 <h1>Gyms#index</h1>
 <p>Find me in app/views/gyms/index.html.erb</p>
+<% @gyms.each do |g| %>
+<%= link_to g.name, gyms_path(g) %><br>
+<% end %>
+<p>
+<%= link_to "New Gym", gyms_new_path %>
+</p>
