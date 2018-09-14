@@ -15,6 +15,10 @@
 //= require turbolinks
 //= require_tree .
 
-function myFunction(x) {
+var menuItems = document.getElementById("nav-box");
+
+function menuReveal(x) {
     x.classList.toggle("change");
+    menuItems.classList.toggle("hidden");
 }
+
