@@ -4,5 +4,18 @@
 <h4><%= @event.event_type %><br></h4>
 <span> Start: <%= @event.start_date.strftime("%y/%m/%d") %></span><br>
 <span> End: <%= @event.end_date.strftime("%y/%m/%d") %></span><br>
+<p><%= @event.description %></p>
+<% if @event.participants.count != 1 %>
+<%= link_to @event.participants.count.to_s + ' people are coming', gym_event_participants_path(@gym, @event)  %><br>
+<% else %>
+<%= link_to @event.participants.count.to_s + ' person is coming', gym_event_participants_path(@gym, @event)  %><br>
+<% end %>
 
-<%= link_to @event.name + " participants", gym_event_participants_path(@gym, @event)  %>
+<% if @event.participants.count <= 10 %>
+<ol>
+<%  @event.participants.each do |p| %>
+<li><%= p.first_name %></li>
+<% end %>
+</ol>
+<% end %>
+<%= render 'participants/newparticipant' %>

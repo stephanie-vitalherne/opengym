@@ -7,20 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
 
     <nav class="nav-top">
-      <div class="nav-top-logo">Open Gym</div>
-      <button><i class="fa fa-search"></i></button>
+      <input id="search-bar" class="hidden" type="text" placeholder="search" name="search">
+      <div id="nav-top-logo">Open Gym</div>
+      <i onClick="search()" class="fa fa-search"></i>
     </nav>
 
-    <%= yield %>
+    <div id="yield-container"> <%= yield %> </div>
 
-    <ul id="nav-box" class="hidden">
+    <ul id="nav-box" class="hidden" >
       <li>
         Basketball
       </li>
@@ -33,9 +34,9 @@
     </ul>
 
     <nav class="nav-bottom">
-      <button><i class="fa fa-envelope-o"></i></button>
+      <i class="far fa-envelope"></i>
       <div class="nav-bottom-logo">OG</div>
-      <div class="bar-container" onclick="menuReveal(this)">
+      <div id="bar-container" onClick="menuReveal()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>

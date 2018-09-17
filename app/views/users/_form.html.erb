@@ -1,9 +1,33 @@
 <%= form_for(@user) do |f| %>
-  <%= f.text_field :first_name, placeholder: 'First Name' %> <br>
-  <%= f.text_field :last_name, placeholder: 'Last Name' %> <br>
-  <%= f.text_field :email, placeholder: 'Email' %> <br>
-  <%= f.password_field :password, placeholder: 'Create a Password' %> <br>
-  <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %> <br>
-
-  <%=  f.submit %>
+<div class="register-input">
+  <i class="far fa-user">
+    <%= f.text_field :first_name, placeholder: 'First Name', class: 'input' %>
+  </i>
+</div>
+<div class="register-input">
+  <i class="far fa-user">
+    <%= f.text_field :last_name, placeholder: 'Last Name', class: 'input' %>
+  </i>
+</div>
+<div class="register-input">
+  <i class="fas fa-at">
+    <%= f.email_field :email, placeholder: 'Email', class: 'input' %>
+  </i>
+</div>
+<div class="register-input">
+  <%= f.label :photo, 'Upload a photo' %>
+  <br>
+  <%= f.file_field :photo %>
+</div>
+<div class="register-input">
+  <i class="fas fa-key">
+    <%= f.password_field :password, placeholder: 'Create a Password', class: 'input' %>
+  </i>
+</div>
+<div class="register-input">
+  <i class="fas fa-key">
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'input' %>
+  </i>
+</div>
+<%= f.submit 'Lace Up!', id:'submit' %>
 <% end %>

@@ -1,8 +1,70 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#users-show{
+#users-new {
+  position: absolute;
+  top: 12%;
+  left: 7%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 12%;
+  padding: 10% 7%;
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#users-new-info {
+  position: relative;
+  top: 15%;
+  #submit {
+    padding: 10%;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-top: 10%;
+    border: none;
+    box-shadow: 0 0 10px black;
+  }
+  .input {
+    background: none;
+    border: none;
+    height: 5vh;
+    color: black;
+    padding-left: 10%;
+  }
+}
+
+#users-show {
   border: 1px solid red;
   position: absolute;
-  top: 10%;
+  top: 12%;
+  left: 22%;
+  max-width: 100%;
+  p {
+    font-size: 1.4em;
+  }
+}
+
+#pro-img {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+}
+
+.register-input{
+  position: relative;
+  left: 15%;
+  margin: 0;
+  padding: 0;
+  i{
+    border-bottom: 2px solid red;
+    padding-right: 2%;
+    margin-right: 2%;
+    color: black;
+  }
+}
+
+#register-bottom{
+  bottom: 59px;
 }
