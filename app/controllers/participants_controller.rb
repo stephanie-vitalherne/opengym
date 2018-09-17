@@ -3,7 +3,7 @@ class ParticipantsController < ApplicationController
   before_action :find_event, only: %i[show index edit new create]
   before_action :find_gym, only: %i[show index edit new create]
   def index
-    @participant = Participant.all
+    @participants = Participant.all
   end
 
   def edit; end
