@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #users-new {
   position: absolute;
-  top: 12%;
+  top: 8.5%;
   left: 7%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 12%;
@@ -30,9 +30,9 @@
   .input {
     background: none;
     border: none;
-    height: 5vh;
+    height: 7vh;
     color: black;
-    padding-left: 10%;
+    width: 76%;
   }
 }
 
@@ -57,11 +57,15 @@
   left: 15%;
   margin: 0;
   padding: 0;
+  width: 64%;
   i{
     border-bottom: 2px solid red;
     padding-right: 2%;
     margin-right: 2%;
     color: black;
+  }
+  ::placeholder{
+    letter-spacing: 1px;
   }
 }
 
