@@ -14,8 +14,11 @@
     <%= f.email_field :email, placeholder: 'Email', class: 'input' %>
   </i>
 </div>
-  <%= f.label :photo, 'Upload a photo' %> <br>
-<%= f.file_field :photo %> <br>
+<div class="register-input">
+  <%= f.label :photo, 'Upload a photo' %>
+  <br>
+  <%= f.file_field :photo %>
+</div>
 <div class="register-input">
   <i class="fas fa-key">
     <%= f.password_field :password, placeholder: 'Create a Password', class: 'input' %>
@@ -26,5 +29,5 @@
     <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'input' %>
   </i>
 </div>
-  <%=  f.submit 'Lace Up!', id:'submit' %>
+<%= f.submit 'Lace Up!', id:'submit' %>
 <% end %>
