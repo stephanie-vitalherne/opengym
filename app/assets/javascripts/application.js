@@ -31,3 +31,11 @@ function search() {
     document.getElementById("go").classList.toggle("hidden");
     document.getElementById("search-icon").classList.toggle("hidden");
 }
+
+function newGymOpen() {
+      document.getElementById("newgym").classList.toggle("open");
+}
+
+function removeShadow() {
+       document.getElementById("footer").classList.remove("shadow");
+     }

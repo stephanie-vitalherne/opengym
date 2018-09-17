@@ -13,12 +13,8 @@
 
   <body>
 
-    <nav class="nav-top">
-      <div id="search">
-      <input id="search-bar" type="text"  class="hidden" placeholder="search" name="search">
-      <button class="hidden" id="go">GO</button>
-      <button class="hidden" id="cancel" onClick="search()">X</button>
-      </div>
+    <nav id="header" class="nav-top shadow">
+      <input id="search-bar" class="hidden" type="text" placeholder="search" name="search">
       <div id="nav-top-logo">Open Gym</div>
       <div id="search-icon"><i onClick="search()" class="fa fa-search"></i></div>
     </nav>
@@ -37,7 +33,7 @@
       </li>
     </ul>
 
-    <nav class="nav-bottom">
+    <nav id="footer" class="nav-bottom shadow">
       <i class="far fa-envelope"></i>
       <div class="nav-bottom-logo">OG</div>
       <div id="bar-container" onClick="menuReveal()">
@@ -46,6 +42,8 @@
         <div class="bar3"></div>
       </div>
     </nav>
-
+<script>
+removeShadow();
+</script>
   </body>
 </html>

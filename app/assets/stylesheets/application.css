@@ -19,7 +19,7 @@
 
 html{
   font-family: sans-serif;
-  background-color: grey;
+  background-color: rgb(82, 82, 82);
   /* background-image: url(asphalt2.JPG); */
   background-size: cover;
   color: white;
@@ -46,10 +46,11 @@ nav {
     padding-top: 1%;
     padding-bottom: 1%;
     color: black;
-    box-shadow: 0 0 5px black;
     color: white;
 }
-
+.shadow {
+      box-shadow: 0 0 5px black;
+}
 .nav-top {
     top: 0;
     height: 35px;
@@ -168,26 +169,41 @@ nav {
 .hidden {
     display: none;
 }
-.gymphoto {
-  width: 100%;
-}
-.gmap_canvas {
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-}
 
-.gmap_canvas iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
-}
 #yield-container {
   margin-top: 45px;
-  margin-bottom: 45px;
-  /* min-height: 100%; */
-  max-width: 90%;
+  margin-bottom: 55px;
+        padding: 0;
+}
+
+.intform {
+  text-align: center;
+    width: 100vw;
+      padding: 0;
+}
+.intform form {
+  width: 100%;
+}
+.intform form > *, .intform input {
+  margin: 2px;
+  width: 100%;
+  border: none;
+  margin: 2px 0;
+  font-size: 20px;
+  padding: 3px 10px;
+}
+.intform form textarea {
+height: 30vh;
+}
+.first {
+  background-color: white;
+}
+.gray {
+  background-color: rgb(215, 215, 215);
+}
+.intform form input[type="submit"] {
+  background-color: rgb(73, 255, 91);
+  width: 96%;
+  border-radius: 5px;
+  padding: 10px;
 }
