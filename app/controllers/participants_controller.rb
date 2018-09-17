@@ -27,7 +27,10 @@ class ParticipantsController < ApplicationController
 
   def participant_params
     params.require(:participant).permit(:user_id, :first_name, :last_name, :email, :phone)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 19f2d5469c023d2ec784cea6b5c0bc74d9088297
     end
 
   def find_participant
