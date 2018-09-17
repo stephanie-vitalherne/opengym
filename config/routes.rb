@@ -10,6 +10,9 @@ resources :events do
   resources :participants
 end
 end
+
+
+get '/results' => 'pages#results'
   get '/gyms' => 'gyms#index'
 
   get 'gyms/show'

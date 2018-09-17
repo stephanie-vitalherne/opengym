@@ -14,7 +14,7 @@ before_action :find_gym, only: [:show, :index, :edit, :new, :create]
 
 def create
   @event = @gym.events.new(event_params)
-  if @event.save!
+  if @event.save
     redirect_to gym_event_path(@gym, @event)
   else
     render 'new'
@@ -23,6 +23,7 @@ end
 
 
   def show
+
 
 
   end

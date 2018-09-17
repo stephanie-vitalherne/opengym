@@ -1,0 +1,14 @@
+<h1>results</h1>
+
+
+<%@event.each do |e| %>
+<%=link_to "#{e.name}", gym_event_path(@gym, e)  %><br>
+<%= e.event_type %><br>
+<span>Start date: <%= e.start_date %></span> -
+<span> End date:<%= e.end_date %></span>
+<% end %>
+
+<!-- <h3>gym</h3> -->
+<%#@gym.each do |e| %>
+<%#= e.name%><br>
+<%# end %>
