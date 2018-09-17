@@ -1,19 +1,13 @@
 class PagesController < ApplicationController
-  def home
-  end
+  def home; end
 
-  def basketball
-  end
+  def basketball; end
 
-  def football
-  end
+  def football; end
 
-  def soccer
-  end
+  def soccer; end
 
-  def other
-  end
+  def other; end
 
-  def about
-  end
+  def about; end
 end

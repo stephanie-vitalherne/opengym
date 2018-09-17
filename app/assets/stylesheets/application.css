@@ -19,7 +19,8 @@
 
 html{
   font-family: sans-serif;
-  background-image: url(asphalt2.JPG);
+  background-color: grey;
+  /* background-image: url(asphalt2.JPG); */
   background-size: cover;
   color: white;
 }
@@ -178,4 +179,8 @@ nav {
    position: absolute;
    top: 0;
    width: 100%;
+}
+#yield-container {
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
