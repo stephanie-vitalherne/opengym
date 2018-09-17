@@ -1,3 +1,92 @@
 // Place all the styles related to the Gyms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.gmap_canvas {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.gmap_canvas iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+#gymphoto {
+    min-height: 150px;
+}
+#gymphoto, .gymphoto {
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+}
+#gymphoto h1, .gymphoto h2 {
+  text-shadow: 1px 1px 1px black;
+}
+.gymphoto h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.gymphoto p {
+  margin: 2px;
+}
+.gymphoto {
+  text-align: center;
+height: 80px;
+border-top: 2px solid white;
+margin-top: -20px;
+border-top-right-radius: 20px;
+box-shadow: 0px -1px 2px black;
+overflow: hidden;
+transition: height;
+transition-duration: 1s;
+}
+.gymphoto:hover {
+  height:150px;
+}
+.gymphoto a {
+  text-decoration: none;
+}
+.gymscontainer {
+  margin-top: 80px;
+  min-height: 100vh;
+}
+.gymscontainer div:last-child {
+  position: relative;
+height: 100vh;
+bottom: 0;
+}
+.newgym {
+  margin: 0 auto;
+  background-color: rgb(164, 0, 0);
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -1px 2px black;
+  height: 40px;
+  text-align: center;
+  position: fixed;
+  bottom: 40px;
+  z-index: 0;
+  transition: height;
+  transition-duration: 1s;
+}
+.open {
+  height: calc(100% - 85px);
+}
+.newgym h2 {
+  margin: 0;
+  margin-top:5px;
+}
+.newgym a {
+  text-decoration: none;
+}
+.newgymform {
+margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

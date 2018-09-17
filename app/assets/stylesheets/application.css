@@ -19,7 +19,7 @@
 
 html{
   font-family: sans-serif;
-  background-color: grey;
+  background-color: rgb(82, 82, 82);
   /* background-image: url(asphalt2.JPG); */
   background-size: cover;
   color: white;
@@ -46,10 +46,11 @@ nav {
     padding-top: 1%;
     padding-bottom: 1%;
     color: black;
-    box-shadow: 0 0 5px black;
     color: white;
 }
-
+.shadow {
+      box-shadow: 0 0 5px black;
+}
 .nav-top {
     top: 0;
     position: fixed;
@@ -162,52 +163,7 @@ nav {
 .hidden {
     display: none;
 }
-.gmap_canvas {
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-}
 
-.gmap_canvas iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
-}
-#gymphoto {
-    min-height: 150px;
-}
-#gymphoto, .gymphoto {
-  margin: 0 auto;
-  background-size: cover;
-  background-position: center;
-}
-#gymphoto h1, .gymphoto h2 {
-  text-shadow: 1px 1px 1px black;
-}
-.gymphoto h2 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.gymphoto p {
-  margin: 2px;
-}
-.gymphoto {
-  text-align: center;
-height: 80px;
-border-top: 1px solid black;
-margin-top: -20px;
-border-top-right-radius: 20px;
-box-shadow: 0px -1px 2px black;
-}
-.gymphoto a {
-  text-decoration: none;
-}
-.gymscontainer {
-  margin-top: 80px;
-}
 #yield-container {
   margin-top: 45px;
   margin-bottom: 55px;

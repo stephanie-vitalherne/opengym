@@ -26,6 +26,7 @@ class GymsController < ApplicationController
 
   def index
     @gyms = Gym.all
+        @gym = Gym.new
   end
 
   def show; end

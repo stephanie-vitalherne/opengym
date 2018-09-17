@@ -13,7 +13,7 @@
 
   <body>
 
-    <nav class="nav-top">
+    <nav id="header" class="nav-top shadow">
       <input id="search-bar" class="hidden" type="text" placeholder="search" name="search">
       <div id="nav-top-logo">Open Gym</div>
       <i onClick="search()" class="fa fa-search"></i>
@@ -33,7 +33,7 @@
       </li>
     </ul>
 
-    <nav class="nav-bottom">
+    <nav id="footer" class="nav-bottom shadow">
       <i class="far fa-envelope"></i>
       <div class="nav-bottom-logo">OG</div>
       <div id="bar-container" onClick="menuReveal()">
@@ -42,6 +42,8 @@
         <div class="bar3"></div>
       </div>
     </nav>
-
+<script>
+removeShadow();
+</script>
   </body>
 </html>

@@ -27,3 +27,11 @@ function search() {
     document.getElementById("search-bar").classList.toggle("hidden");
     document.getElementById("nav-top-logo").classList.toggle("hidden");
 }
+
+function newGymOpen() {
+      document.getElementById("newgym").classList.toggle("open");
+}
+
+function removeShadow() {
+       document.getElementById("footer").classList.remove("shadow");
+     }
