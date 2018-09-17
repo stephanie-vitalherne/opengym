@@ -1,9 +1,10 @@
 class EventsController < ApplicationController
-  before_action :find_event, only: %i[show edit]
+  before_action :find_event, only: %i[show edit index]
   before_action :find_gym, only: %i[show index edit new create]
 
   def index
-    @event = Event.all
+    @events = Event.all
+    @event = Event.new
   end
 
   def new

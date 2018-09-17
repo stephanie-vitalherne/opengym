@@ -29,7 +29,7 @@ function search() {
 }
 
 function newGymOpen() {
-      document.getElementById("newgym").classList.toggle("open");
+      document.getElementById("newmodal").classList.toggle("open");
 }
 
 function removeShadow() {
