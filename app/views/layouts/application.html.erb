@@ -14,9 +14,13 @@
   <body>
 
     <nav class="nav-top">
-      <input id="search-bar" class="hidden" type="text" placeholder="search" name="search">
+      <div id="search">
+      <input id="search-bar" type="text"  class="hidden" placeholder="search" name="search">
+      <button class="hidden" id="go">GO</button>
+      <button class="hidden" id="cancel" onClick="search()">X</button>
+      </div>
       <div id="nav-top-logo">Open Gym</div>
-      <i onClick="search()" class="fa fa-search"></i>
+      <div id="search-icon"><i onClick="search()" class="fa fa-search"></i></div>
     </nav>
 
     <div id="yield-container"> <%= yield %> </div>
