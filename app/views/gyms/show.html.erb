@@ -14,7 +14,7 @@
 <ul>
 <% @gym.events.each do |e| %>
 <% if x < 3 %>
- <li><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(e) %></li>
+ <li><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(@gym, e) %></li>
   <% x += 1 %>
 <% end %>
 <% end %>
