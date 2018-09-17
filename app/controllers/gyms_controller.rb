@@ -1,5 +1,5 @@
 class GymsController < ApplicationController
-    before_action :find_gym, only: %i[show edit update destroy]
+  before_action :find_gym, only: %i[show edit update destroy]
   def new
     @gym = Gym.new
   end
@@ -7,16 +7,14 @@ class GymsController < ApplicationController
   def create
     @gym = Gym.new(gym_params)
     if @gym.save
-            flash[:notice] = 'Gym created successfully'
+      flash[:notice] = 'Gym created successfully'
       redirect_to @gym
     else
       render 'new'
     end
   end
 
-
-  def edit
-  end
+  def edit; end
 
   def update
     if @gym.update(gym_params)
@@ -30,8 +28,7 @@ class GymsController < ApplicationController
     @gyms = Gym.all
   end
 
-  def show
-  end
+  def show; end
 
   def destroy
     @gym.destroy
@@ -44,6 +41,6 @@ class GymsController < ApplicationController
   end
 
   def find_gym
-            @gym = Gym.find(params[:id])
+    @gym = Gym.find(params[:id])
   end
 end
