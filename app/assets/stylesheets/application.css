@@ -85,7 +85,6 @@ nav {
     100% { left: 0; }
 }
 
-
 .nav-bottom {
     position: fixed;
     left: 0px;
@@ -135,7 +134,7 @@ nav {
     position: relative;
     width: 40%;
     /* text-align: center; */
-    background-color: grey;
+    background-color: black;
     top: -500px;
     padding-top: 15px;
     padding-bottom: 15px;
