@@ -59,7 +59,7 @@ transition-duration: 1s;
 height: 100vh;
 bottom: 0;
 }
-.newgym {
+.newmodal {
   margin: 0 auto;
   background-color: rgb(164, 0, 0);
   width: 100%;
@@ -77,15 +77,15 @@ bottom: 0;
 .open {
   height: calc(100% - 85px);
 }
-.newgym h2 {
+.newmodal h2 {
   margin: 0;
   margin-top:5px;
 }
-.newgym a {
+.newmodal a {
   text-decoration: none;
 }
 .newgymform {
-margin-top: 50px;
+margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
