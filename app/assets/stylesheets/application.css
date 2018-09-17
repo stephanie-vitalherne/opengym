@@ -19,7 +19,8 @@
 
 html{
   font-family: sans-serif;
-  background-image: url(asphalt2.JPG);
+  background-color: grey;
+  /* background-image: url(asphalt2.JPG); */
   background-size: cover;
   color: white;
 }

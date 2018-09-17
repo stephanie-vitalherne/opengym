@@ -1,9 +1,14 @@
 <%= form_for(@user) do |f| %>
-  <%= f.text_field :first_name, placeholder: 'First Name' %> <br>
-  <%= f.text_field :last_name, placeholder: 'Last Name' %> <br>
-  <%= f.text_field :email, placeholder: 'Email' %> <br>
-  <%= f.password_field :password, placeholder: 'Create a Password' %> <br>
-  <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %> <br>
+<div class="register-input">
+  <i class="far fa-user">
 
-  <%=  f.submit %>
+    <%= f.text_field :first_name, placeholder: 'First Name', class: 'input' %> <br>
+  </i>
+</div>
+  <%= f.text_field :last_name, placeholder: 'Last Name', class: 'input' %> <br>
+  <%= f.text_field :email, placeholder: 'Enter Email', class: 'input' %> <br>
+  <%= f.password_field :password, placeholder: 'Create a Password', class: 'input' %> <br>
+  <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'input' %> <br>
+
+  <%=  f.submit 'Lace Up!', id:'submit' %>
 <% end %>
