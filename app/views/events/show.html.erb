@@ -4,7 +4,7 @@
 <h4><%= @event.event_type %><br></h4>
 <span> Start: <%= @event.start_date.strftime("%y/%m/%d") %></span><br>
 <span> End: <%= @event.end_date.strftime("%y/%m/%d") %></span><br>
-
+<p><%= @event.description %></p>
 <% if @event.participants.count != 1 %>
 <%= link_to @event.participants.count.to_s + ' people are coming', gym_event_participants_path(@gym, @event)  %><br>
 <% else %>
