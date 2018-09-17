@@ -179,9 +179,15 @@ nav {
    top: 0;
    width: 100%;
 }
+#gymphoto {
+  min-height: 150px;
+}
+#gymphoto h1 {
+  text-shadow: 1px 1px 1px black;
+}
 #yield-container {
   margin-top: 45px;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
         padding: 0;
 }
 
