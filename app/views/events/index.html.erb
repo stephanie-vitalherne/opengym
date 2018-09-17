@@ -1,2 +1,8 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+
+<ul>
+<% @gym.events.each do |e| %>
+
+ <li><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(@gym, e) %></li>
+
+<% end %>
+</ul>

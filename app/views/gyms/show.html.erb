@@ -10,3 +10,12 @@
 
 
 <%= link_to @gym.name + " events", gym_events_path(@gym)  %>
+<% x = 0 %>
+<ul>
+<% @gym.events.each do |e| %>
+<% if x < 3 %>
+ <li><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(e) %></li>
+  <% x += 1 %>
+<% end %>
+<% end %>
+</ul>
