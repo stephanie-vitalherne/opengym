@@ -178,12 +178,16 @@ nav {
 .intform form {
   width: 100%;
 }
-.intform form > *, .intform input, .upload [type='file'] {
+.intform form > *, .intform input {
   margin: 2px;
   width: 100%;
   border: none;
-  padding: 3px;
   margin: 2px 0;
+  font-size: 20px;
+  padding: 3px 10px;
+}
+.intform form textarea {
+height: 30vh;
 }
 .first {
   background-color: white;
