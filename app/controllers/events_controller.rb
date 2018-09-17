@@ -18,6 +18,8 @@ def create
   else
     render 'new'
 
+
+  end
   end
 
   def show
@@ -26,8 +28,6 @@ def create
 
 
 
-
-  end
 
   def edit
   end
