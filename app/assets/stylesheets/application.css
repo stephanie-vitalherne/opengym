@@ -162,9 +162,6 @@ nav {
 .hidden {
     display: none;
 }
-.gymphoto {
-  width: 100%;
-}
 .gmap_canvas {
   overflow: hidden;
   padding-top: 56.25%;
@@ -179,9 +176,41 @@ nav {
    top: 0;
    width: 100%;
 }
+#gymphoto {
+    min-height: 150px;
+}
+#gymphoto, .gymphoto {
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+}
+#gymphoto h1, .gymphoto h2 {
+  text-shadow: 1px 1px 1px black;
+}
+.gymphoto h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.gymphoto p {
+  margin: 2px;
+}
+.gymphoto {
+  text-align: center;
+height: 80px;
+border-top: 1px solid black;
+margin-top: -20px;
+border-top-right-radius: 20px;
+box-shadow: 0px -1px 2px black;
+}
+.gymphoto a {
+  text-decoration: none;
+}
+.gymscontainer {
+  margin-top: 80px;
+}
 #yield-container {
   margin-top: 45px;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
         padding: 0;
 }
 
@@ -193,12 +222,18 @@ nav {
 .intform form {
   width: 100%;
 }
-.intform form > *, .intform input {
+.intform form > *, .intform input, .upload [type='file'] {
   margin: 2px;
   width: 100%;
   border: none;
   padding: 3px;
   margin: 2px 0;
+}
+.first {
+  background-color: white;
+}
+.gray {
+  background-color: rgb(215, 215, 215);
 }
 .intform form input[type="submit"] {
   background-color: rgb(73, 255, 91);

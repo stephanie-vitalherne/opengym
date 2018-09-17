@@ -1,8 +1,10 @@
-<h1>Gyms#index</h1>
-<p>Find me in app/views/gyms/index.html.erb</p>
+<div class="gymscontainer">
 <% @gyms.each do |g| %>
-<%= link_to g.name, gym_path(g) %><br>
+
+<div class="gymphoto" style="background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url('<%= g.cover_photo.attachment.nil? ? asset_url('asphalt2.JPG') : rails_blob_url(g.cover_photo) %>');">
+<h2><%= link_to g.name, gym_path(g) %></h2><p><%= g.location %></p></div>
 <% end %>
 <p>
 <%= link_to "New Gym", gyms_new_path %>
 </p>
+</div>
