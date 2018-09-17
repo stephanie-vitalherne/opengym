@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/leaderboard'
  root  'pages#home'
   get 'participants/index'
   get 'participants/edit'
