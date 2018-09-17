@@ -28,7 +28,7 @@
   .input {
     background: none;
     border: none;
-    border-bottom: 1px solid red;
+    // border-bottom: 1px solid red;
     height: 5vh;
     color: black;
   }
@@ -52,4 +52,10 @@
 #pro-img {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
+}
+
+.register-input{
+  i{
+    border-bottom: 2px solid red;
+  }
 }
