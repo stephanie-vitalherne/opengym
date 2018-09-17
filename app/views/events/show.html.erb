@@ -6,3 +6,4 @@
 <span> End: <%= @event.end_date.strftime("%y/%m/%d") %></span><br>
 
 <%= link_to @event.name + " participants", gym_event_participants_path(@gym, @event)  %>
+<%= @event.participants.count %> people are coming
