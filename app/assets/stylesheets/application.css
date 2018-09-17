@@ -50,17 +50,24 @@ nav {
 
 .nav-top {
     top: 0;
-    position: sticky;
+    position: fixed;
     display: flex;
 }
 
-.nav-top-logo {
+#nav-top-logo {
     text-shadow: -1px -1px 1px #000;
     flex: 1;
 }
 
-.nav-top button {
-    margin-right: 10px;
+.nav-top i {
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+#search-bar {
+    margin-left: 30px;
+    width: 70%;
+    flex: 1;
 }
 
 .nav-bottom {
@@ -70,23 +77,22 @@ nav {
     display: flex;
 }
 
-.nav-bottom button {
+.nav-bottom i {
     flex: 1;
-    max-width: 70px;
+    max-width: 40px;
 }
 
 .nav-bottom-logo {
     flex: 2;
 }
 
-.nav-bottom button {
+.nav-bottom i {
    margin-left: 10px;
 }
 
-.bar-container {
+#bar-container {
     display: inline-block;
-    cursor: pointer;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -110,17 +116,20 @@ nav {
 }
 
 #nav-box {
-    width: 100%;
-    height: 400px;
-    text-align: center;
+    width: 40%;
+    /* text-align: center; */
     background-color: grey;
-    padding-top: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     list-style: none;
+    margin: auto;
+    margin-top: 200px;
 }
 
 #nav-box li {
     color: white;
-    margin-top: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .hidden {
