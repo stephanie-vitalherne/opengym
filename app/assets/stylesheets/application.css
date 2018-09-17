@@ -131,14 +131,26 @@ nav {
 }
 
 #nav-box {
+    position: relative;
     width: 40%;
     /* text-align: center; */
     background-color: grey;
+    top: -500px;
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
     margin: auto;
     margin-top: 200px;
+    -webkit-animation: down 0.5s forwards;
+    animation: down 0.5s forwards;
+}
+
+@-webkit-keyframes down {
+    100% { top: 0; }
+}
+
+@keyframes down {
+    100% { top: 0; }
 }
 
 #nav-box li {
