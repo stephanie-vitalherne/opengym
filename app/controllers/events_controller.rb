@@ -10,20 +10,28 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  def create
-    @event = @gym.events.new(event_params)
-    if @event.save!
-      redirect_to gym_event_path(@gym, @event)
-    else
-      render 'new'
-    end
+
+def create
+  @event = @gym.events.new(event_params)
+  if @event.save
+    redirect_to gym_event_path(@gym, @event)
+  else
+    render 'new'
+
+
+  end
   end
 
   def show
     @participant = Participant.new
    end
 
-  def edit; end
+
+
+
+  def edit
+  end
+
 
   private
 
