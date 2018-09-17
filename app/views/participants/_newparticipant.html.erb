@@ -1,5 +1,5 @@
 
-
+<div class="intform">
 <%# if not logged in show this %>
 RSVP for yourself or a friend<br>
 <%= form_for([@gym, @event, @participant]) do |f| %>
@@ -18,3 +18,4 @@ if so show 'add a friend' instead of 'add yourself' form
  <%# f.hidden_field :user_id, value: current_user.id %><br>
  <%# f.submit 'Join' %>
  <%# end %>
+</div>
