@@ -1,8 +1,12 @@
 <%= form_for(@user) do |f| %>
 <div class="register-input">
   <i class="far fa-user">
-
-    <%= f.text_field :first_name, placeholder: 'First Name', class: 'input' %> <br>
+    <%= f.text_field :first_name, placeholder: 'First Name', class: 'input' %>
+  </i>
+</div>
+<div class="register-input">
+  <i class="far fa-user">
+    <%= f.text_field :last_name, placeholder: 'st Name', class: 'input' %>
   </i>
 </div>
   <%= f.text_field :last_name, placeholder: 'Last Name', class: 'input' %> <br>
