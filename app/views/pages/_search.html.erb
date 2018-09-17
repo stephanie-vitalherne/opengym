@@ -1,7 +1,12 @@
 
 
-<%= form_tag('/results', method: :get) %>
-<label for="">Search for an event</label>
-<%= text_field_tag(:q)%><br>
-<%= submit_tag("search") %>
+<%#= form_tag('/results', method: :get) %>
+<%#= text_field_tag(:q) %><br>
+<%#= submit_tag("search") %>
+
+<form  accept-charset="UTF-8" action="/results" method="get">
+  <!-- <input id="search-bar" class="hidden" name="utf8" type="hidden" value="&#x2713;" /> -->
+  <input id="search-bar" class="hidden" name="q" type="text", placeholder="search" />
+  <!-- <input name="commit" type="submit" value="Search" /> -->
+</form>
 
