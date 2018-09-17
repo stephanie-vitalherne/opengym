@@ -1,13 +1,7 @@
 class ParticipantsController < ApplicationController
-<<<<<<< HEAD
   before_action :find_participant, only: %i[show edit]
   before_action :find_event, only: %i[show index edit new create]
   before_action :find_gym, only: %i[show index edit new create]
-=======
-  before_action :find_participant, only: [:show, :edit]
-  before_action :find_event
-  before_action :find_gym
->>>>>>> 933ec450a6e438a648e43145ebb919af0d20a063
   def index
     @participant = Participant.all
   end
@@ -32,11 +26,7 @@ class ParticipantsController < ApplicationController
   private
 
   def participant_params
-<<<<<<< HEAD
     params.require(:participant).permit(:user_id, :first_name, :last_name, :email, :phone)
-=======
-  params.require(:participant).permit(:user_id, :event_id, :first_name, :last_name, :email, :phone)
->>>>>>> 933ec450a6e438a648e43145ebb919af0d20a063
     end
 
   def find_participant
