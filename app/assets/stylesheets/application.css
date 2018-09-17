@@ -47,6 +47,7 @@ nav {
     padding-bottom: 1%;
     color: black;
     box-shadow: 0 0 5px black;
+    color: white;
 }
 
 .nav-top {
@@ -61,14 +62,27 @@ nav {
 }
 
 .nav-top i {
-    margin-right: 50px;
+    margin-right: 10px;
     cursor: pointer;
 }
 
 #search-bar {
+    position: relative;
     margin-left: 30px;
     width: 70%;
+    border-radius: 10px;
     flex: 1;
+    left: -1000px;
+    -webkit-animation: slide 0.5s forwards;
+    animation: slide 0.5s forwards;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
 }
 
 .nav-bottom {
@@ -99,7 +113,7 @@ nav {
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -117,14 +131,26 @@ nav {
 }
 
 #nav-box {
+    position: relative;
     width: 40%;
     /* text-align: center; */
-    background-color: grey;
+    background-color: black;
+    top: -500px;
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
     margin: auto;
     margin-top: 200px;
+    -webkit-animation: down 0.5s forwards;
+    animation: down 0.5s forwards;
+}
+
+@-webkit-keyframes down {
+    100% { top: 0; }
+}
+
+@keyframes down {
+    100% { top: 0; }
 }
 
 #nav-box li {
