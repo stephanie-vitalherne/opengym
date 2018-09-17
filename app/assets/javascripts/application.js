@@ -25,7 +25,11 @@ function menuReveal() {
 
 function search() {
     document.getElementById("search-bar").classList.toggle("hidden");
+    document.getElementById("search-bar").classList.toggle("slider");
     document.getElementById("nav-top-logo").classList.toggle("hidden");
+    document.getElementById("cancel").classList.toggle("hidden");
+    document.getElementById("go").classList.toggle("hidden");
+    document.getElementById("search-icon").classList.toggle("hidden");
 }
 
 function newGymOpen() {

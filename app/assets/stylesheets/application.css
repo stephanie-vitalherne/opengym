@@ -53,6 +53,7 @@ nav {
 }
 .nav-top {
     top: 0;
+    height: 35px;
     position: fixed;
     display: flex;
 }
@@ -67,10 +68,15 @@ nav {
     cursor: pointer;
 }
 
+#search {
+    display: flex;
+}
+
 #search-bar {
     position: relative;
+    font-size: 20px;
     margin-left: 30px;
-    width: 70%;
+    width: 100%;
     border-radius: 10px;
     flex: 1;
     left: -1000px;
@@ -135,23 +141,23 @@ nav {
     position: relative;
     width: 40%;
     /* text-align: center; */
-    background-color: black;
-    top: -500px;
+    background: var(--navbar-color);
+    bottom: -500px;
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
     margin: auto;
     margin-top: 200px;
-    -webkit-animation: down 0.5s forwards;
-    animation: down 0.5s forwards;
+    -webkit-animation: up 0.5s forwards;
+    animation: up 0.5s forwards;
 }
 
-@-webkit-keyframes down {
-    100% { top: 0; }
+@-webkit-keyframes up {
+    100% { bottom: 0; }
 }
 
-@keyframes down {
-    100% { top: 0; }
+@keyframes up {
+    100% { bottom: 0; }
 }
 
 #nav-box li {
