@@ -21,10 +21,12 @@
         <% end %>
 <% else %>
 <% @user = User.find_by(id: p.user_id) %>
-<%= link_to @user.first_name @user.last_name, user_path(@user) %>
+<i class="fas fa-star"></i>
+<%= link_to @user.first_name + " " + @user.last_name, user_path(@user) %>
 <% end %>
 
       </li>
     <% end %>
   </ol>
 <% end %>
+<%= render 'newparticipant' %>

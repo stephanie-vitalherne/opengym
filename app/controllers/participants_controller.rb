@@ -4,6 +4,7 @@ class ParticipantsController < ApplicationController
   before_action :find_gym, only: %i[show index edit new create]
   def index
     @participants = Participant.all
+        @participant = Participant.new
   end
 
   def edit; end
@@ -17,7 +18,7 @@ class ParticipantsController < ApplicationController
   def create
     @participant = @event.participants.new(participant_params)
     if @participant.save!
-      redirect_to gym_event_participant_path(@gym, @event, @participant)
+      redirect_to gym_event_participants_path(@gym, @event)
     else
       render 'new'
     end
