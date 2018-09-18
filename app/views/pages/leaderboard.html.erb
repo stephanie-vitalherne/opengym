@@ -1,1 +1,14 @@
-list users by score
+<% if User.first.first_name != nil %>
+<div id="leaderboard">
+  <% @users.each do |u| %>
+    <div><%= u.first_name %></div>
+    <div><%= u.last_name %></div>
+    <div>
+      <% if u.points == nil %>
+        0
+      <% else %>
+        <%= u.points %></div>
+    <% end %>
+  <% end %>
+</div>
+  <% end %>

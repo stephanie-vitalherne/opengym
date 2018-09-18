@@ -19,7 +19,7 @@
 
 function menuReveal() {
     document.getElementById("bar-container").classList.toggle("change");
-    document.getElementById("nav-box").classList.toggle("hidden");
+    document.getElementById("nav-box").classList.toggle("pop-up");
     document.getElementById("yield-container").classList.toggle("hidden");
 }
 
