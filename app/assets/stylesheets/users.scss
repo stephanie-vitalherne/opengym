@@ -1,13 +1,14 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// REGISTER PAGE LAYOUT
 #users-new {
-  position: absolute;
-  top: 8.5%;
-  left: 7%;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 70%;
+  margin-top: 17.5%;
+  margin-left: 7.5%;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 12%;
-  padding: 10% 7%;
+  padding: 7%;
   h1 {
     text-align: center;
     margin: 0;
@@ -18,7 +19,8 @@
 #users-new-info {
   position: relative;
   width: 90%;
-  top: 15%;
+  margin-top: 6%;
+  margin-left: 6%;
   #submit {
     padding: 10%;
     width: 100%;
@@ -31,17 +33,48 @@
   .input {
     background: none;
     border: none;
-    height: 7vh;
-    color: black;
-    width: 90%;
+    height: 7.5vh;
+    // color: rgb(28, 74, 51);
+    width: 100%;
   }
 }
 
+.register-input {
+  left: 15%;
+  display: flex;
+  border-bottom: 2px solid red;
+  .icon {
+    color: black;
+    padding: 0 18px;
+    margin: 18px 0;
+  }
+  ::placeholder {
+    letter-spacing: 2px;
+    color: rgb(28, 74, 51);
+  }
+}
+
+#reg-photo{
+  text-align: center;
+  color: black;
+}
+
+sub{
+  font-weight: lighter;
+  font-size: 14px;
+  color: black;
+  font-variant: small-caps;
+  font-style: oblique;
+}
+
+#min{
+  position: relative;
+  margin-left: 50px;
+}
+// ================================================
+// USERS SHOW LAYOUT
 #users-show {
-  border: 1px solid red;
-  position: absolute;
-  top: 12%;
-  left: 22%;
+  // border: 1px solid red;
   max-width: 100%;
   p {
     font-size: 1.4em;
@@ -49,31 +82,20 @@
 }
 
 #pro-img {
+  position: relative;
+  top: 10%;
+  left: 22%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
 }
 
-.register-input{
-  position: relative;
-  left: 15%;
+#profile-block{
   margin: 0;
   padding: 0;
-  width: 64%;
-  i{
-    border-bottom: 2px solid red;
-    padding-right: 2%;
-    margin-right: 2%;
-    color: black;
-  }
-  ::placeholder{
-    letter-spacing: 1px;
-  }
+  background-color: grey;
+  height: 50vh;
 }
 
-#register-bottom{
-  bottom: 59px;
-}
-
-.new_user{
-  min-width: 100%;
+#edit-button{
+  background-color: linear-gradient(rgb(164, 0, 0), rgb(152, 0, 0));
 }
