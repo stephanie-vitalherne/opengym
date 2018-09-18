@@ -12,7 +12,8 @@
     text-align: center;
     margin: 0;
     padding: 0;
-  }
+  } padding: 0 8px 0 8px;
+    margin: 6px 0 6px 0;
 }
 
 #users-new-info {
@@ -57,11 +58,16 @@
 .register-input{
   position: relative;
   left: 15%;
-  i{
+  display: flex;
     border-bottom: 2px solid red;
-    padding-right: 5%;
-    margin-right: 4%;
+  .icon{
+    // border-bottom: 2px solid red;
+    // padding-right: 5%;
+    // margin-right: 4%;
     color: black;
+    padding: 0 8px 0 8px;
+   margin: 6px 0 6px 0;
+   display: flex;
   }
   ::placeholder{
     letter-spacing: 2px;
