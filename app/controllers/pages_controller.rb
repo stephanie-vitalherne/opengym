@@ -27,7 +27,10 @@ end
   def leaderboard; end
 
 
-  def basketball; end
+  def basketball
+    @basketball = Event.where(:event_type => "Basketball")
+
+   end
 
 
   def football; end

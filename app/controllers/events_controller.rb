@@ -37,7 +37,7 @@ def create
   private
 
   def event_params
-    params.require(:event).permit(:name, :event_type, :start_date, :end_date, :cover_photo)
+    params.require(:event).permit(:name, :event_type, :description, :start_date, :end_date, :cover_photo)
     end
 
   def find_event

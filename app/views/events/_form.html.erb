@@ -3,7 +3,10 @@
 <%= form_for([@gym, @event]) do |f| %>
 <%= f.text_field :name, placeholder: "Event name" %><br>
 <%= f.file_field :cover_photo, :class => "upload" %><br>
-<%= f.text_field :event_type, placeholder: "Event type" %><br>
+<%= f.radio_button :event_type, 'Basketball' %>Basketball<br>
+<%= f.radio_button :event_type, 'Soccer' %>Soccer<br>
+<%= f.radio_button :event_type, 'Football' %>Football<br>
+<%= f.text_field :event_type, placeholder: 'Other' %> <br>
 <%= f.text_area :description, placeholder: 'Description' %><br>
 <%= f.date_field :start_date %><br>
 <%= f.date_field :end_date%><br>
