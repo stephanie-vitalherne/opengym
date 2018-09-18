@@ -27,6 +27,10 @@ class ParticipantsController < ApplicationController
     end
   end
 
+  def destroy
+    @participant.destroy
+  end
+
   private
 
   def participant_params

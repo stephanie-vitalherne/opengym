@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
 resources :gyms do
 resources :events do
-  resources :participants
+  resources :participants do
+        delete 'delete' => 'participants#destroy'
+      end
 end
 end
 

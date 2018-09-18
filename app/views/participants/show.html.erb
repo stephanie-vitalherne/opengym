@@ -1,1 +1,4 @@
 <%= @participant.first_name %>
+<%= link_to gym_event_participant_delete_path(@gym, @event, @participant), method: :delete, data: {confirm: "Delete?"}, class: 'delete' do %>
+  <i title="Delete" class="fas fa-times alt="Delete"></i>
+  <% end %>
