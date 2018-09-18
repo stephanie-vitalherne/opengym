@@ -138,27 +138,34 @@ nav {
 }
 
 #nav-box {
-    position: relative;
+    position: fixed;
     width: 40%;
     /* text-align: center; */
     background: var(--navbar-color);
-    bottom: -500px;
+    /* bottom: -500px; */
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
-    margin: auto;
-    margin-top: 200px;
-    -webkit-animation: up 0.5s forwards;
-    animation: up 0.5s forwards;
+    left: 25%;
+    margin-top: 2200px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    /* -webkit-animation: up 0.5s forwards;
+    animation: up 0.5s forwards; */
 }
 
-@-webkit-keyframes up {
+.pop-up {
+    /* bottom: 0 !important; */
+    margin-top: 100px !important;
+}
+
+/* @-webkit-keyframes up {
     100% { bottom: 0; }
 }
 
 @keyframes up {
     100% { bottom: 0; }
-}
+} */
 
 #nav-box li {
     color: white;
