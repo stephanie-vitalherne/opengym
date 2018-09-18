@@ -14,7 +14,7 @@
  *= require_self
  */
  :root {
-   --navbar-color: linear-gradient(rgb(164, 0, 0), rgb(152, 0, 0));
+   --navbar-color: linear-gradient(rgb(52, 94, 44), rgb(52, 94, 44));
  }
 
 html{
@@ -67,6 +67,9 @@ nav {
     text-shadow: -1px -1px 1px #000;
     flex: 1;
 }
+#nav-top-logo a{
+ text-decoration: none;
+}
 
 .nav-top i {
     margin-right: 10px;
@@ -101,7 +104,7 @@ nav {
 #go {
     margin-top: 5px;
     margin-right: 10px;
-    
+
 }
 
 #cancel {

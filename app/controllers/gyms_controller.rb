@@ -26,12 +26,11 @@ class GymsController < ApplicationController
 
   def index
     @gyms = Gym.all
-        @gym = Gym.new
-
+    @gym = Gym.new
   end
 
   def show
-            @event = Event.new
+    @event = Event.new
    end
 
   def destroy

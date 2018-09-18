@@ -1,2 +1,11 @@
 <h1>Pages#basketball</h1>
-<p>Find me in app/views/pages/basketball.html.erb</p>
+
+
+
+<% @basketball.each do |b| %>
+<%= b.name %><br>
+ <%= b.description %><br>
+   <%= b.start_date %> -
+ <%= b.end_date %><br>
+<% end %>
+

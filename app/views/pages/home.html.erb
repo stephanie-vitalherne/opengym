@@ -1,4 +1,6 @@
 <h3>hompage</h3>
 
 
-<%#= render 'search' %>
+<% @event.each do |e| %>
+<%= link_to "#{e.name}",gym_event_path(@gym, e) %><br>
+<%end %>
