@@ -40,4 +40,6 @@ function newGymOpen() {
 
 function removeShadow() {
        document.getElementById("footer").classList.remove("shadow");
-     }
+}
+
+
