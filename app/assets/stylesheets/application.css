@@ -151,22 +151,11 @@ nav {
     margin-top: 2200px;
     transition: 0.5s;
     transition-timing-function: ease-in-out;
-    /* -webkit-animation: up 0.5s forwards;
-    animation: up 0.5s forwards; */
 }
 
 .pop-up {
-    /* bottom: 0 !important; */
-    margin-top: 100px !important;
+    margin-top: 120px !important;
 }
-
-/* @-webkit-keyframes up {
-    100% { bottom: 0; }
-}
-
-@keyframes up {
-    100% { bottom: 0; }
-} */
 
 #nav-box li {
     color: white;

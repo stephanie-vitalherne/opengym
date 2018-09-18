@@ -1,8 +1,8 @@
 class ParticipantsController < ApplicationController
 
-  before_action :find_participant, only: %i[show edit]
-  before_action :find_event, only: %i[show index edit new create]
-  before_action :find_gym, only: %i[show index edit new create]
+  before_action :find_participant, only: %i[show edit destroy]
+  before_action :find_event, only: %i[show index edit new create destroy]
+  before_action :find_gym, only: %i[show index edit new create destroy]
 
 
   def index
@@ -29,6 +29,7 @@ class ParticipantsController < ApplicationController
 
   def destroy
     @participant.destroy
+      redirect_to gym_event_participants_path(@gym, @event)
   end
 
   private

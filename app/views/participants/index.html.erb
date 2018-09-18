@@ -23,6 +23,11 @@
 <% @user = User.find_by(id: p.user_id) %>
 <i class="fas fa-star"></i>
 <%= link_to @user.first_name + " " + @user.last_name, user_path(@user) %>
+If participant is user OR user owns gym or event, allow delete
+<%= link_to [@gym, @event, @participant], :method  => :delete do %>
+  <i title="Delete" class="fas fa-times alt="Delete"></i>
+  <% end %>
+
 <% end %>
 
       </li>
