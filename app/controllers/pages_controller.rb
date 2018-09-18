@@ -5,6 +5,8 @@ class PagesController < ApplicationController
 
 
   def home
+    @event = Event.all
+    @gym = Gym.find_by(params[:gym_id])
   end
 
 def search
