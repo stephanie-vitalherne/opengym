@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #users-new {
-  position: absolute;
-  top: 8.5%;
-  left: 7%;
+  width: 70%;
+  margin-top: 20.5%;
+  margin-left: 7.5%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 12%;
-  padding: 10% 7%;
+  padding: 7% 7%;
   h1 {
     text-align: center;
     margin: 0;
@@ -18,7 +18,8 @@
 #users-new-info {
   position: relative;
   width: 90%;
-  top: 15%;
+  margin-top: 6%;
+  margin-left: 6%;
   #submit {
     padding: 10%;
     width: 100%;
@@ -31,9 +32,9 @@
   .input {
     background: none;
     border: none;
-    height: 7vh;
+    height: 5vh;
     color: black;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -56,24 +57,13 @@
 .register-input{
   position: relative;
   left: 15%;
-  margin: 0;
-  padding: 0;
-  width: 64%;
   i{
     border-bottom: 2px solid red;
-    padding-right: 2%;
-    margin-right: 2%;
+    padding-right: 5%;
+    margin-right: 4%;
     color: black;
   }
   ::placeholder{
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
-}
-
-#register-bottom{
-  bottom: 59px;
-}
-
-.new_user{
-  min-width: 100%;
 }
