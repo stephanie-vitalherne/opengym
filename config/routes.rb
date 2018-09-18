@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/leaderboard'
+
  root  'pages#home'
   get 'participants/index'
   get 'participants/edit'
@@ -26,11 +26,11 @@ get '/results' => 'pages#results'
 
   get 'register' => 'users#new'
 
-
-  get 'pages/basketball'
-  get 'pages/football'
-  get 'pages/soccer'
-  get 'pages/other'
-  get 'pages/about'
+  get '/leaderboard' => 'pages#leaderboard'
+  get '/basketball' => 'pages#basketball'
+  get '/football' => 'pages#football'
+  get '/soccer' => 'pages#soccer'
+  get '/other' => 'pages#other'
+  get '/about' => 'pages#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

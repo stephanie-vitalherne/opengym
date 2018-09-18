@@ -1,8 +1,15 @@
-
-<ul>
+<div class="gymscontainer">
 <% @gym.events.each do |e| %>
 
- <li><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(@gym, e) %></li>
-
+<div class="gymphoto" style="background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url('<%= e.cover_photo.attachment.nil? ? asset_url('asphalt2.JPG') : rails_blob_url(e.cover_photo) %>');">
+<h2><%= link_to e.name, gym_event_path(@gym, e) %></h2><p><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(@gym, e) %>
+<p><%= e.description %></p>
+</div>
 <% end %>
-</ul>
+</div>
+<div id="newmodal" class="newmodal"><h2 onclick="newGymOpen()"><i class="fas fa-plus"></i> Play Here</h2>
+  <div class="newgymform">
+    <%= render 'events/form' %>
+  </div>
+      <h2><i id="close" onclick="newGymOpen()" class="fas fa-times"></i></h2>
+</div>
