@@ -1,19 +1,19 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// REGISTER PAGE LAYOUT
 #users-new {
   width: 70%;
-  margin-top: 20.5%;
+  margin-top: 17.5%;
   margin-left: 7.5%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 12%;
-  padding: 7% 7%;
+  padding: 7%;
   h1 {
     text-align: center;
     margin: 0;
     padding: 0;
-  } padding: 0 8px 0 8px;
-    margin: 6px 0 6px 0;
+  }
 }
 
 #users-new-info {
@@ -33,17 +33,48 @@
   .input {
     background: none;
     border: none;
-    height: 5vh;
-    color: black;
+    height: 7.5vh;
+    // color: rgb(28, 74, 51);
     width: 100%;
   }
 }
 
+.register-input {
+  left: 15%;
+  display: flex;
+  border-bottom: 2px solid red;
+  .icon {
+    color: black;
+    padding: 0 18px;
+    margin: 18px 0;
+  }
+  ::placeholder {
+    letter-spacing: 2px;
+    color: rgb(28, 74, 51);
+  }
+}
+
+#reg-photo{
+  text-align: center;
+  color: black;
+}
+
+sub{
+  font-weight: lighter;
+  font-size: 14px;
+  color: black;
+  font-variant: small-caps;
+  font-style: oblique;
+}
+
+#min{
+  position: relative;
+  margin-left: 50px;
+}
+// ================================================
+// USERS SHOW LAYOUT
 #users-show {
-  border: 1px solid red;
-  position: absolute;
-  top: 12%;
-  left: 22%;
+  // border: 1px solid red;
   max-width: 100%;
   p {
     font-size: 1.4em;
@@ -51,25 +82,20 @@
 }
 
 #pro-img {
+  position: relative;
+  top: 10%;
+  left: 22%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
 }
 
-.register-input{
-  position: relative;
-  left: 15%;
-  display: flex;
-    border-bottom: 2px solid red;
-  .icon{
-    // border-bottom: 2px solid red;
-    // padding-right: 5%;
-    // margin-right: 4%;
-    color: black;
-    padding: 0 8px 0 8px;
-   margin: 6px 0 6px 0;
-   display: flex;
-  }
-  ::placeholder{
-    letter-spacing: 2px;
-  }
+#profile-block{
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  height: 50vh;
+}
+
+#edit-button{
+  background-color: linear-gradient(rgb(164, 0, 0), rgb(152, 0, 0));
 }
