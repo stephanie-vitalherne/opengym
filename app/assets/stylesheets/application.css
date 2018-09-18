@@ -75,6 +75,7 @@ nav {
 
 #search {
     position: fixed;
+    display: flex;
     background: var(--navbar-color);
     top: 0;
     margin-left: -1000px;
@@ -92,9 +93,18 @@ nav {
 
 #search-bar {
     font-size: 20px;
-    margin-left: 10px;
-    width: 70%;
+    margin-left: 5px;
+    width: 90%;
     border-radius: 10px;
+}
+
+#go {
+    margin-right: 10px;
+    
+}
+
+#cancel {
+    margin-right: 10px;
 }
 
 .nav-bottom {
