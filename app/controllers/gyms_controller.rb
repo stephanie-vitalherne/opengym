@@ -26,9 +26,13 @@ class GymsController < ApplicationController
 
   def index
     @gyms = Gym.all
+        @gym = Gym.new
+
   end
 
-  def show; end
+  def show
+            @event = Event.new
+   end
 
   def destroy
     @gym.destroy

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
  root  'pages#home'
   get 'participants/index'
   get 'participants/edit'
@@ -7,7 +8,9 @@ Rails.application.routes.draw do
 
 resources :gyms do
 resources :events do
-  resources :participants
+  resources :participants do
+        delete 'delete' => 'participants#destroy'
+      end
 end
 end
 
@@ -25,11 +28,11 @@ get '/results' => 'pages#results'
 
   get 'register' => 'users#new'
 
-
-  get 'pages/basketball'
-  get 'pages/football'
-  get 'pages/soccer'
-  get 'pages/other'
-  get 'pages/about'
+  get '/leaderboard' => 'pages#leaderboard'
+  get '/basketball' => 'pages#basketball'
+  get '/football' => 'pages#football'
+  get '/soccer' => 'pages#soccer'
+  get '/other' => 'pages#other'
+  get '/about' => 'pages#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

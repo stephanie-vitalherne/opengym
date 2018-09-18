@@ -19,3 +19,9 @@
 <% end %>
 <% end %>
 </ul>
+<div id="newmodal" class="newmodal"><h2 onclick="newGymOpen()"><i class="fas fa-plus"></i> Play Here</h2>
+  <div class="newgymform">
+    <%= render 'events/form' %>
+  </div>
+      <h2><i id="close" onclick="newGymOpen()" class="fas fa-times"></i></h2>
+</div>

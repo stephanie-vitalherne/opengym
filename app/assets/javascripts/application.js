@@ -19,11 +19,23 @@
 
 function menuReveal() {
     document.getElementById("bar-container").classList.toggle("change");
-    document.getElementById("nav-box").classList.toggle("hidden");
+    document.getElementById("nav-box").classList.toggle("pop-up");
     document.getElementById("yield-container").classList.toggle("hidden");
 }
 
 function search() {
     document.getElementById("search-bar").classList.toggle("hidden");
+    document.getElementById("search-bar").classList.toggle("slider");
     document.getElementById("nav-top-logo").classList.toggle("hidden");
+    document.getElementById("cancel").classList.toggle("hidden");
+    document.getElementById("go").classList.toggle("hidden");
+    document.getElementById("search-icon").classList.toggle("hidden");
 }
+
+function newGymOpen() {
+      document.getElementById("newmodal").classList.toggle("open");
+}
+
+function removeShadow() {
+       document.getElementById("footer").classList.remove("shadow");
+     }
