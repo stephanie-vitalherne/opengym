@@ -89,11 +89,12 @@ sub{
   left: 22%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
+  border: 3px solid
   box-shadow: 0 0 15px white;
 }
 
 #profile-block{
-  background-color: grey;
+  background-color: rgb(159, 157, 124);
   height: 50vh;
 }
 
@@ -109,4 +110,4 @@ sub{
   background-color: red;
 }
 
-#A9CCC6
+// A9CCC6 border color
