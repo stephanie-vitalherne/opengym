@@ -47,6 +47,7 @@ nav {
     padding-bottom: 1%;
     color: black;
     color: white;
+    z-index: 10;
 }
 .shadow {
       box-shadow: 0 0 5px black;
