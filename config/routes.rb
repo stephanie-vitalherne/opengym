@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'messages/index'
+  get 'messages/new'
+  get 'messages/edit'
+  get 'messages/show'
  root  'pages#home'
   get 'participants/index'
   get 'participants/edit'
@@ -12,6 +16,10 @@ resources :events do
         delete 'delete' => 'participants#destroy'
       end
 end
+end
+
+resources :users do
+  resources :messages
 end
 
 
