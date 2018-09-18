@@ -1,33 +1,41 @@
 <%= form_for(@user) do |f| %>
 <div class="register-input">
-  <i class="far fa-user">
+  <div class="icon">
+    <i class="far fa-user"></i>
+  </div>
     <%= f.text_field :first_name, placeholder: 'First Name', class: 'input' %>
-  </i>
 </div>
 <div class="register-input">
-  <i class="far fa-user">
+  <div class="icon">
+  <i class="far fa-user"></i>
+</div>
     <%= f.text_field :last_name, placeholder: 'Last Name', class: 'input' %>
-  </i>
 </div>
 <div class="register-input">
-  <i class="fas fa-at">
-    <%= f.email_field :email, placeholder: 'Email', class: 'input' %>
-  </i>
+  <div class="icon">
+  <i class="fas fa-at"></i>
 </div>
+    <%= f.email_field :email, placeholder: 'Enter Email', class: 'input' %>
+</div>
+<sub id='min'><%= f.label :password, 'Minimum 8 Characters' %></sub>
+<br>
 <div class="register-input">
-  <i class="fas fa-key">
+  <div class="icon">
+  <i class="fas fa-key"></i>
+</div>
     <%= f.password_field :password, placeholder: 'Create a Password', class: 'input' %>
-  </i>
 </div>
 <div class="register-input">
-  <i class="fas fa-key">
+  <div class="icon">
+  <i class="fas fa-key"></i>
+</div>
     <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'input' %>
-  </i>
 </div>
-<div class="register-input">
-  <%= f.label :photo, 'Upload a photo' %>
+<div id='reg-photo'>
+  <sub><%= f.label :photo, 'Upload A Photo' %></sub>
   <br>
   <%= f.file_field :photo %>
 </div>
+
 <%= f.submit 'Lace Up!', id:'submit' %>
 <% end %>

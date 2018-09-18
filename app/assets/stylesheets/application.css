@@ -19,8 +19,8 @@
 
 html{
   font-family: sans-serif;
-  background-color: rgb(82, 82, 82);
-  /* background-image: url(asphalt2.JPG); */
+  /* background-color: rgb(82, 82, 82); */
+  background-image: url(asphalt2.JPG);
   background-size: cover;
   color: white;
 }
