@@ -93,16 +93,20 @@ sub{
 }
 
 #profile-block{
-  margin: 0;
-  padding: 0;
   background-color: grey;
   height: 50vh;
 }
 
-#edit-button a{
+#edit-button a i{
   position: relative;
   border: 1px solid red;
   margin-left: 63%;
   max-width: 5%;
-  margin-top: 50%;
+  margin-top: 17%;
+  z-index: 1;
+  border-radius: 100px;
+  padding: 4%;
+  background-color: red;
 }
+
+#A9CCC6
