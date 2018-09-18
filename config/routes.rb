@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
+  get 'pages/leaderboard'
+ root  'pages#home'
   get 'participants/index'
   get 'participants/edit'
   get 'participants/show'
   get 'participants/new'
- root  'pages#home'
 
 resources :gyms do
 resources :events do
   resources :participants
 end
 end
+
+
+get '/results' => 'pages#results'
   get '/gyms' => 'gyms#index'
 
   get 'gyms/show'

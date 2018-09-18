@@ -1,7 +1,10 @@
 class ParticipantsController < ApplicationController
+
   before_action :find_participant, only: %i[show edit]
   before_action :find_event, only: %i[show index edit new create]
   before_action :find_gym, only: %i[show index edit new create]
+
+
   def index
     @participants = @event.participants
         @participant = Participant.new

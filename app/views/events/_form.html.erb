@@ -1,11 +1,8 @@
 <div class="intform">
-  <h1>Event form</h1>
-
-
-
+  <h2>Event form</h2>
 <%= form_for([@gym, @event]) do |f| %>
 <%= f.text_field :name, placeholder: "Event name" %><br>
-<%= f.file_field :cover_photo %><br>
+<%= f.file_field :cover_photo, :class => "upload" %><br>
 <%= f.text_field :event_type, placeholder: "Event type" %><br>
 <%= f.text_area :description, placeholder: 'Description' %><br>
 <%= f.date_field :start_date %><br>
