@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   get 'pages/leaderboard'
  root  'pages#home'
   get 'participants/index'
@@ -26,6 +27,9 @@ get '/results' => 'pages#results'
 
   get 'register' => 'users#new'
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
   get 'pages/basketball'
   get 'pages/football'
