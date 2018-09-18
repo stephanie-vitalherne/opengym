@@ -24,7 +24,9 @@ end
   end
 
 
-  def leaderboard; end
+  def leaderboard
+    @users = User.all.order(points: :desc)
+   end
 
 
   def basketball

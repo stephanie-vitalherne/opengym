@@ -56,7 +56,7 @@ transition-duration: 1s;
 .aboutphoto:hover {
   height: 50vh;
 }
-.leaderboard {
+#leaderboard {
   display: grid;
   grid-template-columns: repeat(3, auto);
 }

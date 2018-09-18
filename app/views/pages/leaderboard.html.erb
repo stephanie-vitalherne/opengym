@@ -1,10 +1,14 @@
-list users by score
+<% if User.first.first_name != nil %>
 <div id="leaderboard">
-  (in controller) @users = Users all organize by points descending
-  show top (amount)
-  user.each do u
-  <div>u.first_name</div>
-  <div>u.last_name</div>
-  <div>u.score</div>
-  end
+  <% @users.each do |u| %>
+    <div><%= u.first_name %></div>
+    <div><%= u.last_name %></div>
+    <div>
+      <% if u.points == nil %>
+        0
+      <% else %>
+        <%= u.points %></div>
+    <% end %>
+  <% end %>
 </div>
+  <% end %>

@@ -13,21 +13,18 @@
 
   <body>
 
-
-
-
-   <!--    <input id="search-bar" class="hidden" type="text" placeholder="search" name="search"> -->
-
     <nav id="header" class="nav-top shadow">
+      
+      <div id="og-top">
+        <div id="nav-top-logo">Open Gym</div>
+        <div id="search-icon"><i onClick="search()" class="fa fa-search"></i></div>
+      </div>
       <div id="search">
            <%= render 'pages/search' %>
         <!-- <input id="search-bar" type="text"  class="hidden" placeholder="search" name="search"> -->
-        <button class="hidden" id="go">GO</button>
-        <button class="hidden" id="cancel" onClick="search()">X</button>
+        <button id="go">GO</button>
+        <button id="cancel" onClick="search()">X</button>
       </div>
-
-      <div id="nav-top-logo">Open Gym</div>
-      <div id="search-icon"><i onClick="search()" class="fa fa-search"></i></div>
     </nav>
 
     <div id="yield-container"> <%= yield %> </div>

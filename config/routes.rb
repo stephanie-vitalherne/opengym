@@ -1,32 +1,28 @@
 Rails.application.routes.draw do
 
- root  'pages#home'
-  get 'participants/index'
-  get 'participants/edit'
-  get 'participants/show'
-  get 'participants/new'
+  root 'pages#home'
 
-resources :gyms do
-resources :events do
-  resources :participants do
+  resources :users, only: %i[edit index create show update destroy] do
+      resources :messages
+  end
+
+  resources :gyms do
+    resources :events do
+      resources :participants do
         delete 'delete' => 'participants#destroy'
       end
-end
+    end
 end
 
 
-get '/results' => 'pages#results'
+  get '/results' => 'pages#results'
   get '/gyms' => 'gyms#index'
 
-  get 'gyms/show'
-  get 'gyms/edit'
-  get 'gyms/new'
-
-
-
-  resources :users, only: %i[edit index create show update destroy]
-
   get 'register' => 'users#new'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
   get '/leaderboard' => 'pages#leaderboard'
   get '/basketball' => 'pages#basketball'
