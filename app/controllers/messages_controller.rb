@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:user_id, :sender_id, :subject, :body, :read)
-    end
+  end
 
   def find_messages_from
     @messages_from = Participant.find(params[:id])
@@ -46,4 +46,4 @@ class MessagesController < ApplicationController
   def find_user
     @user = User.find(params[:user_id])
   end
-  end
+end

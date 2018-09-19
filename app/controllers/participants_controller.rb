@@ -26,9 +26,9 @@ class ParticipantsController < ApplicationController
           User.increment_counter(:points, 1)
           p @user.points
         else
-User.increment_counter(:points, 1)
+          User.increment_counter(:points, 1)
           p @user.points
-      end
+        end
       end
       redirect_to gym_event_participants_path(@gym, @event)
     else
@@ -45,7 +45,7 @@ User.increment_counter(:points, 1)
 
   def participant_params
     params.require(:participant).permit(:user_id, :first_name, :last_name, :email, :phone)
-    end
+  end
 
   def find_participant
     @participant = Participant.find(params[:id])
