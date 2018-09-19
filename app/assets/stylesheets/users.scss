@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // REGISTER PAGE LAYOUT
-#users-new {
+#users {
   width: 70%;
   margin-top: 17.5%;
   margin-left: 7.5%;
@@ -16,7 +16,7 @@
   }
 }
 
-#users-new-info {
+#users-info {
   position: relative;
   width: 90%;
   margin-top: 6%;
@@ -31,18 +31,20 @@
     box-shadow: 0 0 10px black;
   }
   .input {
-    background: none;
+    background: none !important;
     border: none;
     height: 7.5vh;
     // color: rgb(28, 74, 51);
     width: 100%;
+    font-size: large;
+    text-align: right;
   }
 }
 
 .register-input {
   left: 15%;
   display: flex;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgb(52, 94, 44);
   .icon {
     color: black;
     padding: 0 18px;
@@ -78,26 +80,69 @@ sub{
 #users-show {
   // border: 1px solid red;
   max-width: 100%;
-  p {
+  span h2 {
     font-size: 1.4em;
+    position: relative;
+    // border: 1px solid turquoise;
+    width: 50%;
+    text-align: center;
+    margin-top: -17%;
+    margin-left: 24%;
+  }
+  p{
+    text-align: center;
+    margin-top: -4%;
+    margin-left: 1%;
   }
 }
 
 #pro-img {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  top: 15%;
   left: 22%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
+  border: 3px solid white;
+  box-shadow: 0 0 15px white;
 }
 
 #profile-block{
-  margin: 0;
-  padding: 0;
-  background-color: grey;
+  background-color: rgb(159, 157, 124);
   height: 50vh;
 }
 
-#edit-button{
-  background-color: linear-gradient(rgb(164, 0, 0), rgb(152, 0, 0));
+#edit-button a i{
+  position: relative;
+  border: 1px solid rgb(52, 94, 44);
+  margin-left: 63%;
+  max-width: 5%;
+  margin-top: 17%;
+  z-index: 1;
+  border-radius: 100px;
+  padding: 4%;
+  background-color: rgb(52, 94, 44);
 }
+// ================================================
+// EDIT PAGE
+.edit_user{
+  .input{
+    background: none;
+    border: none;
+    height: 7.5vh;
+    // color: rgb(28, 74, 51);
+    width: 100%;
+    font-size: large;
+    text-align: right;
+  }
+  #submit {
+    padding: 10%;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-top: 10%;
+    border: none;
+    box-shadow: 0 0 10px black;
+  }
+}
+
+// A9CCC6 border color

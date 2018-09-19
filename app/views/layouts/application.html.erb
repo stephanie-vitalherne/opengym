@@ -32,7 +32,9 @@
      <%= render 'layouts/nav-box' %>
 
     <nav id="footer" class="nav-bottom shadow">
+      <%= link_to user_messages_path('1') do %>
       <i class="far fa-envelope"></i>
+      <% end %>
       <div class="nav-bottom-logo">OG</div>
       <div id="bar-container" onClick="menuReveal()">
         <div class="bar1"></div>

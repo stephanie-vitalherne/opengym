@@ -14,7 +14,7 @@
  *= require_self
  */
  :root {
-   --navbar-color: linear-gradient(rgb(164, 0, 0), rgb(152, 0, 0));
+   --navbar-color: linear-gradient(rgb(52, 94, 44), rgb(52, 94, 44));
  }
 
 html{
