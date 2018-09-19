@@ -22,10 +22,11 @@ class ParticipantsController < ApplicationController
       if logged_in?
         @user = User.find_by(id: @current_user.id)
         if @user.points.nil?
-          @user.points = 1
+          @user.points = 0
+          User.increment_counter(:points, 1)
           p @user.points
         else
-          @user.points += 1
+User.increment_counter(:points, 1)
           p @user.points
       end
       end

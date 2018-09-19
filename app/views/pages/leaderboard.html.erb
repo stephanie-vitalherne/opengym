@@ -1,14 +1,14 @@
 <% if User.first.first_name != nil %>
-<div id="leaderboard">
-  <% @users.each do |u| %>
-    <div><%= u.first_name %></div>
-    <div><%= u.last_name %></div>
-    <div>
+<div id="leaderboard"><ol>
+  <% @users.each do |u| %><li>
+    <%= u.first_name %>
+    <%= u.last_name %>
+
       <% if u.points == nil %>
         0
       <% else %>
-        <%= u.points %></div>
+        <%= u.points %></li>
     <% end %>
-  <% end %>
+  <% end %></ol>
 </div>
   <% end %>
