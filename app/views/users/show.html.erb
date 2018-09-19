@@ -1,6 +1,6 @@
 <div id='users-show'>
-  <%# if current_user == nil %>
-  <%# else %>
+  <% if current_user == nil %>
+  <% else %>
   <div id="profile-block">
       <div id="edit-button">
         <%= link_to edit_user_path do %><i class="far fa-edit"></i><% end %>
@@ -13,5 +13,5 @@
   <span><h2 style="width: 50%"><%= @user.full_name %></h2></span>
   <% end %>
   <p><%= @user.email %></p>
-  <%# end %>
+  <% end %>
 </div>
