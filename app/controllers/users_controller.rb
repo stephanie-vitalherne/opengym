@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       flash[:notice] = 'User updated successfully'
+      redirect_to @user
     else
       render 'edit'
     end
