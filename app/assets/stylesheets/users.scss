@@ -13,6 +13,7 @@
     text-align: center;
     margin: 0;
     padding: 0;
+    text-shadow: 0 0 25px grey;
   }
 }
 
@@ -25,10 +26,15 @@
     padding: 10%;
     width: 100%;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10%;
     border: none;
     box-shadow: 0 0 10px black;
+    background-color: rgba(52, 94, 44, 0.69);
+  }
+  #submit:hover{
+    background-color: rgb(52, 94, 44);
+    color: white;
   }
   .input {
     background: none !important;
@@ -69,6 +75,7 @@ sub{
   color: black;
   font-variant: small-caps;
   font-style: oblique;
+  text-shadow: 0 0 0.1px black;
 }
 
 #min{
@@ -78,16 +85,13 @@ sub{
 // ================================================
 // USERS SHOW LAYOUT
 #users-show {
-  // border: 1px solid red;
   max-width: 100%;
   span h2 {
     font-size: 1.4em;
     position: relative;
-    // border: 1px solid turquoise;
-    width: 50%;
     text-align: center;
     margin-top: -17%;
-    margin-left: 24%;
+    margin-left: 25.5%;
   }
   p{
     text-align: center;
@@ -121,6 +125,9 @@ sub{
   border-radius: 100px;
   padding: 4%;
   background-color: rgb(52, 94, 44);
+   a i:active{
+    color: black;
+  }
 }
 // ================================================
 // EDIT PAGE
@@ -129,7 +136,6 @@ sub{
     background: none;
     border: none;
     height: 7.5vh;
-    // color: rgb(28, 74, 51);
     width: 100%;
     font-size: large;
     text-align: right;
@@ -138,11 +144,14 @@ sub{
     padding: 10%;
     width: 100%;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10%;
     border: none;
     box-shadow: 0 0 10px black;
+    background-color: rgba(52, 94, 44, 0.69);
+  }
+  #submit:hover{
+    background-color: rgb(52, 94, 44);
+    color: white;
   }
 }
-
-// A9CCC6 border color

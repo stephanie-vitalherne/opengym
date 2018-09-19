@@ -7,7 +7,11 @@
       </div>
     <%= @user.photo.attachment.nil? ? image_tag('default.png', size: '200x200', id: 'pro-img') : image_tag(@user.photo, size: '200x200', id: 'pro-img') %>
   </div>
-  <span><h2><%= @user.full_name %></h2></span>
+  <% if @user.full_name.length  > 15 %>
+  <span><h2 style="width: 62%; margin-left: 21.5%;"><%= @user.full_name %></h2></span>
+  <% else %>
+  <span><h2 style="width: 50%"><%= @user.full_name %></h2></span>
+  <% end %>
   <p><%= @user.email %></p>
   <%# end %>
 </div>

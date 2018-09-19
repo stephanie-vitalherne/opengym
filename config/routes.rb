@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'locations/new'
+  get 'locations/edit'
+  get 'locations/show'
   root 'pages#home'
 
   resources :users, only: %i[edit index create show update destroy] do
@@ -13,7 +16,7 @@ Rails.application.routes.draw do
       end
     end
 end
-
+  resources :locations
 
   get '/results' => 'pages#results'
   get '/gyms' => 'gyms#index'

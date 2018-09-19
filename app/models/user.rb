@@ -4,6 +4,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 30 }
   has_secure_password
    has_one_attached :photo
+   has_one :location
    has_many :messages
   scope :sorted, -> { order('id ASC') }
   scope :newest_first, -> { order('created_at DESC') }
