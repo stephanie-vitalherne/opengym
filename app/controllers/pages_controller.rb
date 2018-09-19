@@ -42,7 +42,7 @@ class PagesController < ApplicationController
 
   def soccer
     @soccer = Event.where(:event_type => "Soccer")
-
+   end
 
 
 
