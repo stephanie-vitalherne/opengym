@@ -37,9 +37,14 @@ end
    end
 
 
-  def football; end
+  def football
+    @football = Event.where(:event_type => "football")
 
-  def soccer; end
+   end
+
+  def soccer
+    @soccer = Event.where(:event_type => "Soccer")
+   end
 
   def other; end
 
