@@ -1,6 +1,6 @@
 
 <h1>Pages#other</h1>
-<p>Find me in app/views/pages/other.html.erb</p>
+
 <%# if request.remote_ip == nil %>
 <%# @results = Geocoder.search("98.116.10.64") %>
 <%# else %>
@@ -8,14 +8,16 @@
 <%# end %>
 <%# @results.first.city %>
 
-<%# @other.each do |b| %>
-<%#= b.name %><br>
- <%#= b.description %><br>
-   <%#= b.start_date %> -
- <%#= b.end_date %>
-<%# end %>
-<% @other.reject{|c| c == "Basketball" && "Soccer"}.each do |s| %>
-<%= s %><br>
+<% @other.each do |b| if b.event_type != "Basketball" %>
+<% if b.event_type !=  "Soccer"%>
+<% if b.event_type != "Football" %>
+<%= link_to "#{b.name}", gym_event_path(@gym, b) %><br>
+<%= b.description %><br>
+<%= b.start_date %> -
+<%= b.end_date %>
+<% end %>
+<% end %>
+<% end %>
 <% end %>
 
 
@@ -27,9 +29,9 @@
 <p>Distance in Miles Between My Location and End Location (Driving): <input id = "dist"></p>
 <button id = "submitloc" style = "display:block;">Create</button>
 <script>
-document.getElementById("submitloc").addEventListener("click", () => {
-getBothCoordPairs(document.getElementById("testInputAddress").value);
-});
+  document.getElementById("submitloc").addEventListener("click", () => {
+    getBothCoordPairs(document.getElementById("testInputAddress").value);
+  });
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04
 " type="text/javascript"></script>
