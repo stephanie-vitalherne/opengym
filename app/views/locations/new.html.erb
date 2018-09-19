@@ -6,11 +6,11 @@
 <p>My Location: <input id = "myLoc2"></p>
 <p>End Location: <input id = "endLoc"></p>
 <p>Distance in Miles Between My Location and End Location (Driving): <input id = "dist"></p>
-<button id = "submitloc" style = "display:block;">Create</button>
+<button id = "submitloc" style = "display:block;">Calculate Distance</button><hr>
 <%= form_for([@user, @location]) do |f| %>
-  <%= f.text_field :user_id, value: @current_user.id %>
-  <%= f.text_field :coordinates %>
-        <%= f.submit "Locate" %>
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+  <%= f.hidden_field :coordinates %>
+        <%= f.submit "Set My Location" %>
         <% end %>
 <script>
   document.getElementById("submitloc").addEventListener("click", () => {

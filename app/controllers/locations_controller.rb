@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     if @location.save
-      redirect_to location_path(@location)
+redirect_back(fallback_location: locations_new_path)
     else
       render 'new'
     end
