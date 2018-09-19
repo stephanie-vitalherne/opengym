@@ -48,6 +48,7 @@ nav {
     color: black;
     color: white;
     z-index: 10;
+    font-family: 'Alice', serif;
 }
 .shadow {
       box-shadow: 0 0 5px black;
@@ -65,8 +66,10 @@ nav {
 
 #nav-top-logo {
     text-shadow: -1px -1px 1px #000;
+    margin-left: 40px;
     flex: 1;
 }
+
 #nav-top-logo a{
  text-decoration: none;
 }
@@ -83,7 +86,8 @@ nav {
     top: 0;
     margin-left: -1000px;
     width: 100%;
-    padding-bottom: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     -webkit-transition: 0.5;
     transition: 0.5s;
     -webkit-transition-timing-function: ease-in-out;
@@ -98,18 +102,35 @@ nav {
     font-size: 20px;
     margin-left: 5px;
     width: 90%;
+    margin-right: 10px;
     border-radius: 10px;
 }
 
-#go {
+#search-bar:focus {
+    border: 2px solid gold;
+}
+
+.search-buttons {
     margin-top: 5px;
     margin-right: 10px;
+    background: white;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    padding: 1px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
 
+#go {
+    width: 40px;
+    margin-right: 10px;
+    border: 1px solid #39ff14;
 }
 
 #cancel {
-    margin-top: 5px;
-    margin-right: 10px;
+    width: 35px;
+    border: 1px solid red;
 }
 
 .nav-bottom {
@@ -121,7 +142,7 @@ nav {
 
 .nav-bottom i {
     flex: 1;
-    max-width: 40px;
+    max-width: 30px;
 }
 
 .nav-bottom-logo {
@@ -129,6 +150,7 @@ nav {
 }
 
 .nav-bottom i {
+    font-size: 40px;
    margin-left: 10px;
 }
 

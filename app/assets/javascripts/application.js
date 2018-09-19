@@ -24,14 +24,7 @@ function menuReveal() {
 }
 
 function search() {
-  // document.getElementById("search-bar").classList.toggle("hidden");
-  // document.getElementById("search-bar").classList.toggle("slider");
-  // document.getElementById("nav-top-logo").classList.toggle("hidden");
-  // document.getElementById("cancel").classList.toggle("hidden");
-  // document.getElementById("go").classList.toggle("hidden");
-  // document.getElementById("search-icon").classList.toggle("hidden");
   document.getElementById("search").classList.toggle("search-transition");
-  // document.getElementById("og-top").classList.toggle("right");
 }
 
 function newGymOpen() {
@@ -41,22 +34,9 @@ function newGymOpen() {
 function removeShadow() {
 
        document.getElementById("footer").classList.remove("shadow");
-<<<<<<< HEAD
-}
-
-=======
      }
 
-
-
-
 // other = document.querySelector("input");
-
-
-
-
-
-
 
 
 let allCoords = {};
@@ -117,5 +97,4 @@ let calculateDistance = () => {
     );
 
 }
->>>>>>> a27024ac5b23bcd22fe3682f2705ccd223785c24
 
