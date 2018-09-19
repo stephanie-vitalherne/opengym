@@ -8,27 +8,36 @@
   <ol class="participants_list">
     <%  @participants.each do |p| %>
       <li>
-<% if p.user_id == 0 || p.user_id == nil %>
-      <%= p.first_name %>
-        <%if p.last_name != nil %>
-          <%= p.last_name %>
+        <% if p.user_id == 0 || p.user_id == nil %>
+          <%= p.first_name %>
+          <%if p.last_name != nil %>
+            <%= p.last_name %>
+          <% end %>
+          <% if p.email != nil %>
+            <%= p.email %>
+          <% end %>
+          <%if p.phone != nil %>
+            <%= p.phone %>
+          <% end %>
+          <% if logged_in? %>
+            <% if @gym.user_id == @current_user.id || @event.user_id == @current_user.id %>
+              <%= link_to [@gym, @event, @participant], :method => :delete do %>
+              <i title="Delete" class="fas fa-times" alt="Delete"></i>
+            <% end %>
+          <% end %>
+          <% end %>
+        <% else %>
+          <% @user = User.find_by(id: p.user_id) %>
+            <i class="fas fa-star"></i>
+            <%= link_to @user.first_name + " " + @user.last_name, user_path(@user) %>
+            <% if logged_in? %>
+              <% if p.user_id == @current_user.id || @gym.user_id == @current_user.id || @event.user_id == @current_user.id %>
+                <%= link_to [@gym, @event, @participant], :method => :delete do %>
+                <i title="Delete" class="fas fa-times" alt="Delete"></i>
+              <% end %>
+            <% end %>
+          <% end %>
         <% end %>
-        <%if p.email != nil %>
-          <%= p.email %>
-        <% end %>
-        <%if p.phone != nil %>
-          <%= p.phone %>
-        <% end %>
-<% else %>
-<% @user = User.find_by(id: p.user_id) %>
-<i class="fas fa-star"></i>
-<%= link_to @user.first_name + " " + @user.last_name, user_path(@user) %>
-If participant is user OR user owns gym or event, allow delete
-<%= link_to [@gym, @event, @participant], :method  => :delete do %>
-  <i title="Delete" class="fas fa-times alt="Delete"></i>
-  <% end %>
-
-<% end %>
 
       </li>
     <% end %>
