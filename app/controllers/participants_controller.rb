@@ -19,6 +19,16 @@ class ParticipantsController < ApplicationController
   def create
     @participant = @event.participants.new(participant_params)
     if @participant.save!
+      if logged_in?
+        @user = User.find_by(id: @current_user.id)
+        if @user.points.nil?
+          @user.points = 1
+          p @user.points
+        else
+          @user.points += 1
+          p @user.points
+      end
+      end
       redirect_to gym_event_participants_path(@gym, @event)
     else
       render 'new'
