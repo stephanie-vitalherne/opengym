@@ -254,6 +254,6 @@ height: 30vh;
 .other-box:before{
   content: 'Other';
   color: white;
-  margin-left: 13%;
-    font-size: medium;
+  margin-left: -2%;
+  font-size: medium;
 }
