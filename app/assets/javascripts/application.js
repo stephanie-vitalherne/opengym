@@ -39,8 +39,20 @@ function newGymOpen() {
 }
 
 function removeShadow() {
-  document.getElementById("footer").classList.remove("shadow");
-}
+
+       document.getElementById("footer").classList.remove("shadow");
+     }
+
+
+
+
+// other = document.querySelector("input");
+
+
+
+
+
+
 
 
 let allCoords = {};
@@ -101,3 +113,4 @@ let calculateDistance = () => {
     );
 
 }
+

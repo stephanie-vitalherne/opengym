@@ -1,3 +1,24 @@
+
+<h1>Pages#other</h1>
+<p>Find me in app/views/pages/other.html.erb</p>
+<%# if request.remote_ip == nil %>
+<%# @results = Geocoder.search("98.116.10.64") %>
+<%# else %>
+<%# @results = Geocoder.search(request.remote_ip) %>
+<%# end %>
+<%# @results.first.city %>
+
+<%# @other.each do |b| %>
+<%#= b.name %><br>
+ <%#= b.description %><br>
+   <%#= b.start_date %> -
+ <%#= b.end_date %>
+<%# end %>
+<% @other.reject{|c| c == "Basketball" && "Soccer"}.each do |s| %>
+<%= s %><br>
+<% end %>
+
+
 <h1>Hey Test</h1>
 <p>Address:</p>
 <input id = "testInputAddress">
@@ -13,3 +34,4 @@ getBothCoordPairs(document.getElementById("testInputAddress").value);
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04
 " type="text/javascript"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
