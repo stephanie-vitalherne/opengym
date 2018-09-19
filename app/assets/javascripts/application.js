@@ -67,13 +67,13 @@ navigator.geolocation.getCurrentPosition((position) => {
     console.log(`LATITUDE: ${lat} LONGITUDE ${lng}`);
 
     allCoords.userLoc = {latitude: lat, longitude: lng};
-
-    retrieveLocationDataAddressToCoords(address);
+    document.getElementById("location_coordinates").value += allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
+    // retrieveLocationDataAddressToCoords(address);
 
 });
 
 }
-
+getBothCoordPairs();
 let retrieveLocationDataAddressToCoords = (addressArg) => {
 console.log(addressArg);
 
@@ -113,4 +113,3 @@ let calculateDistance = () => {
     );
 
 }
-

@@ -32,6 +32,6 @@ class LocationsController < ApplicationController
   end
 
   def find_location
-    @location = current_user.location
+    @location = @current_user.location
   end
 end
