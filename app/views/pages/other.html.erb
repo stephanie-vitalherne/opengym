@@ -6,3 +6,14 @@
 <%# @results = Geocoder.search(request.remote_ip) %>
 <%# end %>
 <%# @results.first.city %>
+
+<%# @other.each do |b| %>
+<%#= b.name %><br>
+ <%#= b.description %><br>
+   <%#= b.start_date %> -
+ <%#= b.end_date %>
+<%# end %>
+<% @other.reject{|c| c == "Basketball" && "Soccer"}.each do |s| %>
+<%= s %><br>
+<% end %>
+

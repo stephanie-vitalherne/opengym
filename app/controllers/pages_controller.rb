@@ -38,7 +38,7 @@ end
 
 
   def football
-    @football = Event.where(:event_type => "football")
+    @football = Event.where(:event_type => "Football")
 
    end
 
@@ -46,7 +46,10 @@ end
     @soccer = Event.where(:event_type => "Soccer")
    end
 
-  def other; end
+  def other
+  @other = Event.select(:event_type).map{|c| c.event_type}
+
+   end
 
   def about; end
 end
