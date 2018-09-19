@@ -1,3 +1,57 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.login {
+  width: 70%;
+  margin-top: 17.5%;
+  margin-left: 7.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12%;
+  padding: 7%;
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 25px grey;
+  }
+}
+
+.register-input {
+  left: 15%;
+  display: flex;
+  border-bottom: 2px solid rgb(52, 94, 44);
+  .icon {
+    color: black;
+    padding: 0 18px;
+    margin: 18px 0;
+  }
+  ::placeholder {
+    letter-spacing: 2px;
+    color: rgb(28, 74, 51);
+    font-size: 15px;
+    vertical-align: sub;
+  }
+}
+sub{
+  font-weight: lighter;
+  font-size: 14px;
+  color: black;
+  font-variant: small-caps;
+  font-style: oblique;
+  text-shadow: 0 0 0.1px black;
+}
+
+#min{
+  position: relative;
+  margin-left: 50px;
+}
+
+.input {
+  background: none !important;
+  border: none;
+  height: 7.5vh;
+  // color: rgb(28, 74, 51);
+  width: 100%;
+  font-size: large;
+  text-align: right;
+}
