@@ -49,7 +49,9 @@ class PagesController < ApplicationController
 
 
     def other
-      @other = Event.select(:event_type).map{|c| c.event_type}
+      # @other = Event.select(:event_type).map{|c| c.event_type}
+      @other = Event.all
+        @gym = Gym.find_by(params[:gym_id])
 
     end
 
