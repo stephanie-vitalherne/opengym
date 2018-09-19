@@ -1,8 +1,18 @@
 class LocationsController < ApplicationController
-  before_action :find_location, only: %i[show edit update destroy]
+  before_action :find_location, only: %i[update destroy]
+
   def new
-    @location = Location.new
+    if logged_in?
+
+    if @current_user.location == nil
+   @location = Location.new
+    else
+    @location = Location.find_by(user_id: @current_user.id)
+    end
   end
+    end
+
+
 
   def create
     @location = Location.new(location_params)
@@ -13,15 +23,14 @@ redirect_back(fallback_location: locations_new_path)
     end
   end
 
-  def show; end
-
-  def edit; end
 
   def update
+
     if @location.update(location_params)
       flash[:notice] = 'Location updated successfully'
+      redirect_back(fallback_location: locations_new_path)
     else
-      render 'edit'
+      render 'new'
     end
   end
 
@@ -32,6 +41,9 @@ redirect_back(fallback_location: locations_new_path)
   end
 
   def find_location
-    @location = @current_user.location
+    if logged_in?
+    @location = Location.find_by(user_id: @current_user.id)
   end
+  end
+
 end

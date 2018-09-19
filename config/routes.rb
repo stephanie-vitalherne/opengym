@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
   get 'locations/new'
-  get 'locations/edit'
-  get 'locations/show'
+ patch 'locations/new'
   root 'pages#home'
 
   resources :users, only: %i[edit index create show update destroy] do
