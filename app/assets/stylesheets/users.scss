@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // REGISTER PAGE LAYOUT
-#users-new {
+#users {
   width: 70%;
   margin-top: 17.5%;
   margin-left: 7.5%;
@@ -16,7 +16,7 @@
   }
 }
 
-#users-new-info {
+#users-info {
   position: relative;
   width: 90%;
   margin-top: 6%;
@@ -31,7 +31,7 @@
     box-shadow: 0 0 10px black;
   }
   .input {
-    background: none;
+    background: none !important;
     border: none;
     height: 7.5vh;
     // color: rgb(28, 74, 51);
@@ -42,7 +42,7 @@
 .register-input {
   left: 15%;
   display: flex;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgb(52, 94, 44);
   .icon {
     color: black;
     padding: 0 18px;
@@ -78,8 +78,13 @@ sub{
 #users-show {
   // border: 1px solid red;
   max-width: 100%;
-  p {
+  span {
     font-size: 1.4em;
+    position: relative;
+    border: 1px solid turquoise;
+    width: 50%;
+    text-align: center;
+    bottom: 21%;
   }
 }
 
@@ -108,6 +113,26 @@ sub{
   border-radius: 100px;
   padding: 4%;
   background-color: red;
+}
+
+// EDIT PAGE
+.edit_user{
+  .input{
+    background: none;
+    border: none;
+    height: 7.5vh;
+    // color: rgb(28, 74, 51);
+    width: 100%;
+  }
+  #submit {
+    padding: 10%;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-top: 10%;
+    border: none;
+    box-shadow: 0 0 10px black;
+  }
 }
 
 // A9CCC6 border color
