@@ -2,36 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.radio{
+.radio {
   display: flex;
   position: absolute;
   left: 30%;
-  }
+}
 
-.radio label{
+.radio label {
   font-size: 15px;
 }
 
-input#event_event_type_basketball{
+input#event_event_type_basketball {
   margin-right: 260px;
-  padding: 0px;
+  padding: 0;
 }
-input#event_event_type_soccer{
+
+input#event_event_type_soccer {
   margin-right: 240px;
-  padding: 0px;
+  padding: 0;
 }
-input#event_event_type_football{
+
+input#event_event_type_football {
   margin-right: 245px;
-  padding: 0px;
+  padding: 0;
 }
-.other-radio label{
- font-size: 15px;
+
+.other-radio label {
+  font-size: 15px;
   // margin-right: 230px;
   // padding: 0px;
 }
 
-input#other{
+input#other {
   width: 45%;
-
+  margin-left: 15%;
 }
