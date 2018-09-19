@@ -221,3 +221,8 @@ height: 30vh;
   border-radius: 5px;
   padding: 10px;
 }
+
+.other-box:before{
+  content: 'Other';
+  color: white;
+}

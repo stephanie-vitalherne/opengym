@@ -15,8 +15,7 @@
 
 <%#= f.text_field :event_type, placeholder: "other" %>
 <span class="other-radio">
-<%= f.label :Other %>
-<input onchange="betterWork()" id="other" type="radio"  name="event[event_type]" placeholder="other"></span> <br>
+<input onchange="betterWork()" id="other" class='other-box' type="radio"  name="event[event_type]" placeholder="other"></span> <br>
 <%= f.text_area :description, placeholder: 'Description' %><br>
 <%= f.date_field :start_date %><br>
 <%= f.date_field :end_date%><br>
