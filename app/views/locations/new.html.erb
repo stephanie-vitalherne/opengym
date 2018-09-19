@@ -1,2 +1,26 @@
-<h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+
+<% if logged_in? %>
+<h1>Hey Test</h1>
+<p>Address:</p>
+<input id = "testInputAddress">
+<p>My Location: <input id = "myLoc2"></p>
+<p>End Location: <input id = "endLoc"></p>
+<p>Distance in Miles Between My Location and End Location (Driving): <input id = "dist"></p>
+<button id = "submitloc" style = "display:block;">Calculate Distance</button><hr>
+<%= form_for([@user, @location]) do |f| %>
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+  <%= f.hidden_field :coordinates %>
+        <%= f.submit "Set My Location" %>
+        <% end %>
+        <% if @current_user.location.coordinates != nil %>
+        <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<%= @current_user.location.coordinates %>&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+        <% end %>
+          <% end %>
+<script>
+  document.getElementById("submitloc").addEventListener("click", () => {
+    getBothCoordPairs(document.getElementById("testInputAddress").value);
+  });
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04
+" type="text/javascript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

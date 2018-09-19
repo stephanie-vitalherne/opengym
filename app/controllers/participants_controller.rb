@@ -20,7 +20,7 @@ class ParticipantsController < ApplicationController
     @participant = @event.participants.new(participant_params)
     if @participant.save!
       if logged_in?
-        @user = User.find_by(id: @current_user.id)
+        @user = User.find_by(id: @participant.user_id)
         if @user.points.nil?
           @user.points = 0
           User.increment_counter(:points, 1)
@@ -37,6 +37,17 @@ class ParticipantsController < ApplicationController
   end
 
   def destroy
+    if logged_in?
+      @user = User.find_by(id: @participant.user_id)
+    if @user.points.nil?
+      @user.points = 0
+      User.increment_counter(:points, 0)
+      p @user.points
+    else
+User.decrement_counter(:points, 1)
+      p @user.points
+  end
+end
     @participant.destroy
     redirect_to gym_event_participants_path(@gym, @event)
   end
