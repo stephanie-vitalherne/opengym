@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :gyms do
     resources :events do
       resources :participants do
-        delete 'delete' => 'participants#destroy'
+        delete '/delete' => 'participants#destroy'
       end
     end
 end

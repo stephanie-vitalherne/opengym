@@ -21,7 +21,7 @@
           <% end %>
           <% if logged_in? %>
             <% if @gym.user_id == @current_user.id || @event.user_id == @current_user.id %>
-              <%= link_to [@gym, @event, @participant], :method => :delete do %>
+              <%= link_to [@gym, @event, p], :method => :delete do %>
               <i title="Delete" class="fas fa-times" alt="Delete"></i>
             <% end %>
           <% end %>
@@ -32,7 +32,7 @@
             <%= link_to @user.first_name + " " + @user.last_name, user_path(@user) %>
             <% if logged_in? %>
               <% if p.user_id == @current_user.id || @gym.user_id == @current_user.id || @event.user_id == @current_user.id %>
-                <%= link_to [@gym, @event, @participant], :method => :delete do %>
+                <%= link_to [@gym, @event, p], :method => :delete do %>
                 <i title="Delete" class="fas fa-times" alt="Delete"></i>
               <% end %>
             <% end %>
