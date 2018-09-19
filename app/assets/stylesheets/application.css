@@ -186,6 +186,7 @@ nav {
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
+    text-align: center;
     left: 25%;
     margin-top: 2200px;
     -webkit-transition: 0.5;
@@ -194,8 +195,12 @@ nav {
     transition-timing-function: ease-in-out;
 }
 
+#nav-box a {
+    text-decoration: none;
+}
+
 .pop-up {
-    margin-top: 120px !important;
+    margin-top: 150px !important;
 }
 
 #nav-box li {
