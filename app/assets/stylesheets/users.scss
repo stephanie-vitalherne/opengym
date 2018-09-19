@@ -13,6 +13,7 @@
     text-align: center;
     margin: 0;
     padding: 0;
+    text-shadow: 0 0 25px grey;
   }
 }
 
@@ -25,10 +26,15 @@
     padding: 10%;
     width: 100%;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10%;
     border: none;
     box-shadow: 0 0 10px black;
+    background-color: rgba(52, 94, 44, 0.69);
+  }
+  #submit:hover{
+    background-color: rgb(52, 94, 44);
+    color: white;
   }
   .input {
     background: none !important;
@@ -69,6 +75,7 @@ sub{
   color: black;
   font-variant: small-caps;
   font-style: oblique;
+  text-shadow: 0 0 0.1px black;
 }
 
 #min{
@@ -121,6 +128,9 @@ sub{
   border-radius: 100px;
   padding: 4%;
   background-color: rgb(52, 94, 44);
+   a i:active{
+    color: black;
+  }
 }
 // ================================================
 // EDIT PAGE
@@ -138,10 +148,15 @@ sub{
     padding: 10%;
     width: 100%;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10%;
     border: none;
     box-shadow: 0 0 10px black;
+    background-color: rgba(52, 94, 44, 0.69);
+  }
+  #submit:hover{
+    background-color: rgb(52, 94, 44);
+    color: white;
   }
 }
 
