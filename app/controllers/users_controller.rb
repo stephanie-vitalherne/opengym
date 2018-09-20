@@ -26,6 +26,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    p "Terminating #{user.full_name} from OpenGym"
+    user.destroy
+    respond_to do |format|
+      format.js
+      format.html { p 'html response'; redirect_to root_path }
+    end
+  end
+
   private
 
   def user_params

@@ -1,8 +1,20 @@
 <div id="nav-box">
+  <% if current_user == nil %>
+    <li><%= link_to 'Home', root_path %></li>
     <li><%= link_to 'Leaderboard', leaderboard_path %></li>
     <li><%= link_to 'Basketball', basketball_path %></li>
     <li><%= link_to 'Soccer', soccer_path %></li>
     <li><%= link_to 'Football', football_path %></li>
     <li><%= link_to 'Other', other_path %></li>
     <li><%= link_to 'About Us', about_path %></li>
+  <% else %>
+  <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to "#{current_user.full_name}", user_path(current_user)%></li>
+    <li><%= link_to 'Leaderboard', leaderboard_path %></li>
+    <li><%= link_to 'Basketball', basketball_path %></li>
+    <li><%= link_to 'Soccer', soccer_path %></li>
+    <li><%= link_to 'Football', football_path %></li>
+    <li><%= link_to 'Other', other_path %></li>
+    <li><%= link_to 'About Us', about_path %></li>
+  <% end %>
 </div>
