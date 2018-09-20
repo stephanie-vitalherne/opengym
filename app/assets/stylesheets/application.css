@@ -180,15 +180,15 @@ nav {
 }
 
 #nav-box {
-    position: fixed;
-    width: 40%;
+    position: relative;
+    width: 70%;
     background: var(--navbar-color);
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
     text-align: center;
-    left: 25%;
-    margin-top: 2200px;
+    margin: 0 auto;
+    margin-top: 2200px; 
     -webkit-transition: 0.5;
     transition: 0.5s;
     -webkit-transition-timing-function: ease-in-out;
