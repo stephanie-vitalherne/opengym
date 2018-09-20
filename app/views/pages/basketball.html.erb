@@ -1,13 +1,16 @@
 <h1>Basketball Events</h1>
 
-<% @basketball.each do |b| %>
-  <h3><%= link_to "#{b.name}", '#' %></h3>
-  <% if b.description == nil %>
-  <% else %>
-  <p><%= b.description %></p>
+<div class="events-pages-info">
+  <% @basketball.each do |b| %>
+    <h3><%= link_to "#{b.name}", '#' %></h3>
+    <% if b.description == nil %>
+    <% else %>
+      <p><%= b.description %></p>
+    <% end %>
+    <sub>
+      <%= b.start_date.strftime("%b. %e, %Y") %>
+      -
+      <%= b.end_date.strftime("%b. %e, %Y") %>
+    </sub>
   <% end %>
-  <sub>
-    <%= b.start_date.strftime("%b. %e, %Y") %> - 
-    <%= b.end_date.strftime("%b. %e, %Y") %>
-  </sub>
-<% end %>
+</div>
