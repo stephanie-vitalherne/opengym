@@ -14,6 +14,27 @@ class EventsController < ApplicationController
   def create
     @event = @gym.events.new(event_params)
     if @event.save
+
+
+User.all.each do |u|
+      if @event.gym.coordinates != nil && u.location != nil
+      distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + u.location.coordinates + "&destinations=" + @event.gym.coordinates + "&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04")
+        distance = JSON.parse(distrequest.body)
+        @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").gsub(",", "").to_f
+          if @dist <= 5
+            Message.create(
+              user_id: u.id,
+              sender_id: 0,
+              subject: @event.name + "is happening nearby!",
+              body: @event.name + " is scheduled at " + @event.gym.name,
+              read: false
+  )
+          end
+      end
+    end
+
+
+
       redirect_to gym_event_path(@gym, @event)
     else
       render 'new'

@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Righteous|Alice|Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -36,13 +36,17 @@
 
     <nav id="footer" class="nav-bottom shadow">
       <% if logged_in? %>
+
       <%= link_to user_messages_path(@current_user) do %>
       <i class="far fa-envelope results"></i>
+
+
       <% end %>
+      <% else %>
+        <div class="nav-bottom-logo">OG</div>
         <% end %>
          <%= render 'layouts/locator' %>
 
-      <div class="nav-bottom-logo">OG</div>
       <div id="bar-container" onClick="menuReveal()">
         <div class="bar1"></div>
         <div class="bar2"></div>

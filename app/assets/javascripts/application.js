@@ -17,10 +17,22 @@
 
 
 
+// if (document.querySelector("#search").contains('search-transition')) {
+// // Detect all clicks on the document
+// document.addEventListener("click", function(event) {
+// 	// If user clicks inside the element, do nothing
+// 	if (event.target.closest("#search" + "#search-icon")) return;
+
+// 	// If user clicks outside the element, hide it!
+//     document.querySelector("#search").classList.remove("search-transition");
+// });
+// }
+
+
+
 function menuReveal() {
   document.getElementById("bar-container").classList.toggle("change");
   document.getElementById("nav-box").classList.toggle("pop-up");
-  document.getElementById("yield-container").classList.toggle("hidden");
 }
 
 function search() {
@@ -57,52 +69,11 @@ navigator.geolocation.getCurrentPosition((position) => {
 
     console.log(`LATITUDE: ${lat} LONGITUDE ${lng}`);
 
-    allCoords.userLoc = {latitude: lat, longitude: lng};
-    // document.getElementById("location_coordinates").value = allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
-    // retrieveLocationDataAddressToCoords(address);
 
+    allCoords.userLoc = {latitude: lat, longitude: lng};
+
+    document.getElementById("location_coordinates").value = allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
 });
 
 }
 getBothCoordPairs();
-//
-// let retrieveLocationDataAddressToCoords = (addressArg) => {
-// console.log(addressArg);
-
-
-//
-// axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressArg}&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04`)
-// .then((response) => {
-//     console.log(response);
-//
-//     allCoords.endLoc = {latitude: response.data.results[0].geometry.location.lat, longitude: response.data.results[0].geometry.location.lng};
-//     console.log(allCoords);
-//
-//     // document.getElementById("myLoc").value += `Lat: ${allCoords.userLoc.latitude} Lng: ${allCoords.userLoc.longitude}`;
-//     document.getElementById("gym_coordinates").value = allCoords.endLoc.latitude + "," + allCoords.endLoc.longitude;
-//
-//     // calculateDistance();
-// }).catch((error) => {
-//     console.log(error);
-// });
-// }
-
-// let calculateDistance = () => {
-//     let calculate = new google.maps.DistanceMatrixService();
-//
-//     calculate.getDistanceMatrix(
-//         {
-//           origins: [{lat: allCoords.userLoc.latitude, lng: allCoords.userLoc.longitude}],
-//           destinations: [{lat: allCoords.endLoc.latitude, lng: allCoords.endLoc.longitude}],
-//           unitSystem: google.maps.UnitSystem.IMPERIAL,
-//           travelMode: 'DRIVING' //<---Default
-//         },
-//         (response, status) => {
-//             console.log(response);
-//             var s = response.rows[0].elements[0].distance.text.replace(' mi', '');
-//             document.getElementById("dist").value += s;
-//             console.log(status);
-//         }
-//     );
-//
-// }

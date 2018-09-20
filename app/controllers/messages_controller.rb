@@ -1,17 +1,8 @@
 class MessagesController < ApplicationController
-  before_action :find_message, only: %i[show edit destroy]
-  before_action :find_user, only: %i[show index edit new create destroy]
+  before_action :find_messages, only: %i[destroy]
+  before_action :find_user, only: %i[index create destroy]
 
   def index
-    @messages_from = @user.messages
-    @message = Message.new
-  end
-
-  def edit; end
-
-  def show; end
-
-  def new
     @message = Message.new
   end
 
