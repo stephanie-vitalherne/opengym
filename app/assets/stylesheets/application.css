@@ -145,24 +145,25 @@ nav {
 }
 
 .nav-bottom i {
-    flex: 1;
-    max-width: 30px;
-}
-
-.nav-bottom-logo {
-    flex: 2;
-    text-shadow: 3px 2px 3px black
-}
-
-.nav-bottom i {
     font-size: 40px;
-   margin-left: 10px;
+   margin-right: 40px;
+}
+
+.fa-envelope {
+    margin-left: 25px;
 }
 
 #bar-container {
     display: inline-block;
-    margin-right: 15px;
+    margin-left: 20px;
 }
+
+.nav-bottom-logo {
+    margin-left: 170px;
+    margin-right: 100px;
+    text-shadow: 3px 2px 3px black
+}
+
 
 .bar1, .bar2, .bar3 {
     width: 35px;
@@ -200,7 +201,6 @@ nav {
     transition: 0.5s;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-
 }
 
 #nav-box a {

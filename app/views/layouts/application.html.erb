@@ -36,13 +36,14 @@
 
     <nav id="footer" class="nav-bottom shadow">
       <% if logged_in? %>
-      <%= link_to user_messages_path(@current_user) do %>
-      <i class="far fa-envelope"></i>
+        <%= link_to user_messages_path(@current_user) do %>
+        <i class="far fa-envelope"></i>
       <% end %>
+      <% else %>
+        <div class="nav-bottom-logo">OG</div>
         <% end %>
          <%= render 'layouts/locator' %>
 
-      <div class="nav-bottom-logo">OG</div>
       <div id="bar-container" onClick="menuReveal()">
         <div class="bar1"></div>
         <div class="bar2"></div>
