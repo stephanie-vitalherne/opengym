@@ -20,8 +20,10 @@
 html{
   font-family: sans-serif;
   /* background-color: rgb(82, 82, 82); */
-  background-image: url(asphalt2.JPG);
+  /* background-image: url(asphalt2.JPG); */
+  background-image: url("court.png");
   background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 a {
@@ -180,15 +182,15 @@ nav {
 }
 
 #nav-box {
-    position: fixed;
-    width: 40%;
+    position: relative;
+    width: 70%;
     background: var(--navbar-color);
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
     text-align: center;
-    left: 25%;
-    margin-top: 2200px;
+    margin: 0 auto;
+    margin-top: 2200px; 
     -webkit-transition: 0.5;
     transition: 0.5s;
     -webkit-transition-timing-function: ease-in-out;
@@ -257,3 +259,5 @@ height: 30vh;
   margin-left: -2%;
   font-size: medium;
 }
+
+
