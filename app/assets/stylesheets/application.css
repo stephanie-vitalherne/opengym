@@ -281,9 +281,12 @@ transition-duration: 1s;
   /* border: none; */
   font-size: 20px;
   padding: 3px 10px;
+  border-radius:3%;
 }
 .intform form textarea {
-height: 30vh;
+height: 17vh;
+border-radius: 3%;
+margin-top: 6%;
 }
 .first {
   background-color: white;
@@ -292,15 +295,39 @@ height: 30vh;
   background-color: rgb(215, 215, 215);
 }
 .intform form input[type="submit"] {
-  background-color: rgb(73, 255, 91);
-  border-color: rgb(73, 255, 91);
+ /* background-color: rgb(73, 255, 91);
+  border-color: rgb(73, 255, 91);*/
   width: 86%;
   border-radius: 5px;
   padding: 10px;
+  margin-top: 7px;
+
 }
 
-.other-box:before{
+.end-date{
+  margin-top: 4px;
+
+}
+
+#event_end_date input-placeholder{
+  text-align: center;
+}
+
+/*.other-box:before{
   content: 'Other';
   color: white;
   margin-left: -22%;
+}*/
+
+input#other{
+ /* width: 42px;*/
+  margin-left:116px;
+  margin-top:7px;
 }
+label.other{
+      font-size: 18px;
+    position: absolute;
+    right: 236px;
+    top: 229px;
+}
+
