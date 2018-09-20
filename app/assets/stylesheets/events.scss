@@ -5,67 +5,57 @@
 .radio {
   display: flex;
   position: absolute;
-  left: 30%;
 }
 
 .radio label {
-  font-size: 15px;
+  margin-left: 112px;
 }
 
 input#event_event_type_basketball {
-  margin-right: 260px;
-  padding: 0;
+  margin-right: 78px;
 }
 
 input#event_event_type_soccer {
-  margin-right: 240px;
-  padding: 0;
+  margin-right: 50px;
 }
 
 input#event_event_type_football {
-  margin-right: 245px;
-  padding: 0;
+  margin-right: 59px;
 }
 
 .other-radio label {
   font-size: 15px;
-  // margin-right: 230px;
-  // padding: 0px;
 }
-
-// .other-radio:before{
-//   content: 'other';
-// }
 
 input#other {
   width: 45%;
-  margin-left: 15%;
+  margin-left: 121px;
 }
 
-.events{
+.events {
+  position: relative;
   text-align: center;
   padding-top: 30px;
 }
 
 .events a {
   text-decoration: none;
-  color: black;
-
+  color: black !important;
 }
 
-.events ul{
-list-style: none;
-
-}
-
-.events li{
-  padding: 11px;
+.events li {
+  padding: 10px;
   border: 1px solid white;
-  margin-top: 10px;
-  width: 91%;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  list-style: none;
+  width: 85%;
   background-color: white;
-  -webkit-clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
-clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+  font-family: 'Righteous', cursive;
+  letter-spacing: 1.5px;
+  -webkit-clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
 }
 
 
