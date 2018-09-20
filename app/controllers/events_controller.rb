@@ -25,7 +25,7 @@ User.all.each do |u|
             Message.create(
               user_id: u.id,
               sender_id: 0,
-              subject: @event.name + "is happening nearby!",
+              subject: @event.name + " is happening nearby!",
               body: @event.name + " is scheduled at " + @event.gym.name,
               read: false
   )

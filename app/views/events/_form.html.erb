@@ -1,26 +1,27 @@
 <div class="intform">
-  <h2>Event form</h2>
+  <h2 class="results">Event form</h2>
 <%= form_for([@gym, @event]) do |f| %>
 <%= f.text_field :name,  placeholder: "Event name" %><br>
-<%= f.file_field :cover_photo, :class => "upload" %><br>
-<span class="radio">
+<%= f.file_field :cover_photo, :class => "upload results" %><br>
+<span class="radio results">
  <%= f.label :Basketball %>
  <%= f.radio_button :event_type, 'basketball'%></span><br>
- <span class="radio">
+ <span class="radio results">
 <%= f.label :Soccer %>
 <%= f.radio_button :event_type, 'Soccer' %></span><br>
-<span class="radio">
+<span class="radio results">
 <%= f.label :Football %>
 <%= f.radio_button :event_type, 'Football' %><br></span>
 <%#= f.radio_button :event_type, 'other' %> <br>
 
 <%#= f.text_field :event_type, placeholder: "other" %>
 <span class="other-radio">
+  <label class="other results">*</label>
 <input onchange="betterWork()" id="other" class='other-box' type="radio"  name="event[event_type]" placeholder="other"></span> <br>
 <%= f.text_area :description, placeholder: 'Description' %><br>
 <%= f.date_field :start_date %><br>
-<%= f.date_field :end_date%><br>
-<%= f.submit "Submit event" %>
+<%= f.date_field :end_date, class: "end-date" %><br>
+<%= f.submit "Submit event", class: "btn-submit" %>
 <% end %>
 </div>
 
@@ -29,9 +30,12 @@
 
   other = document.getElementById("other");
 
+
+
  function betterWork() {
 
   other.setAttribute("type","text")
+
 
  }
 
