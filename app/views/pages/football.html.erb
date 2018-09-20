@@ -1,7 +1,7 @@
 <h1>Football Events</h1>
 
-<div class="events-pages-info">
-  <% @football.each do |b| %>
+<% @football.each do |b| %>
+  <div class="events-pages-info">
     <%= b.name %><br>
     <% if b.description == nil %>
     <% else %>
@@ -12,5 +12,5 @@
       -
       <%= b.end_date.strftime("%b. %e, %Y") %>
     </sub>
-  <% end %>
-</div>
+  </div>
+<% end %>

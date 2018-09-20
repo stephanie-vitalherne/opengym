@@ -7,10 +7,10 @@
         <%# end %>
           <%# @results.first.city %>
 
-  <div class="events-pages-info">
     <% @other.each do |b| if b.event_type != "basketball" %>
       <% if b.event_type !=  "Soccer" %>
         <% if b.event_type != "Football" %>
+        <div class="events-pages-info">
           <h3><%= link_to "#{b.name}", gym_event_path(@gym, b) %></h3>
           <% if b.description == nil %>
           <% else %>
@@ -21,8 +21,8 @@
             -
             <%= b.end_date.strftime("%b. %e, %Y") %>
           </sub>
+        </div>
         <% end %>
       <% end %>
     <% end %>
   <% end %>
-</div>
