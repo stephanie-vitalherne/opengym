@@ -56,7 +56,29 @@ transition-duration: 1s;
 .aboutphoto:hover {
   height: 50vh;
 }
+
+#leaderboard-container {
+  width: 90%;
+  height: 524px;
+  background-image: url('clipboard.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.lb-title {
+  position: relative;
+  margin-top: 80px;
+  margin-left: 110px;
+  color: black;
+}
+
 #leaderboard {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, auto);
+  color: black;
+  margin-top: 20px;
 }
+
