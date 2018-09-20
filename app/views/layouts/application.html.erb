@@ -36,8 +36,11 @@
 
     <nav id="footer" class="nav-bottom shadow">
       <% if logged_in? %>
-        <%= link_to user_messages_path(@current_user) do %>
-        <i class="far fa-envelope"></i>
+
+      <%= link_to user_messages_path(@current_user) do %>
+      <i class="far fa-envelope results"></i>
+
+
       <% end %>
       <% else %>
         <div class="nav-bottom-logo">OG</div>

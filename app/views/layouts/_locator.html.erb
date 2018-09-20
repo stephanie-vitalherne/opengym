@@ -10,12 +10,20 @@
     <%= f.hidden_field :user_id, value: @current_user.id %>
     <%= f.hidden_field :coordinates %>
 
+   <!--  <button type="submit" class="locator" onclick="openMap()">
+      <i class="far fa-compass results"></i>
+    </button>
+  <%# end %>
+<i onclick="openMap()" class="fas fa-map-marked-alt results"></i> -->
+
+
     <button type="submit" class="locator">
-      <i class="far fa-compass"></i>
+      <i class="far fa-compass results"></i>
     </button>
 
     <% end %>
           <% if @current_user.location != nil %>
 <i onclick="openMap()" class="fas fa-map-marked-alt"></i>
   <% end %>
+
 <% end %>
