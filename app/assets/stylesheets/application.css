@@ -250,9 +250,11 @@ nav {
 }
 #map {
   position: fixed;
-  z-index: 10;
-  top: 50px;
-  width: 100vh;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  border: 1px white;
+  border-radius: 20px;
 }
 .intform form > *, .intform input {
   width: 90%;
