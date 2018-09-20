@@ -38,7 +38,8 @@ function removeShadow() {
 
      function openMap() {
 
-            document.getElementById("map").classList.toggle("hidden");
+            document.getElementById("map").classList.toggle("down");
+                        document.getElementById("map").classList.toggle("up");
             console.log('opened map');
           }
 

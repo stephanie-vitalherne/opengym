@@ -251,11 +251,25 @@ nav {
 #map {
   position: fixed;
   z-index: 5;
-  top: 0;
   width: 100%;
   border: 1px white;
   border-radius: 20px;
+  transition: top;
+  transition-duration: 1s;
 }
+.down {
+  top: 120vh;
+  visibility:collapse;
+transition: top;
+transition-duration: 1s;
+}
+.up {
+    top: 5vh;
+    visibility: visible;
+    transition: top;
+    transition-duration: 1s;
+}
+
 .intform form > *, .intform input {
   width: 90%;
   /* border: none; */
