@@ -150,28 +150,17 @@ nav {
 }
 
 .fa-envelope {
-    
     margin-left: 25px;
-}
-
-.fa-compass {
-    
-    
-}
-
-.fa-map-marked-alt {
-    
-    
 }
 
 #bar-container {
     display: inline-block;
     margin-left: 20px;
-    
 }
 
 .nav-bottom-logo {
-   
+    margin-left: 170px;
+    margin-right: 100px;
     text-shadow: 3px 2px 3px black
 }
 

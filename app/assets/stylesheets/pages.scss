@@ -32,7 +32,8 @@ transition-duration: 1s;
   text-decoration: none;
 }
 .aboutcontainer {
-  margin-top: 80px;
+  position:relative;
+  margin-top: -200px;
   min-height: 100vh;
 }
 .aboutcontainer div:nth-child(1) {
