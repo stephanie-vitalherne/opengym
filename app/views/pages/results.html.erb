@@ -1,15 +1,19 @@
 <h1 class="results">Results</h1>
 
+<div class="events-pages-info">
+  <%@event.each do |e| %>
+    <h3><%=link_to "#{e.name}", gym_event_path(@gym, e) %></h3>
+    <p>Event: <em><%= e.event_type %></em></p>
+    <p>Start: <%= e.start_date.strftime("%b. %e, %Y") %>
+      - End: <%= e.end_date.strftime("%b. %e, %Y") %></p>
+  <% end %>
+</div>
 
-<%@event.each do |e| %>
-<%=link_to "#{e.name}", gym_event_path(@gym, e), class: "results" %><br>
-<p>Event: <%= e.event_type %></p><br>
-<p>Start: <%= e.start_date %> -
- End: <%= e.end_date %></p><br>
-<% end %>
 
 <!-- if you want to add search results for gyms as well  -->
+
 <!-- <h3>gym</h3> -->
 <%#@gym.each do |e| %>
-<%#= e.name%><!-- <br> -->
-<%# end %>
+  <%#= e.name%>
+    <!-- <br> -->
+    <%# end %>

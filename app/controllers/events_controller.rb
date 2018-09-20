@@ -26,7 +26,7 @@ User.all.each do |u|
               user_id: u.id,
               sender_id: 0,
               subject: @event.name + " is happening nearby!",
-              body: @event.name + " is scheduled at " + @event.gym.name,
+              body: "A " + @event.event_type + " session named " + @event.name + " has been scheduled at " + @event.gym.name + " at " + @event.start_date.strftime("%y/%m/%d") + " to " + @event.end_date.strftime("%y/%m/%d") + ".",
               read: false
   )
           end

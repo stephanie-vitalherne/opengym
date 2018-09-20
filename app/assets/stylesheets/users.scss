@@ -143,23 +143,23 @@ sub{
 }
 
 #del-btn a{
-  border-radius: 30px;
+  border-radius: 20px;
   text-decoration: none;
-  padding: 7%;
-  background: rgba(52, 94, 44, 0.69);
-  border: 1px solid rgba(52, 94, 44, 0.69);
+  padding: 2%;
+  background: rgba(94, 44, 44, 0.69);
+  border: 1px solid rgba(94, 44, 44, 0.69);
 }
 
 .deldiv{
   position: relative;
-  border-radius: 30px;
-  margin-left: 27%;
+  border-radius: 20px;
+  margin-left: 15%;
   margin-bottom: 10%;
   background: rgba(255,255,255, 0.7);
   box-shadow: 0 0 10px black;
 
-  padding: 7% 0;
-  width: 10%;
+  padding: 2% 0;
+  width: 7%;
 }
 // ================================================
 // EDIT PAGE
