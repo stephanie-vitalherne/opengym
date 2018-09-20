@@ -17,16 +17,22 @@
 
 
 
+// if (document.querySelector("#search").contains('search-transition')) {
+// // Detect all clicks on the document
+// document.addEventListener("click", function(event) {
+// 	// If user clicks inside the element, do nothing
+// 	if (event.target.closest("#search" + "#search-icon")) return;
+
+// 	// If user clicks outside the element, hide it!
+//     document.querySelector("#search").classList.remove("search-transition");
+// });
+// }
+
+
+
 function menuReveal() {
   document.getElementById("bar-container").classList.toggle("change");
   document.getElementById("nav-box").classList.toggle("pop-up");
-//   if (document.getElementById("yield-container").style.display = 'block') {
-//         document.getElementById("yield-container").style.display = 'none';
-// }if(document.getElementById("yield-container").style.display = 'none'){
-//     setTimeout(function(){
-//         document.getElementById("yield-container").style.display="block";
-//     }, 500);
-//   }
 }
 
 function search() {
