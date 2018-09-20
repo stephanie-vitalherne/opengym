@@ -67,11 +67,14 @@ transition-duration: 1s;
   margin-top: 60px;
 }
 
-.lb-title {
+.leaderboard-title {
   position: relative;
   margin-top: 80px;
-  margin-left: 110px;
+  margin-left: 90px;
   color: black;
+  font-size: 25px;
+  font-family: 'Abril Fatface', cursive;
+  text-decoration: underline;
 }
 
 #leaderboard {
@@ -79,6 +82,14 @@ transition-duration: 1s;
   display: grid;
   grid-template-columns: repeat(3, auto);
   color: black;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.leaderboard-list-item {
+  margin-bottom: 5px;
+}
+
+.invisible-text {
+  color: #3A3A3A;
 }
 

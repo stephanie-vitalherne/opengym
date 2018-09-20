@@ -102,9 +102,9 @@ nav {
 
 #search-bar {
     font-size: 20px;
-    margin-left: 5px;
-    width: 90%;
-    margin-right: 10px;
+   
+    width: 66%;
+    
     border-radius: 10px;
 }
 
@@ -182,19 +182,22 @@ nav {
 }
 
 #nav-box {
-    position: relative;
+    position: fixed;
     width: 70%;
     background: var(--navbar-color);
     padding-top: 15px;
     padding-bottom: 15px;
     list-style: none;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 2200px; 
+    margin-left: 15%;
+    margin-top: 150px;
+    z-index: 90;
+    top: -1000px; 
     -webkit-transition: 0.5;
     transition: 0.5s;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
+
 }
 
 #nav-box a {
@@ -202,7 +205,8 @@ nav {
 }
 
 .pop-up {
-    margin-top: 150px !important;
+    top: 0 !important;
+    
 }
 
 #nav-box li {
@@ -218,7 +222,7 @@ nav {
 #yield-container {
   margin-top: 45px;
   margin-bottom: 55px;
-        padding: 0;
+    padding: 0;
 }
 
 .intform {
@@ -231,7 +235,7 @@ nav {
 }
 .intform form > *, .intform input {
   margin: 2px;
-  width: 100%;
+  width: 90%;
   border: none;
   margin: 2px 0;
   font-size: 20px;
@@ -248,7 +252,7 @@ height: 30vh;
 }
 .intform form input[type="submit"] {
   background-color: rgb(73, 255, 91);
-  width: 96%;
+  width: 86%;
   border-radius: 5px;
   padding: 10px;
 }

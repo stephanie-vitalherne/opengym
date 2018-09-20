@@ -1,16 +1,15 @@
 <% if User.first.first_name != nil %>
 <div id="leaderboard-container">
-<p>this will need to be invisible</p>
-<div class="lb-title">LeaderBoard</div>
+<p class="invisible-text">t</p>
+<div class="leaderboard-title">Leaderboard</div>
 <div id="leaderboard"><ol>
-  <% @users.each do |u| %><li>
+  <% @users.each do |u| %><li class="leaderboard-list-item">
     <%= u.first_name %>
-    <%= u.last_name %>
-
+    <%= u.last_name %> - 
       <% if u.points == nil %>
-        0
+        0 points
       <% else %>
-        <%= u.points %></li>
+        <%= u.points %> points</li>
     <% end %>
   <% end %></ol>
 </div>
