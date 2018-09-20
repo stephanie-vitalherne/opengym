@@ -29,14 +29,16 @@ class PagesController < ApplicationController
 
   def football
     @football = Event.where(event_type: 'Football')
+     @gym = Gym.find_by(params[:gym_id])
   end
 
   def soccer
     @soccer = Event.where(event_type: 'Soccer')
+     @gym = Gym.find_by(params[:gym_id])
    end
 
   def other
-    # @other = Event.select(:event_type).map{|c| c.event_type}
+
     @other = Event.all
     @gym = Gym.find_by(params[:gym_id])
   end
