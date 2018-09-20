@@ -59,7 +59,17 @@ input#other {
   font-family: 'Righteous', cursive;
   letter-spacing: 1.5px;
   -webkit-clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
-clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+  clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+}
+
+
+.results{
+  color: #F9FAF3;
+  text-shadow: 3px 2px 3px black
+}
+
+.scroll {
+  overflow: scroll;
 }
 
 
@@ -100,7 +110,3 @@ clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
 //   // background-color: black;
 //   opacity: 0.4;
 // }
-
-
-
-

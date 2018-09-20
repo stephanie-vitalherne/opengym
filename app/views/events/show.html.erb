@@ -1,7 +1,19 @@
-<h1><%= @event.name %></h1>
+<h1 class="results"><%= @event.name %></h1>
 
-
+<div class="results">
 <h4><%= @event.event_type %><br></h4>
+<h5>At:  <%= link_to @event.gym.name, gym_path(@event.gym), class: "results" %></h5>
+
+<% if logged_in? %>
+
+<% if @event.gym.coordinates != nil && @current_user.location != nil %>
+<% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=" + @event.gym.coordinates + "&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04") %>
+  <% distance = JSON.parse(distrequest.body) %>
+  <% @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").gsub(",", "").to_f %>
+
+<% end %>
+<p><%= @dist %> miles away</p>
+<% end %>
 <span> Start: <%= @event.start_date.strftime("%y/%m/%d") %></span><br>
 <span> End: <%= @event.end_date.strftime("%y/%m/%d") %></span><br>
 <p><%= @event.description %></p>
@@ -11,6 +23,10 @@
 <%= render 'participants/listparticipants' %>
 <% end %>
 <%= render 'participants/newparticipant' %>
+
+</div>
 <script>
 removeShadow();
 </script>
+
+

@@ -1,8 +1,23 @@
 <div class="gymscontainer">
 <% @gym.events.each do |e| %>
 
+
+  <% if logged_in? %>
+
+  <% if e.gym.coordinates != nil && @current_user.location != nil %>
+  <% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=" + e.gym.coordinates + "&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04") %>
+    <% distance = JSON.parse(distrequest.body) %>
+    <% @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").gsub(",", "").to_f %>
+
+  <% end %>
+  <% end %>
+
+
 <div class="gymphoto" style="background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url('<%= e.cover_photo.attachment.nil? ? asset_url('asphalt2.JPG') : rails_blob_url(e.cover_photo) %>');">
 <h2><%= link_to e.name, gym_event_path(@gym, e) %></h2><p><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(@gym, e) %>
+  <% if @dist != nil %>
+  <p> <%= @dist %> miles away </p>
+  <% end %>
 <p><%= e.description %></p>
 </div>
 <% end %>

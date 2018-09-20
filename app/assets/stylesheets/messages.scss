@@ -1,3 +1,24 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message {
+  border: 1px solid white;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px;
+  border-radius: 3px;
+}
+.message p {
+  margin: 2px;
+}
+.message h2 {
+  margin: 2px;
+  font-size: 14px;
+}
+.admin_{
+  border: 1px solid yellow !important;
+}
+#messagesbox {
+  margin-top: 30px;
+}

@@ -31,7 +31,11 @@ redirect_back(fallback_location: gyms_path)
 
   def show
     @event = Event.new
-    @user = User.where(id: current_user.id)
+    if @current_user != nil
+    if @current_user.gyms != nil
+    @user = User.where(id: @current_user.id)
+  end
+end
    end
 
   def destroy
@@ -41,7 +45,7 @@ redirect_back(fallback_location: gyms_path)
   private
 
   def gym_params
-    params.require(:gym).permit(:name, :location, :user_id, :cover_photo)
+    params.require(:gym).permit(:name, :location, :user_id, :cover_photo, :coordinates)
   end
 
   def find_gym

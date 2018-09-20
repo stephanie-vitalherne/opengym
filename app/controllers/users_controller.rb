@@ -14,7 +14,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @gyms = Gym.where(user_id: current_user.id)
+    unless @current_user.nil?
+      unless @current_user.gyms.nil?
+        @gyms = Gym.where(user_id: @current_user.id)
+    end
+  end
   end
 
   def edit; end

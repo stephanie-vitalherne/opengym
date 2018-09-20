@@ -1,8 +1,18 @@
 <div class="gymscontainer">
 <% @gyms.each do |g| %>
+<% if logged_in? %>
+<% if g.coordinates != nil && @current_user.location != nil %>
+<% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=" + g.coordinates + "&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04") %>
+  <% distance = JSON.parse(distrequest.body) %>
+  <% @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").gsub(",", "").to_f %>
+
+<% end %>
+<% end %>
+
+
 
 <div class="gymphoto" style="background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url('<%= g.cover_photo.attachment.nil? ? asset_url('asphalt2.JPG') : rails_blob_url(g.cover_photo) %>');">
-<h2><%= link_to g.name, gym_path(g) %></h2><p><%= g.location %></p></div>
+<h2><%= link_to g.name, gym_path(g) %></h2><p><%= g.location %></p><p><%= @dist %> miles away</p></div>
 <% end %>
 </div>
 <div id="newmodal" class="newmodal"><h2 onclick="newGymOpen()"><i class="fas fa-plus"></i> Add Gym</h2>
@@ -11,8 +21,33 @@
   </div>
       <h2><i id="close" onclick="newGymOpen()" class="fas fa-times"></i></h2>
 </div>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04
+" type="text/javascript"></script>
 <script>
+
+
+let retrieveLocationDataAddressToCoords = (addressArg) => {
+console.log(addressArg);
+
+
+
+axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressArg}&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04`)
+.then((response) => {
+    console.log(response);
+
+    allCoords.endLoc = {latitude: response.data.results[0].geometry.location.lat, longitude: response.data.results[0].geometry.location.lng};
+    console.log(allCoords);
+
+    // document.getElementById("myLoc").value += `Lat: ${allCoords.userLoc.latitude} Lng: ${allCoords.userLoc.longitude}`;
+    document.getElementById("gym_coordinates").value = allCoords.endLoc.latitude + "," + allCoords.endLoc.longitude;
+
+    // calculateDistance();
+}).catch((error) => {
+    console.log(error);
+});
+}
+
 
   document.getElementById("getcoordinates").addEventListener("click", () => {
     retrieveLocationDataAddressToCoords(document.getElementById("gym_location").value);
@@ -29,7 +64,3 @@ function removeShadow() {
      }
 removeShadow();
 </script>
-
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04
-" type="text/javascript"></script>

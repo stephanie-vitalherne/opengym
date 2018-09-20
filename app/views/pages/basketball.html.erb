@@ -1,6 +1,12 @@
-<h1>Basketball Events</h1>
+<h1 class="results">Basketball Events</h1>
 
 <% @basketball.each do |b| %>
+
+
+
+
+
+
   <div class="events-pages-info">
     <%= link_to "#{b.name}", gym_event_path(@gym, b) %><br>
     <% if b.description == nil %>
@@ -11,6 +17,17 @@
       <%= b.start_date.strftime("%b. %e, %Y") %>
       -
       <%= b.end_date.strftime("%b. %e, %Y") %>
+
+      <% if logged_in? %>
+
+      <% if b.gym.coordinates != nil && @current_user.location != nil %>
+      <% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=" + b.gym.coordinates + "&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04") %>
+        <% distance = JSON.parse(distrequest.body) %>
+        <% @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").gsub(",", "").to_f %>
+      , <%= @dist %> miles away.
+      <% end %>
+
+      <% end %>
     </sub>
   </div>
 <% end %>

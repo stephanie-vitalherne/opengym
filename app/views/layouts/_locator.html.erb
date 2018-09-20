@@ -1,0 +1,18 @@
+<% if logged_in? %>
+
+  <% if @current_user.location == nil %>
+    <% @location = Location.new %>
+    <% else %>
+      <% @location = Location.find_by(user_id: @current_user.id) %>
+    <% end %>
+
+    <%= form_for(@location) do |f| %>
+    <%= f.hidden_field :user_id, value: @current_user.id %>
+    <%= f.hidden_field :coordinates %>
+
+    <button type="submit" class="locator" onclick="openMap()">
+      <i class="far fa-compass" style="color: white;"></i>
+    </button>
+  <% end %>
+<i onclick="openMap()" class="fas fa-map-marked-alt"></i>
+<% end %>

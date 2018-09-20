@@ -19,6 +19,9 @@
     <span><h2 style="width: 50%; font-size: 1.5em;"><%= @user.full_name %></h2></span>
   <% end %>
   <p><%= @user.email %></p>
+  <!-- <span class="deldiv">
+    <span id='del-btn'><%#= link_to 'x', '#' %></span>
+  </span> -->
 </div>
 
 
@@ -33,7 +36,4 @@
     <% end %>
   </div>
   <% end %>
-  <span class="deldiv">
-    <span id='del-btn'><%= link_to 'Delete Account', '#' %></span>
-  </span>
 <% end %>

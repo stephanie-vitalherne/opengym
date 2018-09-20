@@ -7,7 +7,7 @@ class Gym < ApplicationRecord
   before_save :default_values
   before_save { self.user_id = user_id.to_i }
 
-  validates :name, :location, :user_id, presence: true
+  validates :name, :location, :coordinates, :user_id, presence: true
 
   def default_values
     self.user_id ||= 1

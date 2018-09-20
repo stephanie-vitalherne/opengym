@@ -7,7 +7,9 @@
   padding-top: 56.25%;
   position: relative;
 }
-
+#map .gmap_canvas {
+  height: 80vh;
+}
 .gmap_canvas iframe {
   border: 0;
   height: 100%;
@@ -61,6 +63,12 @@
 
 .gymphoto a {
   text-decoration: none;
+  color: white;
+}
+
+.gym-page a {
+  text-decoration: none;
+  color: white;
 }
 
 .gymscontainer {
@@ -74,6 +82,18 @@
   bottom: 0;
 }
 
+.gymphoto {
+  color: white;
+}
+
+.gym-page {
+  color: white;
+}
+
+.gymscontainer {
+  color: white;
+}
+
 .newmodal {
   margin: 0 auto;
   background-color: rgb(52, 94, 44);
@@ -82,6 +102,7 @@
   border-top-right-radius: 20px;
   box-shadow: 0 -1px 2px black;
   height: 40px;
+  margin-bottom: 10px;
   text-align: center;
   position: fixed;
   bottom: 40px;

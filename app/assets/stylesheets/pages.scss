@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .aboutphoto h1, .aboutphoto h2 {
   text-shadow: 1px 1px 1px black;
 }
@@ -32,7 +33,8 @@ transition-duration: 1s;
   text-decoration: none;
 }
 .aboutcontainer {
-  margin-top: 80px;
+  position:relative;
+  margin-top: -200px;
   min-height: 100vh;
 }
 .aboutcontainer div:nth-child(1) {
@@ -73,7 +75,6 @@ transition-duration: 1s;
   margin-left: 90px;
   color: black;
   font-size: 25px;
-  font-family: 'Abril Fatface', cursive;
   text-decoration: underline;
 }
 
@@ -94,11 +95,17 @@ transition-duration: 1s;
 }
 
 .events-pages-info{
+  position: relative;
   background-color: rgba(255, 255, 255, 0.7);
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
   padding: 1px 0;
   margin: 10px 0;
+  left: -1000px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide 0.5s forwards;
+  animation-delay: 0.5s;
   p{
     text-transform: capitalize;
     margin: 0;
@@ -109,4 +116,12 @@ transition-duration: 1s;
   sub{
     margin-bottom: 10px;
   }
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
 }
