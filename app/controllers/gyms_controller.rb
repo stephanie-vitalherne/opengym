@@ -31,7 +31,11 @@ redirect_back(fallback_location: gyms_path)
 
   def show
     @event = Event.new
+    if @current_user != nil
+    if @current_user.gyms != nil
     @user = User.where(id: @current_user.id)
+  end
+end
    end
 
   def destroy

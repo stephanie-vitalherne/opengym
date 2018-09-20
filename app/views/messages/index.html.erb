@@ -1,16 +1,13 @@
 <% if logged_in? %>
-if user_id == current_user.id
-show your inbox (list of users you have had messages with, link to their messages page, which will display their message history with you)
-on the other person's user page put an icon to message them
-else
-show your messages with that user
-<br>
-this form doesn't work yet, requires sessions
-<%= render 'newmessage' %>
-mark all read
-end
+<% if @user.id == current_user.id %>
+<% @user.messages.each do |m| %>
+<% p @user.messages %>
+<p><%= m.body %></p>
+<% end %>
+<% end %>
 
-put delete button on message if it's yours and from less than an hour ago
+<%= render 'newmessage' %>
+
 <% else %>
 You must log in to see this page.
 <% end %>
