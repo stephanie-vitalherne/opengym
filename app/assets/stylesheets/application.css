@@ -29,9 +29,9 @@ html{
 a {
   color: black;
 }
-a:visited {
+/*a:visited {
   color: black;
-}
+}*/
 a:hover {
   color: #B26012;
 }
@@ -74,6 +74,11 @@ nav {
 
 #nav-top-logo a{
  text-decoration: none;
+ color: white;
+ text-shadow: 3px 2px 3px black
+}
+#nav-top-logo a:hover{
+  color: #B26012;
 }
 
 .nav-top i {
@@ -149,6 +154,7 @@ nav {
 
 .nav-bottom-logo {
     flex: 2;
+    text-shadow: 3px 2px 3px black
 }
 
 .nav-bottom i {
