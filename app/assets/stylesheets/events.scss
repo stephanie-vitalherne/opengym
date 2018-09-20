@@ -5,44 +5,34 @@
 .radio {
   display: flex;
   position: absolute;
-  left: 30%;
 }
 
 .radio label {
-  font-size: 15px;
+  margin-left: 112px;
 }
 
 input#event_event_type_basketball {
   margin-right: 260px;
-  padding: 0;
 }
 
 input#event_event_type_soccer {
-  margin-right: 240px;
-  padding: 0;
+  margin-right: 50px;
 }
 
 input#event_event_type_football {
-  margin-right: 245px;
-  padding: 0;
+  margin-right: 125px;
 }
 
 .other-radio label {
   font-size: 15px;
-  // margin-right: 230px;
-  // padding: 0px;
 }
-
-// .other-radio:before{
-//   content: 'other';
-// }
 
 input#other {
   width: 45%;
-  margin-left: 15%;
+  margin-left: 121px;
 }
 
-.events{
+.events {
   text-align: center;
   padding-top: 30px;
 }
@@ -50,15 +40,13 @@ input#other {
 .events a {
   text-decoration: none;
   color: black;
-
 }
 
-.events ul{
-list-style: none;
-
+.events ul {
+  list-style: none;
 }
 
-.events li{
+.events li {
   padding: 11px;
   border: 1px solid white;
   margin-top: 10px;
@@ -66,33 +54,29 @@ list-style: none;
   background-color: white;
 }
 
-
-.tri-top{
+.tri-top {
   width: 0;
   height: 0;
   border-top: 12px solid transparent;
   border-right: 22px solid white;
   border-bottom: 12px solid transparent;
   position: absolute;
-top: 90px;
-right: 90%;
+  top: 90px;
+  right: 90%;
 }
 
-
-
-.tri-bot{
+.tri-bot {
   width: 0;
   height: 0;
   border-top: 12.9px solid transparent;
   border-right: 22px solid white;
   border-bottom: 12px solid transparent;
   position: absolute;
-top: 109px;
-right: 90%;
+  top: 109px;
+  right: 90%;
 }
-
 // .events li:before,
-.events li:after{
+.events li:after {
   content: "";
   position: absolute;
   top: 109px;
@@ -100,11 +84,6 @@ right: 90%;
   border-right: 22px solid black;
   border-bottom: 12px solid transparent;
   width: 0;
-  height: 0px;
-  // background-color: black;
+  height: 0;
   opacity: 0.4;
 }
-
-
-
-
