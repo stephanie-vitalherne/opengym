@@ -24,16 +24,16 @@ html{
   background-image: url("court.png");
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  color: black;
 }
 a {
-  color: white;
+  color: black;
 }
 a:visited {
-  color: white;
+  color: black;
 }
 a:hover {
-  color: green;
+  color: #B26012;
 }
 body {
     margin: 0;
