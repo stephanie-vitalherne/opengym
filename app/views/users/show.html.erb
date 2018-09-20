@@ -1,17 +1,32 @@
 <div id='users-show'>
   <% if current_user == nil %>
   <% else %>
-  <div id="profile-block">
+  <% if @user.full_name.length  > 21 || @user.full_name.length <= 32  %>
+    <div id="profile-block">
       <div id="edit-button">
         <%= link_to edit_user_path do %><i class="far fa-edit"></i><% end %>
       </div>
-    <%= @user.photo.attachment.nil? ? image_tag('default.png', size: '200x200', id: 'pro-img') : image_tag(@user.photo, size: '200x200', id: 'pro-img') %>
-  </div>
-  <% if @user.full_name.length  > 15 %>
-  <span><h2 style="width: 62%; margin-left: 21.5%;"><%= @user.full_name %></h2></span>
+      <%= @user.photo.attachment.nil? ? image_tag('default.png', size: '200x200', id: 'pro-img') : image_tag(@user.photo, size: '200x200', id: 'pro-img') %>
+    </div>
   <% else %>
-  <span><h2 style="width: 50%"><%= @user.full_name %></h2></span>
+    <div id="profile-block">
+        <div id="edit-button">
+          <%= link_to edit_user_path do %><i class="far fa-edit"></i><% end %>
+        </div>
+          <%= @user.photo.attachment.nil? ? image_tag('default.png', size: '200x200', id: 'pro-img') : image_tag(@user.photo, size: '200x200', id: 'pro-img') %>
+    </div>
+  <% end %>
+
+  <% if @user.full_name.length  > 21 && @user.full_name.length <= 32  %>
+    <span><h2 style="width: 62%; margin-left: 21.5%; font-size: 1.2em;"><%= @user.full_name %></h2></span>
+  <% elsif @user.full_name.length  > 15  %>
+    <span><h2 style="width: 62%; margin-left: 21.5%;"><%= @user.full_name %></h2></span>
+  <% else %>
+    <span><h2 style="width: 50%; font-size: 1.5em;"><%= @user.full_name %></h2></span>
   <% end %>
   <p><%= @user.email %></p>
   <% end %>
+
+<span id='del-btn'><% link_to 'Delete Account', '#' %></span>
+
 </div>
