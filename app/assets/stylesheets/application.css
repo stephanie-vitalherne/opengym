@@ -27,10 +27,10 @@ html{
   color: white;
 }
 a {
-  color: black;
+  color: white;
 }
 a:visited {
-  color: black;
+  color: white;
 }
 a:hover {
   color: green;
@@ -239,10 +239,8 @@ nav {
   width: 100%;
 }
 .intform form > *, .intform input {
-  margin: 2px;
   width: 90%;
-  border: none;
-  margin: 2px 0;
+  /* border: none; */
   font-size: 20px;
   padding: 3px 10px;
 }
@@ -257,6 +255,7 @@ height: 30vh;
 }
 .intform form input[type="submit"] {
   background-color: rgb(73, 255, 91);
+  border-color: rgb(73, 255, 91);
   width: 86%;
   border-radius: 5px;
   padding: 10px;
@@ -265,8 +264,5 @@ height: 30vh;
 .other-box:before{
   content: 'Other';
   color: white;
-  margin-left: -2%;
-  font-size: medium;
+  margin-left: -22%;
 }
-
-
