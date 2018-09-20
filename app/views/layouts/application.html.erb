@@ -26,18 +26,22 @@
       <div id="search">
            <%= render 'pages/search' %>
         <!-- <input id="search-bar" type="text"  class="hidden" placeholder="search" name="search"> -->
-        
+
       </div>
     </nav>
 
     <div id="yield-container"> <%= yield %> </div>
-
+ <%= render 'layouts/map' %>
      <%= render 'layouts/nav-box' %>
 
     <nav id="footer" class="nav-bottom shadow">
-      <%= link_to user_messages_path('1') do %>
+      <% if logged_in? %>
+      <%= link_to user_messages_path(@current_user) do %>
       <i class="far fa-envelope"></i>
       <% end %>
+        <% end %>
+         <%= render 'layouts/locator' %>
+
       <div class="nav-bottom-logo">OG</div>
       <div id="bar-container" onClick="menuReveal()">
         <div class="bar1"></div>
