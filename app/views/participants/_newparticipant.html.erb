@@ -1,0 +1,37 @@
+<div class="intform">
+  <% if logged_in? %>
+  <% @userpresent = false %>
+      <% @participants.each do |p| %>
+        <% if p.user_id == @current_user.id %>
+        <% @userpresent = true %>
+        <% end %>
+        <% end %>
+          <% if @userpresent == false %>
+            <%= form_for([@gym, @event, @participant]) do |f| %>
+            <%= f.hidden_field :user_id, value: @current_user.id %><br>
+            <%= f.submit 'Join' %>
+          <% end %>
+        <% end %>
+        You are attending. Add a friend?<br>
+        <%= form_for([@gym, @event, @participant]) do |f| %>
+        <%= f.hidden_field :user_id, value: 0 %><br>
+        <%= f.text_field :first_name, placeholder: 'First Name (required)', required: true, :class => 'first' %><br>
+        <%= f.text_field :last_name, placeholder: 'Last Name', :class => 'gray' %><br>
+        <%= f.text_field :email, placeholder: 'email', :class => 'gray' %><br>
+        <%= f.text_field :phone, placeholder: 'phone', :class => 'gray' %><br>
+        <%= f.submit 'Add a Friend' %>
+      <% end %>
+
+    <% else %>
+      RSVP for yourself or a friend<br>
+      <%= form_for([@gym, @event, @participant]) do |f| %>
+      <%= f.hidden_field :user_id, value: 0 %><br>
+      <%= f.text_field :first_name, placeholder: 'First Name (required)', required: true, :class => 'first' %><br>
+      <%= f.text_field :last_name, placeholder: 'Last Name', :class => 'gray' %><br>
+      <%= f.text_field :email, placeholder: 'email', :class => 'gray' %><br>
+      <%= f.text_field :phone, placeholder: 'phone', :class => 'gray' %><br>
+      <%= f.submit 'Join' %>
+    <% end %>
+  <% end %>
+
+</div>

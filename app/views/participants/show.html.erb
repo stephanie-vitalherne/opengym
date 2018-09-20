@@ -1,0 +1,5 @@
+<%= @participant.first_name %>
+If participant is user OR user owns gym or event, allow delete
+<%= link_to [@gym, @event, @participant], :method  => :delete do %>
+  <i title="Delete" class="fas fa-times alt="Delete"></i>
+  <% end %>

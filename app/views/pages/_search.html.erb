@@ -1,0 +1,15 @@
+
+
+<%#= form_tag('/results', method: :get) %>
+<%#= text_field_tag(:q) %><br>
+<%#= submit_tag("search") %>
+
+<form  accept-charset="UTF-8" action="/results" method="get">
+  <!-- <input id="search-bar" class="hidden" name="utf8" type="hidden" value="&#x2713;" /> -->
+  <input id="search-bar" name="q" type="text" placeholder="search" />
+  <button class="search-buttons" type="submit" id="go">GO</button>
+  <button class="search-buttons" type="button" id="cancel" onClick="search()">X</button>
+  <!-- <input name="commit" type="submit" value="Search" /> -->
+</form>
+
+

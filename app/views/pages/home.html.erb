@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+
+  <div class="events">
+      <% @event.each do |e| %>
+      <li><%= link_to "#{e.name}",gym_event_path(@gym, e) %></li>
+      <%end %>
+  </div>
+
+
+<!-- <div class="tri-top">
+
+</div>
+
+<div class="tri-bot">
+</div>
+-->

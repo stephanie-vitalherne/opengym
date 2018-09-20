@@ -1,0 +1,37 @@
+
+<% if logged_in? %>
+<h1>Mapping Test</h1>
+<p>Address:</p>
+<input id = "testInputAddress" value = "<%= Gym.first.location %>">
+<p>My Location: <input id = "myLoc2"></p>
+<p>End Location: <input id = "endLoc"></p>
+<p>Distance in Miles Between My Location and End Location (Driving): <input id = "dist"></p>
+<button id = "submitloc" style = "display:block;">Calculate Distance</button><hr>
+
+<%= form_for(@location) do |f| %>
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+  <%= f.hidden_field :coordinates %>
+        <%= f.submit "Set My Location" %>
+        <% end %>
+        <% if @current_user.location != nil %>
+        <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<%= @current_user.location.coordinates %>&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+        <% end %>
+          <% end %>
+<% @address= "111 John St #500, New York, NY 10038".gsub(" ", "+") %>
+          <% coordrequest = HTTParty.get('https://maps.googleapis.com/maps/api/geocode/json?address=x&components=country:US&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04') %>
+      <% coords = JSON.parse(coordrequest.body) %>
+      <% p coords %>
+      <% p coordrequest %>
+          <% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=40.6905615,-73.9976592&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04") %>
+            <% distance = JSON.parse(distrequest.body) %>
+            <% @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").to_f %>
+            <% p @dist %>
+
+<script>
+  document.getElementById("submitloc").addEventListener("click", () => {
+    getBothCoordPairs(document.getElementById("testInputAddress").value);
+  });
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04
+" type="text/javascript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

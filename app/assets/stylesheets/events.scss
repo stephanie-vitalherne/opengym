@@ -1,0 +1,106 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.radio {
+  display: flex;
+  position: absolute;
+}
+
+.radio label {
+  margin-left: 112px;
+}
+
+input#event_event_type_basketball {
+  margin-right: 78px;
+}
+
+input#event_event_type_soccer {
+  margin-right: 50px;
+}
+
+input#event_event_type_football {
+  margin-right: 59px;
+}
+
+.other-radio label {
+  font-size: 15px;
+}
+
+input#other {
+  width: 45%;
+  margin-left: 121px;
+}
+
+.events {
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.events a {
+  text-decoration: none;
+
+}
+
+.events li {
+  padding: 10px;
+  border: 1px solid white;
+  // margin-top: 10px;
+  // width: 91%;
+  // background-color: rgba(187, 187, 187, 0.4);
+  // border-color: rgba(187, 187, 187, 0.4);
+  font-size: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  list-style: none;
+  width: 85%;
+  background-color: white;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 1.5px;
+  -webkit-clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+}
+
+
+// .tri-top{
+//   width: 0;
+//   height: 0;
+//   border-top: 12px solid transparent;
+//   border-right: 22px solid white;
+//   border-bottom: 12px solid transparent;
+//   position: absolute;
+// top: 90px;
+// right: 90%;
+// }
+
+
+
+// .tri-bot{
+//   width: 0;
+//   height: 0;
+//   border-top: 12.9px solid transparent;
+//   border-right: 22px solid white;
+//   border-bottom: 12px solid transparent;
+//   position: absolute;
+// top: 109px;
+// right: 90%;
+// }
+
+// // .events li:before,
+// .events li:after{
+//   content: "";
+//   position: absolute;
+//   top: 109px;
+//   border-top: 12.9px solid transparent;
+//   border-right: 22px solid black;
+//   border-bottom: 12px solid transparent;
+//   width: 0;
+//   height: 0px;
+//   // background-color: black;
+//   opacity: 0.4;
+// }
+
+
+
+

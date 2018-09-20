@@ -1,0 +1,24 @@
+<div class="login">
+
+  <h1>Log In</h1>
+
+  <p>New Gym? <%= link_to 'Create an account', register_path %></p>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+  <div class="register-input">
+    <div class="icon">
+    <i class="fas fa-at"></i>
+  </div>
+      <%= f.email_field :email, placeholder: 'Email', class: 'input' %>
+  </div>
+  <div class="register-input">
+    <div class="icon">
+      <i class="fas fa-key"></i>
+    </div>
+    <%= f.password_field :password, placeholder: 'Password', class: 'input' %>
+  </div>
+  <sub id='min'><%= f.label :password, 'Minimum 8 Characters' %></sub>
+  <br>
+  <%= f.submit 'Log In', id: 'submit' %>
+  <% end %>
+</div>

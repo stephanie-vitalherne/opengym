@@ -1,0 +1,56 @@
+<div class="intform">
+  <h2>Event form</h2>
+<%= form_for([@gym, @event]) do |f| %>
+<%= f.text_field :name,  placeholder: "Event name" %><br>
+<%= f.file_field :cover_photo, :class => "upload" %><br>
+<span class="radio">
+ <%= f.label :Basketball %>
+ <%= f.radio_button :event_type, 'basketball'%></span><br>
+ <span class="radio">
+<%= f.label :Soccer %>
+<%= f.radio_button :event_type, 'Soccer' %></span><br>
+<span class="radio">
+<%= f.label :Football %>
+<%= f.radio_button :event_type, 'Football' %><br></span>
+<%#= f.radio_button :event_type, 'other' %> <br>
+
+<%#= f.text_field :event_type, placeholder: "other" %>
+<span class="other-radio">
+<input onchange="betterWork()" id="other" class='other-box' type="radio"  name="event[event_type]" placeholder="other"></span> <br>
+<%= f.text_area :description, placeholder: 'Description' %><br>
+<%= f.date_field :start_date %><br>
+<%= f.date_field :end_date%><br>
+<%= f.submit "Submit event" %>
+<% end %>
+</div>
+
+
+<script>
+
+  other = document.getElementById("other");
+
+ function betterWork() {
+
+  other.setAttribute("type","text")
+
+ }
+
+bball = document.getElementById("event_event_type_basketball");
+soccer = document.getElementById("event_event_type_soccer");
+fball= document.getElementById("event_event_type_football");
+
+bball.addEventListener("click", function(){
+
+  other.setAttribute("type", "radio");
+
+})
+soccer.addEventListener("click", function(){
+
+  other.setAttribute("type", "radio");
+})
+fball.addEventListener("click", function(){
+
+  other.setAttribute("type", "radio");
+})
+
+</script>

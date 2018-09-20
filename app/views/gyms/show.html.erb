@@ -1,0 +1,28 @@
+
+<div id="gymphoto" style="background-image: url('<%= @gym.cover_photo.attachment.nil? ? asset_url('gym2.jpg', size: '100x100') : rails_blob_url(@gym.cover_photo) %>');">
+
+  <h1><%= @gym.name %></h1></div>
+<p><%= @gym.description %></p>
+<br>
+<p><%= @gym.location %></p>
+<div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<%= @gym.location %>&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+
+<%= link_to @gym.name + " events", gym_events_path(@gym)  %>
+<% x = 0 %>
+<ul>
+<% @gym.events.each do |e| %>
+<% if x < 3 %>
+ <li><%= link_to e.name + " (" + e.participants.count.to_s + " players)", gym_event_path(@gym, e) %></li>
+  <% x += 1 %>
+<% end %>
+<% end %>
+</ul>
+<div id="newmodal" class="newmodal"><h2 onclick="newGymOpen()"><i class="fas fa-plus"></i> Play Here</h2>
+  <div class="newgymform">
+    <%= render 'events/form' %>
+  </div>
+      <h2><i id="close" onclick="newGymOpen()" class="fas fa-times"></i></h2>
+</div>
+<script>
+removeShadow();
+</script>

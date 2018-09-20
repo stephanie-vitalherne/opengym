@@ -1,3 +1,112 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.aboutphoto h1, .aboutphoto h2 {
+  text-shadow: 1px 1px 1px black;
+}
+.aboutphoto h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.aboutphoto p {
+  margin: 2px;
+}
+.aboutphoto {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center !important;
+  text-align: center;
+height: 30vh;
+border-top: 2px solid white;
+
+box-shadow: 0px -1px 2px black;
+overflow: hidden;
+transition: height;
+transition-duration: 1s;
+}
+
+.aboutphoto a {
+  text-decoration: none;
+}
+.aboutcontainer {
+  margin-top: 80px;
+  min-height: 100vh;
+}
+.aboutcontainer div:nth-child(1) {
+  top: 30vh;
+  border-top-right-radius: 20px;
+}
+.aboutcontainer div:nth-child(2) {
+  top: 45vh;
+  border-top-left-radius: 20px;
+}
+.aboutcontainer div:nth-child(3) {
+  top: 60vh;
+  border-top-right-radius: 20px;
+}
+.aboutcontainer div:nth-child(4) {
+  border-top-left-radius: 20px;
+  top: 75vh;
+  height: auto;
+  bottom: 0px;
+}
+.aboutphoto:hover {
+  height: 50vh;
+}
+
+#leaderboard-container {
+  width: 90%;
+  height: 524px;
+  background-image: url('clipboard.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.leaderboard-title {
+  position: relative;
+  margin-top: 80px;
+  margin-left: 90px;
+  color: black;
+  font-size: 25px;
+  font-family: 'Abril Fatface', cursive;
+  text-decoration: underline;
+}
+
+#leaderboard {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  color: black;
+  margin-top: 10px;
+}
+
+.leaderboard-list-item {
+  margin-bottom: 5px;
+}
+
+.invisible-text {
+  color: #3A3A3A;
+}
+
+.events-pages-info{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 1px 0;
+  margin: 10px 0;
+  p{
+    text-transform: capitalize;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  sub{
+    margin-bottom: 10px;
+  }
+}

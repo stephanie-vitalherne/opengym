@@ -13,3 +13,256 @@
  *= require_tree .
  *= require_self
  */
+ :root {
+   --navbar-color: linear-gradient(rgb(52, 94, 44), rgb(52, 94, 44));
+ }
+
+html{
+  font-family: sans-serif;
+  /* background-color: rgb(82, 82, 82); */
+  /* background-image: url(asphalt2.JPG); */
+  background-image: url("court.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+a {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: #B26012;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    background: var(--navbar-color);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+    color: white;
+    z-index: 10;
+    font-family: 'Alice', serif;
+}
+.shadow {
+      box-shadow: 0 0 5px black;
+}
+.nav-top {
+    top: 0;
+    height: auto;
+    position: fixed;
+}
+
+#og-top {
+    position: relative;
+    display: flex;
+}
+
+#nav-top-logo {
+    text-shadow: -1px -1px 1px #000;
+    margin-left: 40px;
+    flex: 1;
+}
+
+#nav-top-logo a{
+ text-decoration: none;
+}
+
+.nav-top i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#search {
+    position: fixed;
+    display: flex;
+    background: var(--navbar-color);
+    top: 0;
+    margin-left: -1000px;
+    width: 100%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    -webkit-transition: 0.5;
+    transition: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.search-transition {
+    margin-left: 0 !important;
+}
+
+#search-bar {
+    font-size: 20px;
+
+    width: 66%;
+
+    border-radius: 10px;
+}
+
+#search-bar:focus {
+    border: 2px solid gold;
+}
+
+.search-buttons {
+    margin-top: 5px;
+    margin-right: 10px;
+    background: white;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    padding: 1px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+
+#go {
+    width: 40px;
+    margin-right: 10px;
+    border: 1px solid #39ff14;
+}
+
+#cancel {
+    width: 35px;
+    border: 1px solid red;
+}
+
+.nav-bottom {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+}
+
+.nav-bottom i {
+    flex: 1;
+    max-width: 30px;
+}
+
+.nav-bottom-logo {
+    flex: 2;
+}
+
+.nav-bottom i {
+    font-size: 40px;
+   margin-left: 10px;
+}
+
+#bar-container {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#nav-box {
+    position: fixed;
+    width: 70%;
+    background: var(--navbar-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    list-style: none;
+    text-align: center;
+
+    /*margin: 0 auto;
+    margin-top: 2200px;*/
+
+    margin-left: 15%;
+    margin-top: 150px;
+    z-index: 90;
+    top: -1000px;
+
+    -webkit-transition: 0.5;
+    transition: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+
+}
+
+#nav-box a {
+    text-decoration: none;
+}
+
+.pop-up {
+    top: 0 !important;
+
+}
+
+#nav-box li {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+#yield-container {
+  margin-top: 45px;
+  margin-bottom: 55px;
+    padding: 0;
+}
+
+.intform {
+  text-align: center;
+    width: 100vw;
+      padding: 0;
+}
+.intform form {
+  width: 100%;
+}
+.intform form > *, .intform input {
+  width: 90%;
+  /* border: none; */
+  font-size: 20px;
+  padding: 3px 10px;
+}
+.intform form textarea {
+height: 30vh;
+}
+.first {
+  background-color: white;
+}
+.gray {
+  background-color: rgb(215, 215, 215);
+}
+.intform form input[type="submit"] {
+  background-color: rgb(73, 255, 91);
+  border-color: rgb(73, 255, 91);
+  width: 86%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.other-box:before{
+  content: 'Other';
+  color: white;
+  margin-left: -22%;
+}

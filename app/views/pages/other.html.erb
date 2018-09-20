@@ -1,2 +1,28 @@
-<h1>Pages#other</h1>
-<p>Find me in app/views/pages/other.html.erb</p>
+<h1>Other Events</h1>
+
+<%# if request.remote_ip == nil %>
+  <%# @results = Geocoder.search("98.116.10.64") %>
+    <%# else %>
+      <%# @results = Geocoder.search(request.remote_ip) %>
+        <%# end %>
+          <%# @results.first.city %>
+
+    <% @other.each do |b| if b.event_type != "basketball" %>
+      <% if b.event_type !=  "Soccer" %>
+        <% if b.event_type != "Football" %>
+        <div class="events-pages-info">
+          <%= link_to "#{b.name}", gym_event_path(@gym, b) %><br>
+          <% if b.description == nil %>
+          <% else %>
+            <p><%= b.description %></p>
+          <% end %>
+          <sub>
+            <%= b.start_date.strftime("%b. %e, %Y") %>
+            -
+            <%= b.end_date.strftime("%b. %e, %Y") %>
+          </sub>
+        </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>

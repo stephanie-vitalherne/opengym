@@ -1,0 +1,16 @@
+<h1><%= @event.name %></h1>
+
+
+<h4><%= @event.event_type %><br></h4>
+<span> Start: <%= @event.start_date.strftime("%y/%m/%d") %></span><br>
+<span> End: <%= @event.end_date.strftime("%y/%m/%d") %></span><br>
+<p><%= @event.description %></p>
+
+<% if @event.participants.count <= 10 %>
+<% @participants = @event.participants %>
+<%= render 'participants/listparticipants' %>
+<% end %>
+<%= render 'participants/newparticipant' %>
+<script>
+removeShadow();
+</script>

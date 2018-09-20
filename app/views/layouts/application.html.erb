@@ -7,9 +7,45 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Righteous|Alice|Abril+Fatface" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav id="header" class="nav-top shadow">
+      <% if current_user == nil %>
+      <% else %>
+        <%#= @user.photo.attachment.nil? ? image_tag('default.png', size: '50x50', id: 'pro-img') : image_tag(@user.photo, size: '50x50', id: 'pro-img') %>
+      <% end %>
+      <div id="og-top">
+        <div id="nav-top-logo"> <a href="/"> Open Gym</a></div>
+        <div id="search-icon"><i onClick="search()" class="fa fa-search"></i></div>
+      </div>
+      <div id="search">
+           <%= render 'pages/search' %>
+        <!-- <input id="search-bar" type="text"  class="hidden" placeholder="search" name="search"> -->
+        
+      </div>
+    </nav>
+
+    <div id="yield-container"> <%= yield %> </div>
+
+     <%= render 'layouts/nav-box' %>
+
+    <nav id="footer" class="nav-bottom shadow">
+      <%= link_to user_messages_path('1') do %>
+      <i class="far fa-envelope"></i>
+      <% end %>
+      <div class="nav-bottom-logo">OG</div>
+      <div id="bar-container" onClick="menuReveal()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   </body>
 </html>
