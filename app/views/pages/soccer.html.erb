@@ -1,14 +1,16 @@
 <h1>Soccer Events</h1>
 
-
-<% @soccer.each do |b| %>
-<%= b.name %><br>
-<% if b.description == nil %>
-<% else %>
-<p><%= b.description %></p>
-<% end %>
-<sub>
-  <%= b.start_date.strftime("%b. %e, %Y") %> -
-  <%= b.end_date.strftime("%b. %e, %Y") %>
-</sub>
-<% end %>
+<div class="events-pages-info">
+  <% @soccer.each do |b| %>
+    <%= b.name %><br>
+    <% if b.description == nil %>
+    <% else %>
+      <p><%= b.description %></p>
+    <% end %>
+    <sub>
+      <%= b.start_date.strftime("%b. %e, %Y") %>
+      -
+      <%= b.end_date.strftime("%b. %e, %Y") %>
+    </sub>
+  <% end %>
+</div>
