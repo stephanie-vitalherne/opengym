@@ -36,6 +36,12 @@ function removeShadow() {
        document.getElementById("footer").classList.remove("shadow");
      }
 
+     function openMap() {
+
+            document.getElementById("map").classList.toggle("hidden");
+            console.log('opened map');
+          }
+
 // other = document.querySelector("input");
 
 
@@ -58,7 +64,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 }
 getBothCoordPairs();
-// 
+//
 // let retrieveLocationDataAddressToCoords = (addressArg) => {
 // console.log(addressArg);
 

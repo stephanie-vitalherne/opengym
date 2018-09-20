@@ -240,9 +240,19 @@ nav {
 }
 .intform button {
   width: 90%;
-
   font-size: 20px;
   padding: 3px 10px;
+}
+.locator {
+  background-color: transparent;
+  margin: 0 10px;
+  border: 0;
+}
+#map {
+  position: fixed;
+  z-index: 10;
+  top: 50px;
+  width: 100vh;
 }
 .intform form > *, .intform input {
   width: 90%;
