@@ -1,13 +1,25 @@
 <% if logged_in? %>
+<div id="messagesbox">
 <% if @user.id == current_user.id %>
-<% @user.messages.each do |m| %>
-<% p @user.messages %>
-<p><%= m.body %></p>
+  <% @user.messages.each do |m| %>
+    <% if m.sender_id == 0 %>
+  <div class="admin message">
+    <h2><%= m.subject %></h2>
+    <p><%= m.body %></p>
+  </div>
+  <% else %>
+  <% @sender = User.find_by(id: m.sender_id)%>
+  <div class="message">
+    <h2><%= m.subject %>
+      <small>from <%# @sender.first_name %> </small>
+    </h2>
+    <p><%= m.body %></p>
+</div>
 <% end %>
 <% end %>
-
-<%= render 'newmessage' %>
-
+<% end %>
+<%# render 'newmessage' %>
+</div>
 <% else %>
 You must log in to see this page.
 <% end %>
