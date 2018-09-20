@@ -235,7 +235,7 @@ nav {
 }
 .intform form > *, .intform input {
   margin: 2px;
-  width: 100%;
+  width: 90%;
   border: none;
   margin: 2px 0;
   font-size: 20px;
@@ -252,7 +252,7 @@ height: 30vh;
 }
 .intform form input[type="submit"] {
   background-color: rgb(73, 255, 91);
-  width: 96%;
+  width: 86%;
   border-radius: 5px;
   padding: 10px;
 }
