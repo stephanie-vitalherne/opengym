@@ -9,9 +9,13 @@
     <%= form_for(@location) do |f| %>
     <%= f.hidden_field :user_id, value: @current_user.id %>
     <%= f.hidden_field :coordinates %>
-    <button type="submit" class="locator" onclick="openMap()">
+
+    <button type="submit" class="locator">
       <i class="far fa-compass"></i>
     </button>
-  <% end %>
+
+    <% end %>
+          <% if @current_user.location != nil %>
 <i onclick="openMap()" class="fas fa-map-marked-alt"></i>
+  <% end %>
 <% end %>
