@@ -27,13 +27,13 @@ html{
   color: white;
 }
 a {
-  color: white;
+  color: black;
 }
 a:visited {
-  color: white;
+  color: black;
 }
 a:hover {
-  color: red;
+  color: green;
 }
 body {
     margin: 0;
@@ -190,7 +190,7 @@ nav {
     list-style: none;
     text-align: center;
     margin: 0 auto;
-    margin-top: 2200px; 
+    margin-top: 2200px;
     -webkit-transition: 0.5;
     transition: 0.5s;
     -webkit-transition-timing-function: ease-in-out;

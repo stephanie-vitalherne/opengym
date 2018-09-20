@@ -20,6 +20,7 @@ class PagesController < ApplicationController
 
   def basketball
     @basketball = Event.where(event_type: 'Basketball')
+    @gym = Gym.find_by(params[:gym_id])
   end
 
   def football
