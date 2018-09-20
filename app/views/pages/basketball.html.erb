@@ -1,7 +1,7 @@
 <h1>Basketball Events</h1>
 
 <% @basketball.each do |b| %>
-  <h3><%= b.name %></h3>
+  <h3><%= link_to "#{b.name}", '#' %></h3>
   <% if b.description == nil %>
   <% else %>
   <p><%= b.description %></p>
