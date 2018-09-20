@@ -51,7 +51,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     console.log(`LATITUDE: ${lat} LONGITUDE ${lng}`);
 
     allCoords.userLoc = {latitude: lat, longitude: lng};
-    document.getElementById("location_coordinates").value += allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
+    document.getElementById("location_coordinates").value = allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
     // retrieveLocationDataAddressToCoords(address);
 
 });
@@ -70,7 +70,6 @@ axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressAr
 
     document.getElementById("myLoc").value += `Lat: ${allCoords.userLoc.latitude} Lng: ${allCoords.userLoc.longitude}`;
     document.getElementById("endLoc").value += `Lat: ${allCoords.endLoc.latitude} Lng: ${allCoords.endLoc.longitude}`;
-
 
     calculateDistance();
 }).catch((error) => {
