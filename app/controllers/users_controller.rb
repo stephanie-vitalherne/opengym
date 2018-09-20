@@ -13,7 +13,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @gyms = Gym.where(user_id: current_user.id)
+  end
 
   def edit; end
 

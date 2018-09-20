@@ -25,8 +25,16 @@
     <span><h2 style="width: 50%; font-size: 1.5em;"><%= @user.full_name %></h2></span>
   <% end %>
   <p><%= @user.email %></p>
-  <% end %>
-
-<span id='del-btn'><% link_to 'Delete Account', '#' %></span>
-
 </div>
+
+  <div class="user-gym">
+    <% @gyms.each do |f| %>
+      <div class="gymphoto" id="ugym" style="background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url('<%= f.cover_photo.attachment.nil? ? asset_url('asphalt2.JPG') : rails_blob_url(f.cover_photo) %>');">
+        <h2><%= link_to f.name, gym_path(f) %></h2>
+      </div>
+    <% end %>
+  </div>
+  <span class="deldiv">
+    <span id='del-btn'><%= link_to 'Delete Account', '#' %></span>
+  </span>
+<% end %>

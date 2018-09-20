@@ -31,6 +31,7 @@ class GymsController < ApplicationController
 
   def show
     @event = Event.new
+    @user = User.where(id: current_user.id)
    end
 
   def destroy
