@@ -1,6 +1,7 @@
 <div id="nav-box">
   <% if current_user == nil %>
     <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Login', login_path %></li>
     <li><%= link_to 'Leaderboard', leaderboard_path %></li>
     <li><%= link_to 'Basketball', basketball_path %></li>
     <li><%= link_to 'Soccer', soccer_path %></li>
@@ -16,6 +17,6 @@
     <li><%= link_to 'Football', football_path %></li>
     <li><%= link_to 'Other', other_path %></li>
     <li><%= link_to 'About Us', about_path %></li>
-    <li><%= link_to 'Logout', logout_path %></li>
+    <li><%= link_to 'Logout', logout_path, method: :delete %></li>
   <% end %>
 </div>
