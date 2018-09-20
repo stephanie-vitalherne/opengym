@@ -2,7 +2,7 @@
 
 
 <%@event.each do |e| %>
-<%=link_to "#{e.name}", gym_event_path(@gym, e) %><br>
+<%=link_to "#{e.name}", gym_event_path(@gym, e), class: "results" %><br>
 <p>Event: <%= e.event_type %></p><br>
 <p>Start: <%= e.start_date %> -
  End: <%= e.end_date %></p><br>

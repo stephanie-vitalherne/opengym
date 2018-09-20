@@ -287,8 +287,8 @@ margin-top: 6%;
   background-color: rgb(215, 215, 215);
 }
 .intform form input[type="submit"] {
- /* background-color: rgb(73, 255, 91);
-  border-color: rgb(73, 255, 91);*/
+  background-color: rgb(73, 255, 91);
+  border-color: rgb(73, 255, 91);
   width: 86%;
   border-radius: 5px;
   padding: 10px;
