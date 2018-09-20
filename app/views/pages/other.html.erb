@@ -7,15 +7,19 @@
         <%# end %>
           <%# @results.first.city %>
 
-    <% @other.each do |b| if b.event_type != "basketball" %>
-      <% if b.event_type !=  "Soccer" %>
-        <% if b.event_type != "Football" %>
-          <%= link_to "#{b.name}", gym_event_path(@gym, b) %><br>
-          <%= b.description %><br>
-          <%= b.start_date.strftime("%b. %e, %Y") %>
-          -
-          <%= b.end_date.strftime("%b. %e, %Y") %>
+      <% @other.each do |b| if b.event_type != "basketball" %>
+        <% if b.event_type !=  "Soccer" %>
+          <% if b.event_type != "Football" %>
+            <h3><%= link_to "#{b.name}", gym_event_path(@gym, b) %></h3>
+            <% if b.description == nil %>
+            <% else %>
+              <p><%= b.description %></p>
+            <% end %>
+            <sub>
+              <%= b.start_date.strftime("%b. %e, %Y") %> -
+              <%= b.end_date.strftime("%b. %e, %Y") %>
+            </sub>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
-  <% end %>

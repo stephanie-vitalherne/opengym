@@ -1,9 +1,14 @@
-<h1>Pages#soccer</h1>
+<h1>Soccer Events</h1>
 
 
 <% @soccer.each do |b| %>
 <%= b.name %><br>
- <%= b.description %><br>
-   <%= b.start_date.strftime("%b. %e, %Y") %> -
- <%= b.end_date.strftime("%b. %e, %Y") %>
+<% if b.description == nil %>
+<% else %>
+<p><%= b.description %></p>
+<% end %>
+<sub>
+  <%= b.start_date.strftime("%b. %e, %Y") %> -
+  <%= b.end_date.strftime("%b. %e, %Y") %>
+</sub>
 <% end %>
