@@ -1,11 +1,13 @@
-<h1>Pages#basketball</h1>
-
-
+<h1>Basketball Events</h1>
 
 <% @basketball.each do |b| %>
-<%= b.name %><br>
- <%= b.description %><br>
-   <%= b.start_date %> -
- <%= b.end_date %><br>
+  <h3><%= b.name %></h3>
+  <% if b.description == nil %>
+  <% else %>
+  <p><%= b.description %></p>
+  <% end %>
+  <sub>
+    <%= b.start_date.strftime("%b. %e, %Y") %> -
+    <%= b.end_date.strftime("%b. %e, %Y") %>
+  </sub>
 <% end %>
-

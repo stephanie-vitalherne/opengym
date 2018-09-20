@@ -4,6 +4,6 @@
 <% @football.each do |b| %>
 <%= b.name %><br>
  <%= b.description %><br>
-   <%= b.start_date %> -
- <%= b.end_date %>
+   <%= b.start_date.strftime("%b. %e, %Y") %> -
+ <%= b.end_date.strftime("%b. %e, %Y") %>
 <% end %>
