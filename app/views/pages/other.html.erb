@@ -11,7 +11,7 @@
       <% if b.event_type !=  "Soccer" %>
         <% if b.event_type != "Football" %>
         <div class="events-pages-info">
-          <h3><%= link_to "#{b.name}", gym_event_path(@gym, b) %></h3>
+          <%= link_to "#{b.name}", gym_event_path(@gym, b) %><br>
           <% if b.description == nil %>
           <% else %>
             <p><%= b.description %></p>
