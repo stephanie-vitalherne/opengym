@@ -1,8 +1,8 @@
-<h1><%= @event.name %></h1>
+<h1 class="results"><%= @event.name %></h1>
 
-
+<div class="results">
 <h4><%= @event.event_type %><br></h4>
-<h5>At <%= link_to @event.gym.name, gym_path(@event.gym) %></h5>
+<h5>At:  <%= link_to @event.gym.name, gym_path(@event.gym), class: "results" %></h5>
 
 <% if logged_in? %>
 
@@ -23,6 +23,10 @@
 <%= render 'participants/listparticipants' %>
 <% end %>
 <%= render 'participants/newparticipant' %>
+
+</div>
 <script>
 removeShadow();
 </script>
+
+
