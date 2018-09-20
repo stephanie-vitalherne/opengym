@@ -21,7 +21,9 @@ html{
   font-family: sans-serif;
   /* background-color: rgb(82, 82, 82); */
   background-image: url(asphalt2.JPG);
+  /* background-image: url("court.png"); */
   background-size: cover;
+  /* background-repeat: no-repeat; */
   color: white;
 }
 a {
@@ -257,3 +259,5 @@ height: 30vh;
   margin-left: -2%;
   font-size: medium;
 }
+
+
