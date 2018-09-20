@@ -1,6 +1,17 @@
-<h3>hompage</h3>
 
 
-<% @event.each do |e| %>
-<%= link_to "#{e.name}",gym_event_path(@gym, e) %><br>
-<%end %>
+
+  <div class="events">
+      <% @event.each do |e| %>
+      <li><%= link_to "#{e.name}",gym_event_path(@gym, e) %></li>
+      <%end %>
+  </div>
+
+
+<!-- <div class="tri-top">
+
+</div>
+
+<div class="tri-bot">
+</div>
+-->

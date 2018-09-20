@@ -23,14 +23,15 @@
   margin-top: 6%;
   margin-left: 6%;
   #submit {
-    padding: 10%;
+    padding: 7%;
     width: 100%;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 22px;
     margin-top: 10%;
     border: none;
     box-shadow: 0 0 10px black;
     background-color: rgba(52, 94, 44, 0.69);
+    border: 1px solid rgba(52, 94, 44, 0.69);
   }
   #submit:hover{
     background-color: rgb(52, 94, 44);
@@ -90,24 +91,28 @@ sub{
     font-size: 1.4em;
     position: relative;
     text-align: center;
-    margin-top: -17%;
+    margin-top: -22%;
     margin-left: 25.5%;
+    text-shadow: 0 0 6px #3b3a36;
   }
   p{
+    text-shadow: 0 0 6px #3b3a36;
     text-align: center;
     margin-top: -4%;
     margin-left: 1%;
+    font-size: 1.1em;
+    font-style: oblique;
   }
 }
 
 #pro-img {
   position: absolute;
-  top: 15%;
+  top: 12%;
   left: 22%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
   border: 3px solid white;
-  box-shadow: 0 0 15px white;
+  box-shadow: 0 0 20px #777;
 }
 
 #profile-block{
@@ -118,16 +123,43 @@ sub{
 #edit-button a i{
   position: relative;
   border: 1px solid rgb(52, 94, 44);
-  margin-left: 63%;
+  margin-left: 67%;
   max-width: 5%;
-  margin-top: 17%;
+  margin-top: 12%;
   z-index: 1;
   border-radius: 100px;
   padding: 4%;
   background-color: rgb(52, 94, 44);
+  box-shadow: 0 0 5px black;
+  text-shadow: 0 0 1px #eee;
    a i:active{
     color: black;
   }
+}
+
+.user-gym{
+  position: relative;
+  margin-top: 10.5%;
+}
+
+#del-btn a{
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 7%;
+  background: rgba(52, 94, 44, 0.69);
+  border: 1px solid rgba(52, 94, 44, 0.69);
+}
+
+.deldiv{
+  position: relative;
+  border-radius: 30px;
+  margin-left: 27%;
+  margin-bottom: 10%;
+  background: rgba(255,255,255, 0.7);
+  box-shadow: 0 0 10px black;
+
+  padding: 7% 0;
+  width: 10%;
 }
 // ================================================
 // EDIT PAGE
@@ -141,14 +173,15 @@ sub{
     text-align: right;
   }
   #submit {
-    padding: 10%;
+    padding: 7%;
     width: 100%;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 22px;
     margin-top: 10%;
     border: none;
     box-shadow: 0 0 10px black;
     background-color: rgba(52, 94, 44, 0.69);
+    border: 1px solid rgba(52, 94, 44, 0.69);
   }
   #submit:hover{
     background-color: rgb(52, 94, 44);

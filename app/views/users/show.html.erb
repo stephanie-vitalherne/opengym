@@ -1,17 +1,39 @@
 <div id='users-show'>
   <% if current_user == nil %>
   <% else %>
-  <div id="profile-block">
-      <div id="edit-button">
-        <%= link_to edit_user_path do %><i class="far fa-edit"></i><% end %>
-      </div>
-    <%= @user.photo.attachment.nil? ? image_tag('default.png', size: '200x200', id: 'pro-img') : image_tag(@user.photo, size: '200x200', id: 'pro-img') %>
-  </div>
-  <% if @user.full_name.length  > 15 %>
-  <span><h2 style="width: 62%; margin-left: 21.5%;"><%= @user.full_name %></h2></span>
+    <div id="profile-block">
+      <% if current_user == nil %>
+        <% else %>
+        <div id="edit-button">
+          <%= link_to edit_user_path do %><i class="far fa-edit"></i><% end %>
+        </div>
+        <% end %>
+          <%= @user.photo.attachment.nil? ? image_tag('default.png', size: '200x200', id: 'pro-img') : image_tag(@user.photo, size: '200x200', id: 'pro-img') %>
+    </div>
+
+  <% if @user.full_name.length  > 21 && @user.full_name.length <= 32  %>
+    <span><h2 style="width: 62%; margin-left: 21.5%; font-size: 1.2em;"><%= @user.full_name %></h2></span>
+  <% elsif @user.full_name.length  > 15  %>
+    <span><h2 style="width: 62%; margin-left: 21.5%;"><%= @user.full_name %></h2></span>
   <% else %>
-  <span><h2 style="width: 50%"><%= @user.full_name %></h2></span>
+    <span><h2 style="width: 50%; font-size: 1.5em;"><%= @user.full_name %></h2></span>
   <% end %>
   <p><%= @user.email %></p>
-  <% end %>
 </div>
+
+
+<% if @gyms == nil %>
+
+<% else %>
+  <div class="user-gym">
+    <% @gyms.each do |f| %>
+      <div class="gymphoto" id="ugym" style="background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url('<%= f.cover_photo.attachment.nil? ? asset_url('gym2.jpg', size:'100x100') : rails_blob_url(f.cover_photo) %>');">
+        <h2><%= link_to f.name, gym_path(f) %></h2>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+  <span class="deldiv">
+    <span id='del-btn'><%= link_to 'Delete Account', '#' %></span>
+  </span>
+<% end %>

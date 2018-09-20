@@ -20,7 +20,13 @@
 function menuReveal() {
   document.getElementById("bar-container").classList.toggle("change");
   document.getElementById("nav-box").classList.toggle("pop-up");
-  document.getElementById("yield-container").classList.toggle("hidden");
+//   if (document.getElementById("yield-container").style.display = 'block') {
+//         document.getElementById("yield-container").style.display = 'none';
+// }if(document.getElementById("yield-container").style.display = 'none'){
+//     setTimeout(function(){
+//         document.getElementById("yield-container").style.display="block";
+//     }, 500);
+//   }
 }
 
 function search() {

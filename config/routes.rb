@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-
   get 'locations/new'
- patch 'locations/new'
+  patch 'locations/new'
   root 'pages#home'
 
   resources :users, only: %i[edit index create show update destroy] do
-      resources :messages
+    delete '/delete' => 'users#destroy'
+    resources :messages
   end
 
   resources :gyms do
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
         delete '/delete' => 'participants#destroy'
       end
     end
-end
+  end
   resources :locations
 
   get '/results' => 'pages#results'

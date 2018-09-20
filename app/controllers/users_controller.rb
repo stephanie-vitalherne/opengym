@@ -13,7 +13,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @gyms = Gym.where(user_id: current_user.id)
+  end
 
   def edit; end
 
@@ -23,6 +25,15 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'edit'
+    end
+  end
+
+  def destroy
+    p "Terminating #{user.full_name} from OpenGym"
+    user.destroy
+    respond_to do |format|
+      format.js
+      format.html { p 'html response'; redirect_to root_path }
     end
   end
 
