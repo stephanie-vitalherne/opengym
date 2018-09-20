@@ -244,6 +244,24 @@ nav {
 .intform form {
   width: 100%;
 }
+.intform button {
+  width: 90%;
+  font-size: 20px;
+  padding: 3px 10px;
+}
+.locator {
+  background-color: transparent;
+  margin: 0 10px;
+  border: 0;
+}
+#map {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  border: 1px white;
+  border-radius: 20px;
+}
 .intform form > *, .intform input {
   width: 90%;
   /* border: none; */

@@ -7,7 +7,9 @@
   padding-top: 56.25%;
   position: relative;
 }
-
+#map .gmap_canvas {
+  height: 80vh;
+}
 .gmap_canvas iframe {
   border: 0;
   height: 100%;

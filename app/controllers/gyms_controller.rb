@@ -41,7 +41,7 @@ redirect_back(fallback_location: gyms_path)
   private
 
   def gym_params
-    params.require(:gym).permit(:name, :location, :user_id, :cover_photo)
+    params.require(:gym).permit(:name, :location, :user_id, :cover_photo, :coordinates)
   end
 
   def find_gym
