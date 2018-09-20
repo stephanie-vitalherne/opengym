@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
 
   def basketball
-    @basketball = Event.where(event_type: 'Basketball')
+    @basketball = Event.where(event_type: 'basketball')
   end
 
   def football
