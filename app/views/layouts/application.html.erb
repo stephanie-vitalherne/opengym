@@ -17,7 +17,10 @@
   <body>
 
     <nav id="header" class="nav-top shadow">
-
+      <% if current_user == nil %>
+      <% else %>
+        <%#= @user.photo.attachment.nil? ? image_tag('default.png', size: '50x50', id: 'pro-img') : image_tag(@user.photo, size: '50x50', id: 'pro-img') %>
+      <% end %>
       <div id="og-top">
         <div id="nav-top-logo"> <a href="/"> Open Gym</a></div>
         <div id="search-icon"><i onClick="search()" class="fa fa-search"></i></div>
