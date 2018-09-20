@@ -1,5 +1,5 @@
 
-<div id="gymphoto" style="background-image: url('<%= @gym.cover_photo.attachment.nil? ? asset_url('asphalt2.JPG') : rails_blob_url(@gym.cover_photo) %>');">
+<div id="gymphoto" style="background-image: url('<%= @gym.cover_photo.attachment.nil? ? asset_url('gym2.jpg', size: '100x100') : rails_blob_url(@gym.cover_photo) %>');">
 
   <h1><%= @gym.name %></h1></div>
 <p><%= @gym.description %></p>
