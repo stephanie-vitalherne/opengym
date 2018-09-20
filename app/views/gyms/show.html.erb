@@ -1,4 +1,4 @@
-
+<div class="gym-page">
 <div id="gymphoto" style="background-image: url('<%= @gym.cover_photo.attachment.nil? ? asset_url('gym2.jpg', size: '100x100') : rails_blob_url(@gym.cover_photo) %>');">
 
   <h1><%= @gym.name %></h1></div>
@@ -28,6 +28,8 @@
 <% end %>
 <% end %>
 </ul>
+</div>
+
 <div id="newmodal" class="newmodal"><h2 onclick="newGymOpen()"><i class="fas fa-plus"></i> Play Here</h2>
   <div class="newgymform">
     <%= render 'events/form' %>
