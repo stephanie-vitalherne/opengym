@@ -57,8 +57,8 @@ navigator.geolocation.getCurrentPosition((position) => {
     console.log(`LATITUDE: ${lat} LONGITUDE ${lng}`);
 
     allCoords.userLoc = {latitude: lat, longitude: lng};
-    document.getElementById("location_coordinates").value = allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
-    // retrieveLocationDataAddressToCoords(address);
+    // document.getElementById("location_coordinates").value = allCoords.userLoc.latitude + "," + allCoords.userLoc.longitude;
+    retrieveLocationDataAddressToCoords(address);
 
 });
 
@@ -67,38 +67,42 @@ getBothCoordPairs();
 let retrieveLocationDataAddressToCoords = (addressArg) => {
 console.log(addressArg);
 
-axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressArg}&components=country:US&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04`)
+axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressArg}&components=country:US&key=AIzaSyB8hX_GA7hRKU1WEb5pu6HRhmsooFiqQuU`)
 .then((response) => {
     console.log(response);
+// 
+// axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressArg}&key=AIzaSyCGZeAC28wRGbVJb__vJjh60ybcwf1EP2Y`)
+// .then((response) => {
+//     console.log(response);
 
     allCoords.endLoc = {latitude: response.data.results[0].geometry.location.lat, longitude: response.data.results[0].geometry.location.lng};
     console.log(allCoords);
 
-    document.getElementById("myLoc").value += `Lat: ${allCoords.userLoc.latitude} Lng: ${allCoords.userLoc.longitude}`;
-    document.getElementById("endLoc").value += `Lat: ${allCoords.endLoc.latitude} Lng: ${allCoords.endLoc.longitude}`;
+    // document.getElementById("myLoc").value += `Lat: ${allCoords.userLoc.latitude} Lng: ${allCoords.userLoc.longitude}`;
+    document.getElementById("gym_coordinates").value = allCoords.endLoc.latitude + "," + allCoords.endLoc.longitude;
 
-    calculateDistance();
+    // calculateDistance();
 }).catch((error) => {
     console.log(error);
 });
 }
 
-let calculateDistance = () => {
-    let calculate = new google.maps.DistanceMatrixService();
-
-    calculate.getDistanceMatrix(
-        {
-          origins: [{lat: allCoords.userLoc.latitude, lng: allCoords.userLoc.longitude}],
-          destinations: [{lat: allCoords.endLoc.latitude, lng: allCoords.endLoc.longitude}],
-          unitSystem: google.maps.UnitSystem.IMPERIAL,
-          travelMode: 'DRIVING' //<---Default
-        },
-        (response, status) => {
-            console.log(response);
-            var s = response.rows[0].elements[0].distance.text.replace(' mi', '');
-            document.getElementById("dist").value += s;
-            console.log(status);
-        }
-    );
-
-}
+// let calculateDistance = () => {
+//     let calculate = new google.maps.DistanceMatrixService();
+//
+//     calculate.getDistanceMatrix(
+//         {
+//           origins: [{lat: allCoords.userLoc.latitude, lng: allCoords.userLoc.longitude}],
+//           destinations: [{lat: allCoords.endLoc.latitude, lng: allCoords.endLoc.longitude}],
+//           unitSystem: google.maps.UnitSystem.IMPERIAL,
+//           travelMode: 'DRIVING' //<---Default
+//         },
+//         (response, status) => {
+//             console.log(response);
+//             var s = response.rows[0].elements[0].distance.text.replace(' mi', '');
+//             document.getElementById("dist").value += s;
+//             console.log(status);
+//         }
+//     );
+//
+// }

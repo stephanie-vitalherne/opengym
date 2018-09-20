@@ -30,6 +30,7 @@ gem 'validates_timeliness'
 gem 'geokit'
 gem 'geokit-rails'
 gem 'geocoder'
+gem 'httparty'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

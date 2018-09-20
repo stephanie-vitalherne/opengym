@@ -10,7 +10,7 @@ class GymsController < ApplicationController
       flash[:notice] = 'Gym created successfully'
       redirect_to @gym
     else
-      render 'new'
+redirect_back(fallback_location: gyms_path)
     end
   end
 
@@ -20,7 +20,7 @@ class GymsController < ApplicationController
     if @gym.update(gym_params)
       flash[:notice] = 'Gym updated successfully'
     else
-      render 'edit'
+  redirect_back(fallback_location: gyms_path)
     end
   end
 
