@@ -7,8 +7,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.boolean :denied, default: false
       t.date :start_date
       t.date :end_date
-      t.references :user, foreign_key: true
-      t.references :gym, foreign_key: true
+      t.integer :user_id
+      t.integer :gym_id
 
       t.timestamps
     end
