@@ -5,7 +5,7 @@
   <% if logged_in? %>
 
   <% if e.gym.coordinates != nil && @current_user.location != nil %>
-  <% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=" + e.gym.coordinates + "&key=AIzaSyDuEG7OD_U36SiWbM7HkJkom9cbzXkaq04") %>
+  <% distrequest = HTTParty.get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + @current_user.location.coordinates + "&destinations=" + e.gym.coordinates + "&key=ENV['GOOGLE_KEY']") %>
     <% distance = JSON.parse(distrequest.body) %>
     <% @dist = distance['rows'][0]['elements'][0]['distance']['text'].gsub(" mi", "").gsub(",", "").to_f %>
 
