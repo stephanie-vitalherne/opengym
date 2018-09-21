@@ -1,1 +1,11 @@
 # OpenGym
+![about](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/about.png)
+![event](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/event.png)
+![gyms](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/gyms.png)
+![gymshow](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/gymshow.png)
+![inbox](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/inbox.png)
+![leaderboard](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/leaderboard.png)
+![map](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/map.png)
+![menu](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/menu.png)
+![newevent](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/newevent.png)
+![rsvp](https://raw.githubusercontent.com/stephanie-vitalherne/opengym/first_draft/public/screenshots/rsvp.png)
