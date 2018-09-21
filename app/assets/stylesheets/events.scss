@@ -46,10 +46,6 @@ input#other {
 .events li {
   padding: 10px;
   border: 1px solid white;
-  // margin-top: 10px;
-  // width: 91%;
-  // background-color: rgba(187, 187, 187, 0.4);
-  // border-color: rgba(187, 187, 187, 0.4);
   font-size: 20px;
   margin: 0 auto;
   margin-top: 15px;
@@ -71,42 +67,3 @@ input#other {
 .scroll {
   overflow: scroll;
 }
-
-
-// .tri-top{
-//   width: 0;
-//   height: 0;
-//   border-top: 12px solid transparent;
-//   border-right: 22px solid white;
-//   border-bottom: 12px solid transparent;
-//   position: absolute;
-// top: 90px;
-// right: 90%;
-// }
-
-
-
-// .tri-bot{
-//   width: 0;
-//   height: 0;
-//   border-top: 12.9px solid transparent;
-//   border-right: 22px solid white;
-//   border-bottom: 12px solid transparent;
-//   position: absolute;
-// top: 109px;
-// right: 90%;
-// }
-
-// // .events li:before,
-// .events li:after{
-//   content: "";
-//   position: absolute;
-//   top: 109px;
-//   border-top: 12.9px solid transparent;
-//   border-right: 22px solid black;
-//   border-bottom: 12px solid transparent;
-//   width: 0;
-//   height: 0px;
-//   // background-color: black;
-//   opacity: 0.4;
-// }

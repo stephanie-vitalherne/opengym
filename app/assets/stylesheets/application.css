@@ -13,239 +13,244 @@
  *= require_tree .
  *= require_self
  */
- :root {
-   --navbar-color: linear-gradient(rgb(52, 94, 44), rgb(52, 94, 44));
- }
+:root {
+  --navbar-color: linear-gradient(rgb(52, 94, 44), rgb(52, 94, 44));
+}
 
-html{
-  /* background-color: rgb(82, 82, 82); */
-  /* background-image: url(asphalt2.JPG); */
+html {
   background-image: url("court.png");
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
 }
+
 a {
   color: black;
 }
-/*a:visited {
-  color: black;
-}*/
+
 a:hover {
   color: #B26012;
 }
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Righteous', cursive;
+  margin: 0;
+  padding: 0;
+  font-family: 'Righteous', cursive;
 }
 
 nav {
-    width: 100%;
-    background: var(--navbar-color);
-    text-align: center;
-    font-size: 30px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: black;
-    color: white;
-    z-index: 10;
+  width: 100%;
+  background: var(--navbar-color);
+  text-align: center;
+  font-size: 30px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: black;
+  color: white;
+  z-index: 10;
 }
+
 .shadow {
-      box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
 }
+
 .nav-top {
-    top: 0;
-    height: auto;
-    position: fixed;
+  top: 0;
+  height: auto;
+  position: fixed;
 }
 
 #og-top {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
 }
 
 #nav-top-logo {
-    text-shadow: -1px -1px 1px #000;
-    margin-left: 40px;
-    flex: 1;
+  text-shadow: -1px -1px 1px #000;
+  margin-left: 40px;
+  flex: 1;
 }
 
-#nav-top-logo a{
- text-decoration: none;
- color: white;
- text-shadow: 3px 2px 3px black
+#nav-top-logo a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 3px 2px 3px black
 }
-#nav-top-logo a:hover{
+
+#nav-top-logo a:hover {
   color: #B26012;
 }
 
 .nav-top i {
-    margin-right: 10px;
-    cursor: pointer;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 #search {
-    position: fixed;
-    display: flex;
-    background: var(--navbar-color);
-    top: 0;
-    margin-left: -1000px;
-    width: 100%;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    -webkit-transition: 0.5;
-    transition: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
+  position: fixed;
+  display: flex;
+  background: var(--navbar-color);
+  top: 0;
+  margin-left: -1000px;
+  width: 100%;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -webkit-transition: 0.5;
+  transition: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .search-transition {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 #search-bar {
-    font-size: 20px;
-    width: 66%;
-    border-radius: 10px;
-    padding: 2px;
+  font-size: 20px;
+  width: 66%;
+  border-radius: 10px;
+  padding: 2px;
 }
 
 #search-bar:focus {
-    border: 2px solid gold;
+  border: 2px solid gold;
 }
 
 .search-buttons {
-    margin-left: 4px;
-    background: white;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    padding: 2px;
-    border-radius: 10px;
-    font-weight: bold;
+  margin-left: 4px;
+  background: white;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 #go {
-    width: 40px;
-    margin-top: 5px;
-    border: 1px solid #39ff14;
+  width: 40px;
+  margin-top: 5px;
+  border: 1px solid #39ff14;
 }
 
 #cancel {
-    width: 38px;
-    border: 1px solid red;
+  width: 38px;
+  border: 1px solid red;
 }
 
 .nav-bottom {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    display: flex;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
 }
 
 .nav-bottom i {
-    font-size: 40px;
-   margin-right: 40px;
+  font-size: 40px;
+  margin-right: 40px;
 }
 
 .fa-envelope {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 #bar-container {
-    display: inline-block;
-    margin-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .nav-bottom-logo {
-    margin-left: 170px;
-    margin-right: 100px;
-    text-shadow: 3px 2px 3px black
+  margin-left: 170px;
+  margin-right: 100px;
+  text-shadow: 3px 2px 3px black
 }
 
-
 .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 #nav-box {
-    position: fixed;
-    width: 70%;
-    background: var(--navbar-color);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    list-style: none;
-    text-align: center;
-    margin-left: 15%;
-    margin-top: 150px;
-    z-index: 90;
-    top: -1000px;
-    -webkit-transition: 0.5;
-    transition: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
+  position: fixed;
+  width: 70%;
+  background: var(--navbar-color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  list-style: none;
+  text-align: center;
+  margin-left: 15%;
+  margin-top: 150px;
+  z-index: 90;
+  top: -1000px;
+  -webkit-transition: 0.5;
+  transition: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 #nav-box a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .pop-up {
-    top: 0 !important;
-
+  top: 0 !important;
 }
 
 #nav-box li {
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #yield-container {
   margin-top: 45px;
   margin-bottom: 55px;
-    padding: 0;
+  padding: 0;
 }
 
 .intform {
   text-align: center;
-    width: 100vw;
-      padding: 0;
+  width: 100vw;
+  padding: 0;
 }
+
 .intform form {
   width: 100%;
 }
+
 .intform button {
   width: 90%;
   font-size: 20px;
   padding: 3px 10px;
 }
+
 .locator {
   background-color: transparent;
   margin: 0 10px;
   border: 0;
 }
+
 #map {
   position: fixed;
   z-index: 5;
@@ -255,37 +260,42 @@ nav {
   transition: top;
   transition-duration: 1s;
 }
+
 .down {
   top: 120vh;
-  visibility:collapse;
-transition: top;
-transition-duration: 1s;
-}
-.up {
-    top: 5vh;
-    visibility: visible;
-    transition: top;
-    transition-duration: 1s;
+  visibility: collapse;
+  transition: top;
+  transition-duration: 1s;
 }
 
-.intform form > *, .intform input {
+.up {
+  top: 5vh;
+  visibility: visible;
+  transition: top;
+  transition-duration: 1s;
+}
+
+.intform form>*, .intform input {
   width: 90%;
-  /* border: none; */
   font-size: 20px;
   padding: 3px 10px;
-  border-radius:3%;
+  border-radius: 3%;
 }
+
 .intform form textarea {
-height: 17vh;
-border-radius: 3%;
-margin-top: 6%;
+  height: 17vh;
+  border-radius: 3%;
+  margin-top: 6%;
 }
+
 .first {
   background-color: white;
 }
+
 .gray {
   background-color: rgb(215, 215, 215);
 }
+
 .intform form input[type="submit"] {
   background-color: rgb(73, 255, 91);
   border-color: rgb(73, 255, 91);
@@ -293,33 +303,24 @@ margin-top: 6%;
   border-radius: 5px;
   padding: 10px;
   margin-top: 7px;
-
 }
 
-.end-date{
+.end-date {
   margin-top: 4px;
-
 }
 
-#event_end_date input-placeholder{
+#event_end_date input-placeholder {
   text-align: center;
 }
 
-/*.other-box:before{
-  content: 'Other';
-  color: white;
-  margin-left: -22%;
-}*/
-
-input#other{
- /* width: 42px;*/
-  margin-left:116px;
-  margin-top:7px;
-}
-label.other{
-      font-size: 18px;
-    position: absolute;
-    right: 236px;
-    top: 229px;
+input#other {
+  margin-left: 116px;
+  margin-top: 7px;
 }
 
+label.other {
+  font-size: 18px;
+  position: absolute;
+  right: 236px;
+  top: 229px;
+}
