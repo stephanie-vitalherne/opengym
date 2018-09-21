@@ -1,4 +1,5 @@
 <div class="gymscontainer">
+  <% if @gyms != nil %>
 <% @gyms.each do |g| %>
 <% if logged_in? %>
 <% if g.coordinates != nil && @current_user.location != nil %>
@@ -15,12 +16,14 @@
 <h2><%= link_to g.name, gym_path(g) %></h2><p><%= g.location %></p><p><%= @dist %> miles away</p></div>
 <% end %>
 </div>
+<% end %>
 <div id="newmodal" class="newmodal"><h2 onclick="newGymOpen()"><i class="fas fa-plus"></i> Add Gym</h2>
   <div class="newgymform">
     <%= render 'newgym' %>
   </div>
       <h2><i id="close" onclick="newGymOpen()" class="fas fa-times"></i></h2>
 </div>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=ENV['GOOGLE_KEY']
 " type="text/javascript"></script>
